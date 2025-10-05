@@ -1,0 +1,29 @@
+{
+  "brand": "PuntoSabor",
+  "nav": {
+    "categories": "Categorías",
+    "promos": "Promos",
+    "plans": "Planes",
+    "contact": "Contacto",
+    "map": "Mapa",
+    "signin": "Ingresar"
+  },
+  "home": {
+    "headline": "Descubre huariques auténticos cerca de ti",
+    "subhead": "Explora por categoría, encuentra promociones y revisa reseñas reales de la comunidad. Guarda tus favoritos y apoya a los pequeños negocios.",
+    "searchPlaceholder": "Buscar por nombre, distrito o categoría…",
+    "ctaExplore": "Explorar",
+    "ctaMap": "Ver mapa",
+    "catsTitle": "Explora por categorías",
+    "popularNear": "Opciones populares cerca de ti",
+    "view": "Ver"
+  },
+  "categories": {
+    "title": "Categorías",
+    "see": "Ver",
+    "exploreInArea": "Explora {category} en tu zona"
+  },
+  "contact": { "title": "Contáctanos", "sent": "¡Gracias! Recibimos tu consulta." },
+  "reviews": { "title": "Reseñas" },
+  "plans": { "title": "Planes de membresía" }
+}

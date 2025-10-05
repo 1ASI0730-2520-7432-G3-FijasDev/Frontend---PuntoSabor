@@ -1,0 +1,29 @@
+{
+  "brand": "PuntoSabor",
+  "nav": {
+    "categories": "Categories",
+    "promos": "Promos",
+    "plans": "Plans",
+    "contact": "Contact",
+    "map": "Map",
+    "signin": "Sign in"
+  },
+  "home": {
+    "headline": "Discover authentic huariques near you",
+    "subhead": "Explore by category, find promos and read real community reviews. Save your favorites and support local businesses.",
+    "searchPlaceholder": "Search by name, district or category…",
+    "ctaExplore": "Explore",
+    "ctaMap": "Open map",
+    "catsTitle": "Browse by categories",
+    "popularNear": "Popular options near you",
+    "view": "View"
+  },
+  "categories": {
+    "title": "Categories",
+    "see": "View",
+    "exploreInArea": "Explore {category} in your area"
+  },
+  "contact": { "title": "Contact us", "sent": "Thanks! We received your message." },
+  "reviews": { "title": "Reviews" },
+  "plans": { "title": "Membership plans" }
+}
