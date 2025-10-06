@@ -23,13 +23,14 @@
   </section>
 </template>
 <script>
-import { sendMessageUsecase } from '../../application/send-message.usecase.js';
+
+import { sendMessageUseCase } from '../../application/send-message.usecase.js';
 export default {
   name:'ContactView',
   data:()=>({ name:'', email:'', msg:'', ok:false }),
   methods:{
     async send(){
-      await sendMessageUsecase?.({ name:this.name, email:this.email, msg:this.msg });
+      await sendMessageUseCase?.({ name:this.name, email:this.email, msg:this.msg });
       this.ok = true; setTimeout(()=> this.ok=false, 2500);
     }
   }

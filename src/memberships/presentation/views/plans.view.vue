@@ -13,7 +13,7 @@
   </section>
 </template>
 <script>
-import { listPlansQuery } from '../../application/list-plans.query.js';
+import { listPlansQuery } from '../../application/list-plan.query.js';
 export default {
   name:'PlansView',
   data:()=>({plans:[]}),
