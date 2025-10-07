@@ -1,3 +1,9 @@
+
 export default [
-    { path: '/plans', component: () => import('./views/plans.view.vue') }
+    {
+        path: '/plans',
+        name: 'plans',
+        component: () => import('./views/plans.view.vue'),
+        meta: { title: 'Planes de membresía' }
+    }
 ];

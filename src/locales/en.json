@@ -10,20 +10,74 @@
   },
   "home": {
     "headline": "Discover authentic huariques near you",
-    "subhead": "Explore by category, find promos and read real community reviews. Save your favorites and support local businesses.",
-    "searchPlaceholder": "Search by name, district or category…",
+    "subhead": "Explore by category, find promotions, and check real community reviews. Save your favorites and support local businesses.",
+    "searchPlaceholder": "Search by name, district, or category…",
     "ctaExplore": "Explore",
-    "ctaMap": "Open map",
-    "catsTitle": "Browse by categories",
-    "popularNear": "Popular options near you",
+    "ctaMap": "View map",
+    "catsTitle": "Explore by categories",
+    "popularNear": "Popular nearby options",
     "view": "View"
   },
   "categories": {
     "title": "Categories",
-    "see": "View",
+    "see": "See",
     "exploreInArea": "Explore {category} in your area"
   },
-  "contact": { "title": "Contact us", "sent": "Thanks! We received your message." },
+  "contact": {
+    "title": "Contact us",
+    "sent": "Thanks! We've received your message."
+  },
   "reviews": { "title": "Reviews" },
-  "plans": { "title": "Membership plans" }
+
+  "plans": {
+    "title": "Membership plans",
+    "subtitle": "Choose the plan that best fits your huarique. You can switch anytime.",
+    "common": {
+      "noCommitment": "No commitment",
+      "securePayments": "Secure payments",
+      "support": "Spanish support"
+    },
+    "ctaHelp": "Have questions about the plans?",
+    "ctaContact": "Contact us →",
+
+    "basic": {
+      "name": "BASIC",
+      "price": "Free",
+      "button": "Start for free",
+      "tagline": "Perfect to start gaining visibility",
+      "features": [
+        "Publish your huarique",
+        "Profile with essential info",
+        "Access to reviews and ratings"
+      ],
+      "popular": "Popular"
+    },
+    "premium": {
+      "name": "PREMIUM",
+      "price": "$35",
+      "period": "/MO",
+      "button": "Choose Premium",
+      "tagline": "Ideal if you already have reviews and want to grow",
+      "features": [
+        "Everything in Basic plan",
+        "Featured promotion tools",
+        "Visit and comment stats",
+        "Technical support & consulting"
+      ]
+    },
+    "exclusive": {
+      "name": "EXCLUSIVE",
+      "price": "$50",
+      "period": "/MO",
+      "button": "Choose Exclusive",
+      "tagline": "For brands that want maximum exposure",
+      "features": [
+        "Everything in Premium plan",
+        "Priority advertising",
+        "Advanced review management",
+        "Access to special events"
+      ]
+    }
+  }
+
 }

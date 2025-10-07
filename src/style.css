@@ -353,3 +353,72 @@ body{
     .cards-4>*{grid-column:1/-1}
     .footer .wrap { font-size: 12px; padding: 10px var(--space); }
 }
+
+/* ===== Plans Page ===== */
+.plans-page{ position: relative; isolation: isolate; }
+.plans-page::before{
+    content:""; position:absolute; inset: -40px 0 auto 50%;
+    width: 880px; height: 880px; translate: -50% 0;
+    background:
+            radial-gradient(closest-side at 35% 35%, #fff8e9 0%, transparent 60%),
+            radial-gradient(closest-side at 70% 70%, #ffe8c7 0%, transparent 55%);
+    filter: blur(12px); opacity:.45; z-index:-1; pointer-events:none;
+}
+.section-kicker{
+    display:inline-block; font-weight:800; letter-spacing:.6px; color: var(--orange);
+    background: rgba(227,137,27,.12); border: 1px solid rgba(227,137,27,.24);
+    padding:4px 10px; border-radius:999px; box-shadow: 0 4px 12px rgba(227,137,27,.12);
+}
+.section-lead{ max-width:62ch; margin:8px 0 18px; color:#2c2c2c; }
+
+.common-benefits{ display:flex; gap:10px; flex-wrap:wrap; margin:8px 0 4px; }
+.common-benefits .benefit{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; border:1px dashed rgba(0,0,0,.08);
+    padding:6px 10px; border-radius:999px; font-weight:700; color:var(--brown);
+}
+
+.plans-grid{ display:grid; grid-template-columns: repeat(12,1fr); gap:22px; margin-top:14px; }
+.plan-card{ grid-column: span 4; }
+.plan-card{
+    position:relative; background:#fff; border:1px solid rgba(0,0,0,.06);
+    border-radius: var(--radius); box-shadow: var(--shadow-1);
+    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    display:flex; flex-direction:column; overflow:hidden;
+}
+.plan-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-2); }
+
+.plan-head{ padding: 18px 18px 10px; background: linear-gradient(180deg, #fff, #fff9f2 95%); }
+.plan-name{ margin:0 0 6px; font-weight:900; color:var(--brown); letter-spacing:.3px; }
+.price{ display:flex; align-items:baseline; gap:8px; }
+.price-main{ font-size: clamp(22px,3.2vw,34px); font-weight:900; color:#111; }
+
+.ribbon{ position:absolute; top:12px; right:-6px; pointer-events:none; }
+.ribbon span{
+    background: var(--orange); color:#fff; font-weight:900; font-size:12px;
+    padding:6px 12px; border-radius:999px; box-shadow:0 8px 16px rgba(227,137,27,.25);
+}
+
+.features{ list-style:none; margin: 10px 0 0; padding: 0 18px; display:flex; flex-direction:column; gap: 10px; }
+.features li{ display:flex; gap:10px; align-items:flex-start; }
+.features li .dot{
+    position:relative; top:2px; flex:0 0 18px; width:18px; height:18px; border-radius:50%;
+    background: #dff6d7; border:2px solid #88d07b;
+}
+.features li .dot::after{
+    content:""; position:absolute; inset:3px 4px 4px 3px; border-right:2px solid #2e7d32; border-bottom:2px solid #2e7d32; rotate:45deg;
+}
+
+.plan-cta{ margin-top:auto; padding: 14px 18px 18px; display:grid; gap:8px; }
+.plan-cta .cta{ width:100%; font-weight:900; padding:10px 16px; }
+.plan-cta .tagline{ margin:0; color:var(--muted); font-size:12px; text-align:center; }
+
+.plan-card.--popular{
+    border:2px solid rgba(227,137,27,.25);
+    box-shadow: 0 14px 36px rgba(227,137,27,.18);
+    transform: translateY(-6px);
+}
+.plan-card.--popular .price-main{ font-size: clamp(24px,3.6vw,38px) }
+
+@media (max-width:1024px){ .plan-card{ grid-column: span 6; } }
+@media (max-width:640px){ .plan-card{ grid-column: 1 / -1; } }
