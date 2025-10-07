@@ -1,21 +1,75 @@
 {
-  "categories": ["Pollo","Marina","Criolla","Chifa","Postres","Menú","Café"],
+  "categories": [
+    "Pollo",
+    "Marina",
+    "Criolla",
+    "Chifa",
+    "Postres",
+    "Menú",
+    "Café"
+  ],
   "huariques": [
-    { "id":1, "name":"El Brasero", "category":"Pollo", "price":22, "rating":4.6, "district":"Surco", "near": true },
-    { "id":2, "name":"Rincón Marino", "category":"Marina", "price":28, "rating":4.8, "district":"Chorrillos", "near": false }
+    {
+      "id": 1,
+      "name": "El Brasero",
+      "category": "Pollo",
+      "price": 22,
+      "rating": 4.6,
+      "district": "Surco",
+      "near": true
+    },
+    {
+      "id": 2,
+      "name": "Rincón Marino",
+      "category": "Marina",
+      "price": 28,
+      "rating": 4.8,
+      "district": "Chorrillos",
+      "near": false
+    }
   ],
   "promos": [
-    { "id":1, "title":"2x1 Pollo Hoy", "note":"Locales seleccionados" }
+    {
+      "id": 1,
+      "title": "2x1 Pollo Hoy",
+      "note": "Locales seleccionados"
+    }
   ],
   "reviews": [
-    { "id":1, "by":"Carla D.", "stars":5, "text":"Buenazo y barato." }
+    {
+      "id": 1,
+      "by": "Carla D.",
+      "stars": 5,
+      "text": "Buenazo y barato."
+    }
   ],
   "plans": [
-    { "id": "premium",   "name": "Premium",   "price": 35 },
-    { "id": "basic",     "name": "Básico",    "price": 0  },
-    { "id": "exclusive", "name": "Exclusive", "price": 50 }
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price": 35
+    },
+    {
+      "id": "basic",
+      "name": "Básico",
+      "price": 0
+    },
+    {
+      "id": "exclusive",
+      "name": "Exclusive",
+      "price": 50
+    }
   ],
   "users": [
-    { "id":1, "name":"demo", "email":"demo@upc.edu.pe" }
+    {
+      "id": 1,
+      "name": "demo",
+      "email": "demo@upc.edu.pe"
+    },
+    {
+      "name": "hola",
+      "email": "hola@gmail.com",
+      "id": 2
+    }
   ]
 }

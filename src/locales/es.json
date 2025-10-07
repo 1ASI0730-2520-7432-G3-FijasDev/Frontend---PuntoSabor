@@ -27,8 +27,9 @@
     "title": "Contáctanos",
     "sent": "¡Gracias! Recibimos tu consulta."
   },
-  "reviews": { "title": "Reseñas" },
-
+  "reviews": {
+    "title": "Reseñas"
+  },
   "plans": {
     "title": "Planes de membresía",
     "subtitle": "Elige el plan que mejor se adapte a tu huarique. Puedes cambiarlo cuando quieras.",
@@ -39,7 +40,6 @@
     },
     "ctaHelp": "¿Tienes dudas sobre los planes?",
     "ctaContact": "Contáctanos →",
-
     "basic": {
       "name": "BÁSICO",
       "price": "Gratis",
@@ -78,6 +78,39 @@
         "Acceso a eventos especiales"
       ]
     }
+  },
+  "ownerNew": {
+    "title": "Registrar huarique",
+    "subtitle": "Completa la información para que te encuentren más fácil.",
+    "sections": {
+      "data": "Datos",
+      "schedules": "Horarios",
+      "address": "Dirección",
+      "services": "Servicios",
+      "menu": "Menú"
+    },
+    "labels": {
+      "name": "Nombre",
+      "category": "Categoría",
+      "avgPrice": "Precio promedio (S/)",
+      "district": "Distrito",
+      "nearMe": "Cerca de mí",
+      "street": "Calle / Nro.",
+      "city": "Ciudad",
+      "reference": "Referencia",
+      "phone": "Teléfono",
+      "openAt": "Abrimos",
+      "closeAt": "Cerramos",
+      "closed": "Cerrado",
+      "delivery": "Delivery",
+      "takeaway": "Para llevar",
+      "dinein": "En salón",
+      "itemName": "Nombre",
+      "price": "Precio (S/)",
+      "section": "Sección",
+      "addItem": "+ Añadir ítem",
+      "save": "Guardar",
+      "select": "Selecciona…"
+    }
   }
-
 }
