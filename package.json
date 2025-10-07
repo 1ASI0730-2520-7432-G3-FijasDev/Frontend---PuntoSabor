@@ -10,6 +10,7 @@
     "api": "json-server --watch ./server/db.json --routes ./server/routes.json --port 3001"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "vue": "^3.5.12",
     "vue-i18n": "^11.1.12",
     "vue-router": "^4.4.5"
