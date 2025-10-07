@@ -11,7 +11,9 @@
     { "id":1, "by":"Carla D.", "stars":5, "text":"Buenazo y barato." }
   ],
   "plans": [
-    { "id":"basic", "name":"Básico", "price":0 }
+    { "id": "premium",   "name": "Premium",   "price": 35 },
+    { "id": "basic",     "name": "Básico",    "price": 0  },
+    { "id": "exclusive", "name": "Exclusive", "price": 50 }
   ],
   "users": [
     { "id":1, "name":"demo", "email":"demo@upc.edu.pe" }

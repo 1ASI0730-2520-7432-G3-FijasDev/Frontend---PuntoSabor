@@ -23,7 +23,61 @@
     "see": "Ver",
     "exploreInArea": "Explora {category} en tu zona"
   },
-  "contact": { "title": "Contáctanos", "sent": "¡Gracias! Recibimos tu consulta." },
+  "contact": {
+    "title": "Contáctanos",
+    "sent": "¡Gracias! Recibimos tu consulta."
+  },
   "reviews": { "title": "Reseñas" },
-  "plans": { "title": "Planes de membresía" }
+
+  "plans": {
+    "title": "Planes de membresía",
+    "subtitle": "Elige el plan que mejor se adapte a tu huarique. Puedes cambiarlo cuando quieras.",
+    "common": {
+      "noCommitment": "Sin permanencia",
+      "securePayments": "Pagos seguros",
+      "support": "Soporte en español"
+    },
+    "ctaHelp": "¿Tienes dudas sobre los planes?",
+    "ctaContact": "Contáctanos →",
+
+    "basic": {
+      "name": "BÁSICO",
+      "price": "Gratis",
+      "button": "Empezar gratis",
+      "tagline": "Perfecto para empezar a tener visibilidad",
+      "features": [
+        "Publica tu huarique",
+        "Perfil con datos esenciales",
+        "Acceso a reseñas y calificaciones"
+      ],
+      "popular": "Popular"
+    },
+    "premium": {
+      "name": "PREMIUM",
+      "price": "$35",
+      "period": "/MES",
+      "button": "Elegir Premium",
+      "tagline": "Ideal si ya tienes reseñas y buscas crecer",
+      "features": [
+        "Todo lo del plan Básico",
+        "Herramientas de promoción destacada",
+        "Estadísticas de visitas y comentarios",
+        "Soporte técnico y asesoría"
+      ]
+    },
+    "exclusive": {
+      "name": "EXCLUSIVO",
+      "price": "$50",
+      "period": "/MES",
+      "button": "Elegir Exclusivo",
+      "tagline": "Para marcas que quieren destacar al máximo",
+      "features": [
+        "Todo lo del plan Premium",
+        "Publicidad prioritaria",
+        "Gestión avanzada de reseñas",
+        "Acceso a eventos especiales"
+      ]
+    }
+  }
+
 }
