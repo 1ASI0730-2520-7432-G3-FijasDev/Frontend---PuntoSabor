@@ -5,7 +5,6 @@ import es from './locales/es.json';
 function detectLocale() {
     const saved = localStorage.getItem('ps-locale');
     if (saved) return saved;
-    // por defecto: inglés
     return 'en';
 }
 
@@ -16,7 +15,6 @@ export const i18n = createI18n({
     messages: { en, es }
 });
 
-// Mantén actualizado el <html lang="...">
 document.documentElement.setAttribute('lang', i18n.global.locale.value);
 
 export function setLocale(locale) {

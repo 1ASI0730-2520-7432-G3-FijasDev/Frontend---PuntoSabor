@@ -13,7 +13,7 @@
           class="card card--category item"
           :style="stagger(i)"
       >
-        <!-- Media con imagen y badge (título solo aquí) -->
+
         <div class="card__media media">
           <img :src="categoryImg(c)" :alt="c" loading="lazy" @error="onImgError" />
           <span class="media__badge" :aria-label="c">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="card__body">
-          <!-- Quitamos el <strong>{{ c }}</strong> para evitar duplicado -->
+
           <p class="meta">{{ $t('categories.exploreInArea', { category: c }) }}</p>
         </div>
 
@@ -39,7 +39,7 @@
 <script>
 import { listCategoriesQuery } from '../../application/list-categories.query.js';
 
-/** Carga todas las imágenes de src/assets como URL (Vite) */
+
 const modules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp}', {
   eager: true,
   as: 'url'
@@ -73,7 +73,7 @@ export default {
           .replace(/\s+/g, '-')
           .replace(/[^a-z0-9\-]/g, '');
     },
-    /** Mapea categorías a tus archivos reales de /src/assets */
+
     categoryImg (c) {
       const slug = this.slugify(c);
       const ALIAS = {
@@ -98,7 +98,7 @@ export default {
     onImgError (e) {
       e.target.src = FALLBACK;
     },
-    /** Stagger para la entrada de cada card */
+
     stagger (i) {
       const delay = (i % 12) * 60; // ms
       return { animationDelay: `${delay}ms` };
@@ -108,7 +108,7 @@ export default {
 </script>
 
 <style scoped>
-/* ===== Cabecera de la vista ===== */
+/* ===== Cabecera ===== */
 .page-head{
   margin-bottom: 4px;
 }
@@ -135,10 +135,10 @@ export default {
   margin: 6px 0 14px;
 }
 
-/* ===== Grid local (no toca lo global) ===== */
+/* ===== Grid local ===== */
 .categories-grid{ gap: 14px; }
 
-/* Stagger + pop-in (suave, elegante) */
+
 .item{
   animation: cardPop .55s cubic-bezier(.2,.7,.2,1) both;
 }
@@ -147,11 +147,10 @@ export default {
   to  { opacity: 1; transform: translateY(0)   scale(1);   }
 }
 
-/* Compacidad moderada */
+
 .card__body{ padding: 12px 14px; }
 .card--category .card__footer{ padding: 10px 12px; }
 
-/* ===== Media con parallax/zoom y badge ===== */
 .media{
   position: relative;
   overflow: hidden;
@@ -174,7 +173,6 @@ export default {
   filter: saturate(1.06) contrast(1.05);
 }
 
-/* Badge con el título (único texto visible de la categoría) */
 .media__badge{
   position: absolute;
   left: 10px; right: 10px; bottom: 10px;
@@ -198,7 +196,6 @@ export default {
   transform: translateY(-2px);
 }
 .card:hover .media__badge::after{
-  /* shimmer muy sutil */
   content:"";
   position:absolute; inset:0;
   background: linear-gradient(120deg, transparent, rgba(255,255,255,.25), transparent);
@@ -210,7 +207,6 @@ export default {
   to { transform: translateX(100%); }
 }
 
-/* ===== Centrado de última fila (3 columnas -> span 4) ===== */
 .categories-grid:has(> :nth-child(3n+1):last-child) > :last-child{
   grid-column: 5 / span 4;
 }

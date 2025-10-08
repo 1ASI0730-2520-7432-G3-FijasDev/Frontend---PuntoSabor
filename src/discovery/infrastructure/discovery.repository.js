@@ -2,23 +2,19 @@
 import { api } from '@/shared/infrastructure/base-api';
 
 export const DiscoveryRepository = {
-    /** Lista categorías disponibles */
     listCategories() {
         return api('/categories');
     },
 
-    /** Búsqueda de huariques por texto */
     search(q) {
         const query = typeof q === 'string' ? encodeURIComponent(q) : '';
         return api(`/huariques?q=${query}`);
     },
 
-    /** Huariques cercanos */
     nearYou() {
         return api('/huariques?near=true');
     },
 
-    /** Obtiene un huarique por id */
     getHuariqueById(id) {
         return api(`/huariques/${id}`);
     },

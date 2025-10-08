@@ -10,7 +10,7 @@ const serverPlans = ref([])
 
 onMounted(async () => {
   try {
-    serverPlans.value = await listPlansQuery() // [{id:'basic', price:0}, ...]
+    serverPlans.value = await listPlansQuery()
   } catch (e) {
     console.warn('Plans API error:', e)
     serverPlans.value = []
@@ -24,7 +24,7 @@ const priceById = computed(() => {
   return m
 })
 
-// Formateo de precio según idioma (simple)
+// Formateo de precio según idioma
 function formatPrice(n) {
   if (typeof n !== 'number') return ''
   if (n === 0) return t('plans.basic.price') // Free / Gratis
@@ -32,12 +32,9 @@ function formatPrice(n) {
   return `${symbol}${n}`
 }
 
-// Catálogo combinado (orden visual premium, basic, exclusive)
 const plans = computed(() => {
-  // tm() devuelve el nodo de mensajes como objeto reactivo
   const P = tm('plans') || {}
 
-  // Utilidad para leer con fallback
   const get = (id, key, fb = '') =>
       (P?.[id]?.[key] ?? fb)
 
@@ -62,7 +59,6 @@ const plans = computed(() => {
   })
 })
 
-// Helper mostrar precio + periodo
 const displayPrice = (p) => p.period ? `${p.priceText} ${p.period}` : p.priceText
 </script>
 

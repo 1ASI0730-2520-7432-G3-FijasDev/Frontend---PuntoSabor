@@ -1,4 +1,3 @@
-<!-- src/contact/presentation/views/contact.view.vue -->
 <template>
   <section class="wrap contact" aria-labelledby="title">
     <header class="page-head">
@@ -170,8 +169,8 @@ onMounted(() => {
   // === Marker con TU LOGO ===
   const psIcon = L.icon({
     iconUrl: smallLogo,
-    iconSize: [44, 44],      // ajusta si lo quieres más grande/pequeño
-    iconAnchor: [22, 42],    // base del pin
+    iconSize: [44, 44],
+    iconAnchor: [22, 42],
     popupAnchor: [0, -40],
     className: 'ps-marker'
   });
