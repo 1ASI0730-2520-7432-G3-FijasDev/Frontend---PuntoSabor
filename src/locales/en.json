@@ -23,10 +23,6 @@
     "see": "See",
     "exploreInArea": "Explore {category} in your area"
   },
-  "contact": {
-    "title": "Contact us",
-    "sent": "Thanks! We've received your message."
-  },
   "reviews": {
     "title": "Reviews"
   },
@@ -250,11 +246,42 @@
       "address": "Av. Sabor 123, Lima",
       "hours": "Mon–Fri: 9:00–18:00"
     }
+  },
+  "map": {
+    "title": "Huariques near you",
+    "hint": "Map with Leaflet, filters, search, and a local detail card.",
+    "searchPlaceholder": "Search by name…",
+    "filters": {
+      "all": "All",
+      "pollo": "Chicken",
+      "criollo": "Creole",
+      "mar": "Seafood",
+      "chifa": "Chifa",
+      "postre": "Desserts",
+      "menu": "Menu",
+      "cafe": "Coffee",
+      "parri": "Grill"
+    },
+    "quick": {
+      "recommended": "Recommended",
+      "nearby": "Nearby",
+      "reviews": "Reviews"
+    },
+    "actions": {
+      "viewMenu": "View menu",
+      "directions": "Directions",
+      "call": "Call",
+      "share": "Share"
+    },
+    "empty": "Select a huarique to see its details",
+    "noResults": "No results for “{q}”.",
+    "shareText": "Sharing this huarique: {name}. Hours: {hours}.",
+    "copied": "Link copied",
+    "aria": {
+      "filterByCat": "Filter by category",
+      "search": "Search huarique",
+      "map": "Huariques map",
+      "list": "Huariques list"
+    }
   }
-
-
-
-
-
-
 }
