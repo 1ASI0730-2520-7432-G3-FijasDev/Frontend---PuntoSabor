@@ -142,5 +142,115 @@
       "save": "Guardar",
       "select": "Selecciona…"
     }
+  },
+
+  "login": {
+    "title": "Inicia sesión",
+    "subtitle": "Ingresa tu correo para continuar",
+    "emailPlaceholder": "Correo",
+    "emailAria": "Correo electrónico",
+    "submit": "Ingresar",
+    "submitting": "Ingresando…",
+    "noAccount": "¿No tienes cuenta?",
+    "register": "Regístrate",
+    "errorDefault": "No pudimos iniciar sesión. Intenta nuevamente."
+  },
+
+  "register": {
+    "title": "¡Hola, amigo!",
+    "namePlaceholder": "Nombre",
+    "nameAria": "Nombre completo",
+    "emailPlaceholder": "Correo electrónico",
+    "emailAria": "Correo electrónico",
+    "submit": "Crear cuenta",
+    "submitting": "Creando…",
+    "helloRight": "¡Qué gusto verte!",
+    "subRight": "Crea tu cuenta con tu nombre y correo. Te tomará menos de un minuto.",
+    "successToast": "¡Cuenta creada! Te llevamos a elegir tu rol…",
+    "errorToast": "No pudimos crear tu cuenta. Intenta nuevamente."
+  },
+
+  "roleSelect": {
+    "title": "Elige tu rol",
+    "subtitle": "Selecciona cómo quieres usar PuntoSabor",
+    "radiogroupLabel": "Roles disponibles",
+    "explorerTitle": "Descubridor",
+    "explorerDesc": "Encuentra huariques y guarda tus favoritos.",
+    "ownerTitle": "Dueño de restaurante",
+    "ownerDesc": "Publica tu huarique y gestiona tu vitrina.",
+    "continue": "Continuar",
+    "explorerAria": "Rol de descubridor",
+    "ownerAria": "Rol de dueño de restaurante"
+  },
+
+  "ownerNewView": {
+    "title": "Registrar huarique",
+    "subtitle": "Completa la información para que te encuentren más fácil.",
+    "sections": {
+      "data": "Datos",
+      "address": "Dirección",
+      "schedules": "Horarios",
+      "services": "Servicios",
+      "menu": "Menú"
+    },
+    "labels": {
+      "name": "Nombre",
+      "category": "Categoría",
+      "avgPrice": "Precio promedio (S/)",
+      "district": "Distrito",
+      "nearMe": "Cerca de mí",
+      "street": "Calle / Nro.",
+      "city": "Ciudad",
+      "reference": "Referencia",
+      "phone": "Teléfono",
+      "openAt": "Abrimos",
+      "closeAt": "Cerramos",
+      "closed": "Cerrado",
+      "delivery": "Delivery",
+      "takeaway": "Para llevar",
+      "dinein": "En salón",
+      "itemName": "Nombre",
+      "price": "Precio (S/)",
+      "section": "Sección"
+    },
+    "placeholders": {
+      "select": "Selecciona…",
+      "street": "Av. Los Incas 123",
+      "city": "Lima",
+      "reference": "Frente al parque",
+      "phone": "+51 999 999 999",
+      "menuName": "Nombre",
+      "menuPrice": "Precio (S/)",
+      "menuSection": "Sección"
+    },
+    "actions": {
+      "addItem": "+ Añadir ítem",
+      "save": "Guardar",
+      "removeItemAria": "Eliminar"
+    },
+    "feedback": {
+      "saveError": "No se pudo guardar. Inténtalo otra vez."
+    }
+  },
+
+
+  "contact": {
+    "formTitle": "Escríbenos",
+    "nameLabel": "Nombre",
+    "namePh": "Tu nombre",
+    "emailLabel": "Correo",
+    "emailPh": "tucorreo@dominio.com",
+    "messageLabel": "Mensaje",
+    "messagePh": "Cuéntanos en qué podemos ayudarte…",
+    "submit": "Enviar",
+    "submitting": "Enviando…",
+    "mapTitle": "Ubícanos",
+    "mapAria": "Mapa y datos de contacto",
+    "info": {
+      "address": "Av. Sabor 123, Lima",
+      "hours": "Lun–Vie: 9:00–18:00"
+    }
   }
+
+
 }
