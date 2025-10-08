@@ -28,7 +28,7 @@
     { "id": 15, "name": "Punto Grill",              "category": "Parrillas", "price": 40, "rating": 4.9, "district": "San Isidro",       "near": false },
     { "id": 16, "name": "La Picantería Peruana",    "category": "Criolla",   "price": 27, "rating": 4.7, "district": "Surquillo",        "near": true  },
     { "id": 17, "name": "La Casa del Postre",       "category": "Postres",   "price": 13, "rating": 4.7, "district": "Surquillo",        "near": true  },
-    { "id": 18, "name": "Chifa Dragón Feliz",       "category": "Chifa",     "price": 20, "rating": 4.2, "district": "Lince",            "near": false },
+    { "id": 18, "name": "Chifa Ping Chung Long",       "category": "Chifa",     "price": 20, "rating": 4.2, "district": "Lince",            "near": false },
     { "id": 19, "name": "El Sabor Norteño",         "category": "Criolla",   "price": 23, "rating": 4.2, "district": "Los Olivos",       "near": false },
     { "id": 20, "name": "La Ola Marina",            "category": "Marina",    "price": 29, "rating": 4.4, "district": "Magdalena",        "near": true  },
     { "id": 21, "name": "Menu Don Lucho",           "category": "Menú",      "price": 12, "rating": 4.2, "district": "El Agustino",      "near": true  }
