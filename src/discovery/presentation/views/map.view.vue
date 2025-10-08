@@ -37,7 +37,7 @@
       <div class="map-col">
         <div ref="mapEl" id="map-zones" class="map"></div>
 
-        <!-- Stack de 2 tarjetas: izquierda imagen, derecha info -->
+        <!-- Stack de 2 tarjetas -->
         <Transition name="card-pop" mode="out-in">
           <div v-if="selectedMeta" :key="activeId" class="detail-stack" aria-live="polite">
             <!-- Tarjeta: solo imagen -->
@@ -108,11 +108,25 @@
         </Transition>
 
         <!-- Acciones rápidas -->
-        <div class="quick-actions">
-          <RouterLink class="chip-link" :to="{ path:'/results', query:{ q:'Pollo' } }">Recomendado</RouterLink>
-          <RouterLink class="chip-link" :to="{ path:'/results', query:{ q:'Menú' } }">Tu zona</RouterLink>
-          <RouterLink class="chip-link" to="/reviews">Reseñas</RouterLink>
-        </div>
+        <nav class="quick-actions" aria-label="Acciones rápidas">
+          <RouterLink
+              class="chip-link chip-link--accent"
+              :to="{ path:'/results', query:{ q:'Pollo' } }"
+          >
+            Recomendado
+          </RouterLink>
+
+          <RouterLink
+              class="chip-link"
+              :to="{ path:'/results', query:{ q:'Menú' } }"
+          >
+            Tu zona
+          </RouterLink>
+
+          <RouterLink class="chip-link" to="/reviews">
+            Reseñas
+          </RouterLink>
+        </nav>
       </div>
 
       <!-- Lista -->
@@ -228,7 +242,7 @@ export default defineComponent({
     const selectedPlace = computed(()=> places.find(p=>p.id===state.activeId) || null)
     const selectedMeta  = computed(()=> (state.activeId && META[state.activeId]) ? META[state.activeId] : null)
 
-    // tags sin duplicar categoría
+
     const filteredTags = computed(()=>{
       const p=selectedPlace.value, m=selectedMeta.value
       if(!p || !m) return []
@@ -372,7 +386,7 @@ export default defineComponent({
 .btn:focus{ outline:none; box-shadow:0 0 0 4px rgba(227,137,27,.18); }
 .btn--primary{ background:#fff7ec; border-color:rgba(227,137,27,.45); color:#5a3a16; }
 
-/* Responsive: apila las tarjetas en móviles */
+/* Responsive */
 @media (max-width:820px){
   .detail-stack{ flex-direction:column; }
   .media-card{ width:100%; min-width:unset; }

@@ -1,28 +1,53 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { getSession } from '@/auth/application/get-session.query';
 
 const Home = () => import('./shared/presentations/views/home.view.vue');
 const NotFound = () => import('./shared/presentations/views/page-not-found.view.vue');
 
-// contextos
-const AuthRoutes = () => import('./auth/presentation/auth-routes.js');
-const DiscoveryRoutes = () => import('./discovery/presentation/discovery-routes.js');
-const PromotionsRoutes = () => import('./promotions/presentation/promotions-routes.js');
-const ReviewsRoutes = () => import('./reviews/reviews-routes.js');
+
+const AuthRoutes        = () => import('./auth/presentation/auth-routes.js');
+const DiscoveryRoutes   = () => import('./discovery/presentation/discovery-routes.js');
+const PromotionsRoutes  = () => import('./promotions/presentation/promotions-routes.js');
+const ReviewsRoutes     = () => import('./reviews/reviews-routes.js');
 const MembershipsRoutes = () => import('./memberships/presentation/memberships-routes.js');
-const ContactRoutes = () => import('./contact/presentation/contact-routes.js');
+const ContactRoutes     = () => import('./contact/presentation/contact-routes.js');
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', name: 'home', component: Home },
-        // Cargamos las rutas contextuales en tiempo de ejecucion
-        { path: '/auth', component: () => import('./auth/presentation/views/login.view.vue') },
-        { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound }
-    ]
+        { path: '/', name: 'home', component: Home, meta: { title: 'PuntoSabor' } },
+
+        { path: '/auth', component: () => import('./auth/presentation/views/login.view.vue'), meta: { title: 'Sign in' } },
+
+        { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound, meta: { title: 'Página no encontrada' } }
+    ],
+    scrollBehavior() { return { top: 0 }; }
 });
 
+
+router.beforeEach(async (to) => {
+    if (to.meta?.requiresOwner) {
+        try {
+            const session = await getSession();
+            if (!session || session.role !== 'owner') {
+                return { path: '/role' };
+            }
+        } catch {
+            return { path: '/auth' };
+        }
+    }
+    return true;
+});
+
+
+router.afterEach((to) => {
+    const base = 'PuntoSabor';
+    const title = to.meta?.title ? `${to.meta.title} · ${base}` : base;
+    if (typeof document !== 'undefined') document.title = title;
+});
+
+
 (async () => {
-    // inyectando rutas de cada contexto
     const ctxs = [
         (await AuthRoutes()).default,
         (await DiscoveryRoutes()).default,

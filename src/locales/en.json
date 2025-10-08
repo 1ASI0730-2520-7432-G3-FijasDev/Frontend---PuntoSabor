@@ -27,8 +27,9 @@
     "title": "Contact us",
     "sent": "Thanks! We've received your message."
   },
-  "reviews": { "title": "Reviews" },
-
+  "reviews": {
+    "title": "Reviews"
+  },
   "plans": {
     "title": "Membership plans",
     "subtitle": "Choose the plan that best fits your huarique. You can switch anytime.",
@@ -39,7 +40,6 @@
     },
     "ctaHelp": "Have questions about the plans?",
     "ctaContact": "Contact us →",
-
     "basic": {
       "name": "BASIC",
       "price": "Free",
@@ -78,6 +78,39 @@
         "Access to special events"
       ]
     }
+  },
+  "ownerNew": {
+    "title": "Register huarique",
+    "subtitle": "Fill in the information so people can find you more easily.",
+    "sections": {
+      "data": "Data",
+      "schedules": "Schedules",
+      "address": "Address",
+      "services": "Services",
+      "menu": "Menu"
+    },
+    "labels": {
+      "name": "Name",
+      "category": "Category",
+      "avgPrice": "Average price (S/)",
+      "district": "District",
+      "nearMe": "Near me",
+      "street": "Street / No.",
+      "city": "City",
+      "reference": "Reference",
+      "phone": "Phone",
+      "openAt": "Open",
+      "closeAt": "Close",
+      "closed": "Closed",
+      "delivery": "Delivery",
+      "takeaway": "Takeaway",
+      "dinein": "Dine-in",
+      "itemName": "Name",
+      "price": "Price (S/)",
+      "section": "Section",
+      "addItem": "+ Add item",
+      "save": "Save",
+      "select": "Select…"
+    }
   }
-
 }

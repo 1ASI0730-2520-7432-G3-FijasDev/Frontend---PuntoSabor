@@ -28,6 +28,7 @@
       "near": false
     }
   ],
+
   "promos": [
     {
       "id": 1,
@@ -35,6 +36,7 @@
       "note": "Locales seleccionados"
     }
   ],
+
   "reviews": [
     {
       "id": 1,
@@ -43,6 +45,7 @@
       "text": "Buenazo y barato."
     }
   ],
+
   "plans": [
     {
       "id": "premium",
@@ -60,6 +63,7 @@
       "price": 50
     }
   ],
+
   "users": [
     {
       "id": 1,
