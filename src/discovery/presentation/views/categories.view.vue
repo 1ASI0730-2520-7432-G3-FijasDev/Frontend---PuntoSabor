@@ -78,12 +78,13 @@ export default {
       const slug = this.slugify(c);
       const ALIAS = {
         pollo:   ['pollo', 'pollo-brasa', 'pollo_brasa'],
-        marina:  ['marina', 'la-marina', 'la_marina', 'marisco', 'mariscos'],
+        marina:  ['marisco', 'la-marina', 'la_marina', 'mariscos'],
         criolla: ['criolla', 'antojos-criollos', 'antojos_criollos'],
-        chifa:   ['chifa', 'la-picanteria', 'la_picanteria', 'don-pepe', 'don_pepe', 'el-forastero', 'el_forastero'],
-        postres: ['postres', 'dulces', 'dulcesazon', 'mazamorra', 'mazamorra-morada', 'mazamorra_morada'],
-        menu:    ['menu', 'menú'],
-        cafe:    ['cafe']
+        chifa:   ['chifaref', 'la-picanteria', 'la_picanteria', 'don-pepe', 'don_pepe', 'el-forastero', 'el_forastero'],
+        postres: ['postresref', 'dulces', 'dulcesazon', 'mazamorra', 'mazamorra-morada', 'mazamorra_morada'],
+        menu:    ['menuref', 'menú'],
+        cafe:    ['caféref'],
+        parrillas:   ['parrillasref']
       };
 
       const candidates = (ALIAS[slug] || [slug])
@@ -108,7 +109,7 @@ export default {
 </script>
 
 <style scoped>
-/* ===== Cabecera ===== */
+
 .page-head{
   margin-bottom: 4px;
 }
@@ -135,7 +136,6 @@ export default {
   margin: 6px 0 14px;
 }
 
-/* ===== Grid local ===== */
 .categories-grid{ gap: 14px; }
 
 
