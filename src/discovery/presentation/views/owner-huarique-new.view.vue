@@ -5,7 +5,7 @@
       <p class="section-sub">Completa la información para que te encuentren más fácil.</p>
     </header>
 
-    <!-- Panel que ENGLOBA las sesiones (no incluye el header) -->
+    <!-- Panel que ENGLOBA las sesiones -->
     <div class="sheet">
       <form class="form-grid" @submit.prevent="onSubmit">
         <!-- Columna izquierda -->
@@ -283,15 +283,11 @@ async function onSubmit(){
   --ring: 0 0 0 3px rgba(227,137,27,.28);
 }
 
-/* Fondo global verde (si tu layout no lo trae, colócalo en style.css global) */
-/* body{ background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%) fixed; } */
-
 .owner-form{ padding-bottom: 24px; }
 .page-head{ margin-bottom: 12px; }
 .section-title{ color: var(--brown); margin: 0 0 6px; }
 .section-sub{ color:#637257; margin:0 0 12px; }
 
-/* ====== Panel que engloba TODO el formulario ====== */
 .sheet{
   background: linear-gradient(180deg, #fffdf8 0%, #fffaf1 100%);
   border: 1px solid #eadcc8;
@@ -309,7 +305,7 @@ async function onSubmit(){
 }
 .col{ display:grid; gap:16px; min-width:0; }
 
-/* ====== Tarjetas (cada sesión) ====== */
+/* ====== Tarjetas ====== */
 .card{
   background: var(--card-bg);
   border-radius: var(--radius-card);

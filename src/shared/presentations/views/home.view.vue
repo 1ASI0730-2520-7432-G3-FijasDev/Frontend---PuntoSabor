@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <!-- Lado derecho: logo con nombre -->
+      <!-- Logo con nombre -->
       <div class="pinwrap">
         <div class="pin pin--img">
           <img :src="smallLogo" alt="PuntoSabor" />

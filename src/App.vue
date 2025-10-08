@@ -1,5 +1,4 @@
 <template>
-  <!-- Si usas el switcher de idiomas, déjalo. Si no, elimínalo -->
   <LanguageSwitcher />
 
   <nav class="nav">
@@ -32,11 +31,11 @@
 
 <script>
 import smallLogo from '@/assets/slogoPuntoSabor.png';
-import LanguageSwitcher from '@/shared/presentations/components/language-switcher.vue'; // quítalo si no usas i18n
+import LanguageSwitcher from '@/shared/presentations/components/language-switcher.vue';
 
 export default {
   name: 'App',
-  components: { LanguageSwitcher }, // quítalo si no usas i18n
+  components: { LanguageSwitcher },
   data: () => ({ smallLogo })
 };
 </script>
@@ -55,7 +54,6 @@ export default {
   filter: drop-shadow(0 2px 4px rgba(0,0,0,.15));
 }
 
-/* puedes variar el tamaño del logo del footer si quieres */
 .brand__mark--footer{
   width: 32px;
   height: 32px;

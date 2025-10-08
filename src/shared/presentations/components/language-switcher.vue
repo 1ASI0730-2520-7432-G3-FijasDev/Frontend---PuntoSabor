@@ -37,10 +37,10 @@ export default {
   border-radius: 999px;
   font-weight: 800;
   cursor: pointer;
-  color: #6f4228; /* tu brown */
+  color: #6f4228;
 }
 .pill.active{
-  background: #e3891b; /* tu orange */
+  background: #e3891b;
   color: #fff;
 }
 </style>

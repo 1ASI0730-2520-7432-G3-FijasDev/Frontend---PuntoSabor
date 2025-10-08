@@ -17,10 +17,8 @@ const router = createRouter({
     routes: [
         { path: '/', name: 'home', component: Home, meta: { title: 'PuntoSabor' } },
 
-        // Ruta directa a login por si alguien navega manualmente a /auth
         { path: '/auth', component: () => import('./auth/presentation/views/login.view.vue'), meta: { title: 'Sign in' } },
 
-        // 404
         { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound, meta: { title: 'Página no encontrada' } }
     ],
     scrollBehavior() { return { top: 0 }; }
@@ -30,10 +28,9 @@ const router = createRouter({
 router.beforeEach(async (to) => {
     if (to.meta?.requiresOwner) {
         try {
-            const session = await getSession(); // debe devolver { role: 'owner' | 'explorer' | ... }
+            const session = await getSession();
             if (!session || session.role !== 'owner') {
-                // si no tiene rol válido, redirige al selector de rol
-                return { path: '/role' }; // asumiendo que /role existe en auth-routes
+                return { path: '/role' };
             }
         } catch {
             return { path: '/auth' };

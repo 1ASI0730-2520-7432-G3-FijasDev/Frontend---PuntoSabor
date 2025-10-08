@@ -22,7 +22,7 @@ export default {
   methods:{
     async register(){
       await registerUseCase({ name:this.name.trim(), email:this.email.trim() });
-      this.msg = '✅ ¡Cuenta creada! Serás dirigido a selección de rol…';
+      this.msg = '¡Cuenta creada! Serás dirigido a selección de rol…';
       setTimeout(()=> this.$router.push('/role'), 800);
     }
   }

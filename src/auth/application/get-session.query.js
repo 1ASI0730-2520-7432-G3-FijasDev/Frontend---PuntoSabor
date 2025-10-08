@@ -3,10 +3,10 @@
 const KEY = 'ps-session';
 const LEGACY_KEY = 'ps-user';
 
-/** Lee la sesión desde localStorage. Devuelve {role:string,...} o null */
+
 export function getSession() {
     try {
-        // prioridad a la clave nueva; si no existe, intenta con la antigua
+
         const raw = localStorage.getItem(KEY) ?? localStorage.getItem(LEGACY_KEY);
         if (!raw) return null;
 
@@ -18,7 +18,6 @@ export function getSession() {
     }
 }
 
-/** Guarda/actualiza la sesión (usa la clave nueva) */
 export function setSession(partial) {
     const prev = getSession() || {};
     const next = { ...prev, ...partial };
@@ -26,11 +25,9 @@ export function setSession(partial) {
     return next;
 }
 
-/** Borra la sesión (nueva y legacy) */
 export function clearSession() {
     localStorage.removeItem(KEY);
     localStorage.removeItem(LEGACY_KEY);
 }
 
-// default opcional por si en algún sitio importas por defecto
 export default { getSession, setSession, clearSession };
