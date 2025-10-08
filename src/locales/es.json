@@ -250,6 +250,43 @@
       "address": "Av. Sabor 123, Lima",
       "hours": "Lun–Vie: 9:00–18:00"
     }
+  },
+  "map": {
+    "title": "Huaríques cerca de ti",
+    "hint": "Mapa con Leaflet, filtros, búsqueda y ficha con detalles del local.",
+    "searchPlaceholder": "Buscar por nombre…",
+    "filters": {
+      "all": "Todos",
+      "pollo": "Pollo",
+      "criollo": "Criollo",
+      "mar": "Marina",
+      "chifa": "Chifa",
+      "postre": "Postres",
+      "menu": "Menú",
+      "cafe": "Café",
+      "parri": "Parrillas"
+    },
+    "quick": {
+      "recommended": "Recomendado",
+      "nearby": "Cerca de ti",
+      "reviews": "Reseñas"
+    },
+    "actions": {
+      "viewMenu": "Ver menú",
+      "directions": "Cómo llegar",
+      "call": "Llamar",
+      "share": "Compartir"
+    },
+    "empty": "Selecciona un huarique para ver su descripción",
+    "noResults": "No hay resultados para “{q}”.",
+    "shareText": "Te comparto este huarique: {name}. Horario: {hours}.",
+    "copied": "Enlace copiado",
+    "aria": {
+      "filterByCat": "Filtrar por categoría",
+      "search": "Buscar huarique",
+      "map": "Mapa de huariques",
+      "list": "Listado de huariques"
+    }
   }
 
 

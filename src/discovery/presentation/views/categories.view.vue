@@ -13,17 +13,17 @@
           class="card card--category item"
           :style="stagger(i)"
       >
-
         <div class="card__media media">
-          <img :src="categoryImg(c)" :alt="c" loading="lazy" @error="onImgError" />
-          <span class="media__badge" :aria-label="c">
-            {{ c }}
+          <img :src="categoryImg(c)" :alt="tCat(c)" loading="lazy" @error="onImgError" />
+          <span class="media__badge" :aria-label="tCat(c)">
+            {{ tCat(c) }}
           </span>
         </div>
 
         <div class="card__body">
-
-          <p class="meta">{{ $t('categories.exploreInArea', { category: c }) }}</p>
+          <p class="meta">
+            {{ $t('categories.exploreInArea', { category: tCat(c) }) }}
+          </p>
         </div>
 
         <footer class="card__footer">
@@ -38,7 +38,6 @@
 
 <script>
 import { listCategoriesQuery } from '../../application/list-categories.query.js';
-
 
 const modules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp}', {
   eager: true,
@@ -59,9 +58,7 @@ const FALLBACK =
 
 export default {
   name: 'CategoriesView',
-  data: () => ({
-    cats: []
-  }),
+  data: () => ({ cats: [] }),
   async created () {
     this.cats = await listCategoriesQuery();
   },
@@ -73,31 +70,35 @@ export default {
           .replace(/\s+/g, '-')
           .replace(/[^a-z0-9\-]/g, '');
     },
+    /** nombre traducido de la categoría */
+    tCat (c) {
+      const key = this.slugify(c);
+      const translated = this.$t(`cat.${key}`);
+
+      return typeof translated === 'string' && translated !== `cat.${key}` ? translated : c;
+    },
 
     categoryImg (c) {
       const slug = this.slugify(c);
       const ALIAS = {
-        pollo:   ['pollo', 'pollo-brasa', 'pollo_brasa'],
-        marina:  ['marisco', 'la-marina', 'la_marina', 'mariscos'],
-        criolla: ['criolla', 'antojos-criollos', 'antojos_criollos'],
-        chifa:   ['chifaref', 'la-picanteria', 'la_picanteria', 'don-pepe', 'don_pepe', 'el-forastero', 'el_forastero'],
-        postres: ['postresref', 'dulces', 'dulcesazon', 'mazamorra', 'mazamorra-morada', 'mazamorra_morada'],
-        menu:    ['menuref', 'menú'],
-        cafe:    ['caféref'],
-        parrillas:   ['parrillasref']
+        pollo:     ['pollo', 'pollo-brasa', 'pollo_brasa'],
+        marina:    ['marisco', 'la-marina', 'la_marina', 'mariscos'],
+        criolla:   ['criolla', 'antojos-criollos', 'antojos_criollos'],
+        chifa:     ['chifaref', 'la-picanteria', 'la_picanteria', 'don-pepe', 'don_pepe', 'el-forastero', 'el_forastero'],
+        postres:   ['postresref', 'dulces', 'dulcesazon', 'mazamorra', 'mazamorra-morada', 'mazamorra_morada'],
+        menu:      ['menuref', 'menú', 'menu'],
+        cafe:      ['caféref', 'caferef', 'cafe'],
+        parrillas: ['parrillasref', 'parrillas', 'parrilla']
       };
-
       const candidates = (ALIAS[slug] || [slug])
           .map(k => [k, k.replace(/-/g, '_')])
           .flat();
-
-      for (const key of candidates) {
-        if (IMG_MAP[key]) return IMG_MAP[key];
-      }
+      for (const key of candidates) if (IMG_MAP[key]) return IMG_MAP[key];
       return FALLBACK;
     },
+
     onImgError (e) {
-      e.target.src = FALLBACK;
+      if (e?.target && e.target.src !== FALLBACK) e.target.src = FALLBACK;
     },
 
     stagger (i) {
@@ -107,121 +108,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-
-.page-head{
-  margin-bottom: 4px;
-}
-.fx-title{
-  position: relative;
-  display: inline-block;
-  padding-bottom: 6px;
-}
-.fx-title::after{
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -4px;
-  height: 6px;
-  border-radius: 6px;
-  background: linear-gradient(90deg, rgba(227,137,27,.25), rgba(111,66,40,.35));
-  filter: blur(0.2px);
-  animation: underlineGlow 2.2s ease-in-out infinite alternate;
-}
-@keyframes underlineGlow {
-  from { opacity: .65; transform: scaleX(.98); }
-  to   { opacity: 1;   transform: scaleX(1.02); }
-}
-.fx-sub{
-  margin: 6px 0 14px;
-}
-
-.categories-grid{ gap: 14px; }
-
-
-.item{
-  animation: cardPop .55s cubic-bezier(.2,.7,.2,1) both;
-}
-@keyframes cardPop{
-  from{ opacity: 0; transform: translateY(18px) scale(.98); }
-  to  { opacity: 1; transform: translateY(0)   scale(1);   }
-}
-
-
-.card__body{ padding: 12px 14px; }
-.card--category .card__footer{ padding: 10px 12px; }
-
-.media{
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-alt);
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
-  transition: transform .3s ease;
-}
-.media img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.02) translateZ(0);
-  transition: transform .45s cubic-bezier(.2,.7,.2,1), filter .3s ease;
-  filter: saturate(1.03) contrast(1.02);
-}
-.card:hover .media img{
-  transform: scale(1.06) translateY(-2px);
-  filter: saturate(1.06) contrast(1.05);
-}
-
-.media__badge{
-  position: absolute;
-  left: 10px; right: 10px; bottom: 10px;
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 12px;
-  background: rgba(255,255,255,.9);
-  color: var(--brown);
-  font-weight: 900;
-  letter-spacing: .2px;
-  box-shadow: var(--shadow-1);
-  will-change: transform, opacity;
-  animation: badgeIn .5s ease-out both;
-}
-@keyframes badgeIn{
-  from{ transform: translateY(10px); opacity: 0; }
-  to  { transform: translateY(0);    opacity: 1; }
-}
-.card:hover .media__badge{
-  animation: none;
-  transform: translateY(-2px);
-}
-.card:hover .media__badge::after{
-  content:"";
-  position:absolute; inset:0;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,.25), transparent);
-  transform: translateX(-100%);
-  animation: shine .8s ease-out;
-  border-radius: inherit;
-}
-@keyframes shine{
-  to { transform: translateX(100%); }
-}
-
-.categories-grid:has(> :nth-child(3n+1):last-child) > :last-child{
-  grid-column: 5 / span 4;
-}
-.categories-grid:has(> :nth-child(3n+1):nth-last-child(2)) > :nth-last-child(2){
-  grid-column: 3 / span 4;
-}
-.categories-grid:has(> :nth-child(3n+2):last-child) > :last-child{
-  grid-column: 7 / span 4;
-}
-
-@media (max-width:1024px){
-  .categories-page .cards-3 > *{ grid-column: span 6; }
-}
-@media (max-width:640px){
-  .categories-page .cards-3 > *{ grid-column: 1 / -1; }
-  .media__badge{ left: 8px; right: 8px; bottom: 8px; padding: 7px 10px; }
-}
-</style>
