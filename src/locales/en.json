@@ -89,6 +89,36 @@
       "services": "Services",
       "menu": "Menu"
     },
+    "promos": {
+      "title": "Promotions",
+      "seeDetails": "See details",
+      "cards": {
+        "pollo": {
+          "title": "2x1 Chicken Today",
+          "note": "Selected restaurants"
+        },
+        "marino": {
+          "title": "Seafood Menu $20",
+          "note": "Mon–Fri 12:00–16:00"
+        },
+        "cafe": {
+          "title": "Coffee + Brownie",
+          "note": "Only at Aroma & Sabor"
+        },
+        "parrilla": {
+          "title": "Family Grill",
+          "note": "15% off on weekends"
+        },
+        "postre": {
+          "title": "Desserts 3x2",
+          "note": "At La Dulcería all month"
+        },
+        "criollo": {
+          "title": "Criollo Discount",
+          "note": "10% off criollo dishes"
+        }
+      }
+    },
     "labels": {
       "name": "Name",
       "category": "Category",
