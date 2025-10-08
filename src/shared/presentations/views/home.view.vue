@@ -118,32 +118,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.media {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  height: 180px;
-}
-.media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-.media:hover img {
-  transform: scale(1.05);
-}
-.media__badge {
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 0.85rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 0.5rem;
-}
-</style>
