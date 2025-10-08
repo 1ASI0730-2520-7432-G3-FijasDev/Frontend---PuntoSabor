@@ -142,5 +142,119 @@
       "save": "Save",
       "select": "Select…"
     }
+  },
+
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Enter your email to continue",
+    "emailPlaceholder": "Email",
+    "emailAria": "Email address",
+    "submit": "Sign in",
+    "submitting": "Signing in…",
+    "noAccount": "Don't have an account?",
+    "register": "Sign up",
+    "errorDefault": "We couldn't sign you in. Please try again."
+  },
+
+  "register": {
+    "title": "Hello, friend!",
+    "namePlaceholder": "Name",
+    "nameAria": "Full name",
+    "emailPlaceholder": "Email address",
+    "emailAria": "Email address",
+    "submit": "Create account",
+    "submitting": "Creating…",
+    "helloRight": "Glad to see you!",
+    "subRight": "Create your account with your name and email. It will take less than a minute.",
+    "successToast": "Account created! We’ll take you to choose your role…",
+    "errorToast": "We couldn’t create your account. Please try again."
+  },
+
+  "roleSelect": {
+    "title": "Choose your role",
+    "subtitle": "Select how you want to use PuntoSabor",
+    "radiogroupLabel": "Available roles",
+    "explorerTitle": "Explorer",
+    "explorerDesc": "Find huariques and save your favorites.",
+    "ownerTitle": "Restaurant owner",
+    "ownerDesc": "Publish your huarique and manage your showcase.",
+    "continue": "Continue",
+    "explorerAria": "Explorer role",
+    "ownerAria": "Restaurant owner role"
+  },
+
+  "ownerNewView": {
+    "title": "Register huarique",
+    "subtitle": "Fill in the information so people can find you more easily.",
+    "sections": {
+      "data": "Data",
+      "address": "Address",
+      "schedules": "Schedules",
+      "services": "Services",
+      "menu": "Menu"
+    },
+    "labels": {
+      "name": "Name",
+      "category": "Category",
+      "avgPrice": "Average price (S/)",
+      "district": "District",
+      "nearMe": "Near me",
+      "street": "Street / No.",
+      "city": "City",
+      "reference": "Reference",
+      "phone": "Phone",
+      "openAt": "Open",
+      "closeAt": "Close",
+      "closed": "Closed",
+      "delivery": "Delivery",
+      "takeaway": "Takeaway",
+      "dinein": "Dine-in",
+      "itemName": "Name",
+      "price": "Price (S/)",
+      "section": "Section"
+    },
+    "placeholders": {
+      "select": "Select…",
+      "street": "Av. Los Incas 123",
+      "city": "Lima",
+      "reference": "In front of the park",
+      "phone": "+51 999 999 999",
+      "menuName": "Name",
+      "menuPrice": "Price (S/)",
+      "menuSection": "Section"
+    },
+    "actions": {
+      "addItem": "+ Add item",
+      "save": "Save",
+      "removeItemAria": "Remove"
+    },
+    "feedback": {
+      "saveError": "We couldn't save. Please try again."
+    }
+  },
+
+
+  "contact": {
+    "formTitle": "Write to us",
+    "nameLabel": "Name",
+    "namePh": "Your name",
+    "emailLabel": "Email",
+    "emailPh": "you@email.com",
+    "messageLabel": "Message",
+    "messagePh": "Tell us how we can help…",
+    "submit": "Send",
+    "submitting": "Sending…",
+    "mapTitle": "Find us",
+    "mapAria": "Map and contact details",
+    "info": {
+      "address": "Av. Sabor 123, Lima",
+      "hours": "Mon–Fri: 9:00–18:00"
+    }
   }
+
+
+
+
+
+
 }
