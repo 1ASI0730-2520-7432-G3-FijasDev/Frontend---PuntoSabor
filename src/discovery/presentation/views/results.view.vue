@@ -76,19 +76,46 @@ export default {
           .replace(/[^a-z0-9\-]/g, '');
     },
     itemImg (r) {
-      const cat = slugify(r.category || this.$route.query.q || '');
-      const ALIAS = {
-        pollo:     ['elbrasero', 'dontito'],
-        marina:    ['rinconmarino', 'marytierra', 'olamarina'],
-        criolla:   ['dona', 'la_picanteria', 'sabornorteño'],
-        chifa:     ['sanjoylao', 'chifaping']
+      const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const slugify = s => norm(s).replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+      const variants = k => {
+        const a = norm(k);
+        return [a, a.replace(/-/g, '_'), a.replace(/[_-]/g, '')];
       };
-      if (r.name) {
-        const n = slugify(r.name);
-        for (const key of variants(n)) {
-          if (IMG_MAP[key]) return IMG_MAP[key];
-        }
+      const hashIndex = (key, n) => {
+        let h = 0; const s = norm(key);
+        for (let i = 0; i < s.length; i++) h = ((h * 31) + s.charCodeAt(i)) >>> 0;
+        return n ? (h % n) : 0;
+      };
+
+      const cat = slugify(r.category || this.$route.query.q || '');
+      const nameSlug = r.name ? slugify(r.name) : '';
+
+      const NAME_ALIAS = {
+        'parrilladas-don-mario': ['mario'],
+        'brasa-y-carbon': ['brasaycarbon'],
+        'fuego-criollo': ['fuegocriollo'],
+        'la-parrilla-del-norte': ['parrillanorte'],
+        'punto-grill': ['puntogrill'],
+      };
+
+      if (nameSlug && NAME_ALIAS[nameSlug]) {
+        const direct = NAME_ALIAS[nameSlug].flatMap(variants);
+        for (const key of direct) if (IMG_MAP[key]) return IMG_MAP[key];
       }
+
+      if (nameSlug) {
+        for (const key of variants(nameSlug)) if (IMG_MAP[key]) return IMG_MAP[key];
+      }
+      const ALIAS = {
+        pollo:     ['pollo', 'pollo-brasa', 'pollo_brasa', 'parrillasref', 'elbrasero', 'dontito', 'donlucho'],
+        marina:    ['marina', 'la-marina', 'la_marina', 'marisco', 'mariscos', 'olamarina', 'rinconmarino'],
+        criolla:   ['criolla', 'antojos-criollos', 'antojos_criollos', 'dona', 'lapicanteria', 'sabornorteno', 'marytierra'],
+        chifa:     ['chifaref', 'chifaping', 'don-pepe', 'don_pepe', 'el-forastero', 'el_forastero', 'sanjoylao'],
+        postres:   ['postresref', 'dulces', 'dulcesazon', 'mazamorra', 'mazamorra-morada', 'mazamorra_morada', 'lacaspdelpostre', 'lapasteleria'],
+        menu:      ['menuref', 'menu', 'menu-del-dia', 'menu_del_dia', 'aesqui'],
+        cafe:      ['caferef', 'cafe', 'cafecentral', 'aromaysabor']
+      };
 
       const list = (ALIAS[cat] || [cat])
           .flatMap(variants)
@@ -99,6 +126,7 @@ export default {
         const idx = hashIndex(r.name || String(r.id), sorted.length);
         return IMG_MAP[sorted[idx]];
       }
+
       return FALLBACK;
     }
   }
