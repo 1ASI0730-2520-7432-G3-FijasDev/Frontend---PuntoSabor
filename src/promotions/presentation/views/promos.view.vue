@@ -34,12 +34,12 @@ const FALLBACK =
     Object.values(IMG_MAP)[0];
 
 const BUCKETS = [
-  { key: 'pollo',     keys: ['pollo', 'brasa', 'parrilla', 'parrillas', 'grill', 'brasas'], imgs: ['pollo_brasa', 'parrillasref'] },
-  { key: 'marino',    keys: ['marino', 'marina', 'ceviche', 'mariscos', 'pescado'],        imgs: ['la_marina', 'marisco'] },
-  { key: 'cafe',      keys: ['cafe', 'café', 'espresso', 'latte'],                          imgs: ['caferef'] },
-  { key: 'parrilla',  keys: ['parrilla', 'parrillas', 'grill', 'asado'],                    imgs: ['parrillasref'] },
-  { key: 'postre',    keys: ['postre', 'postres', 'dulce', 'torta', 'pastel', 'helado', 'mazamorra'], imgs: ['postresref', 'dulcesazon', 'mazamorra_morada'] },
-  { key: 'criollo',   keys: ['criollo', 'criolla', 'anticucho', 'aji de gallina', 'lomo saltado'],   imgs: ['criolla', 'antojos_criollos'] }
+  { key: 'parrilla', keys: ['parrilla', 'parrillas', 'grill', 'asado'], imgs: ['parrillasref'] },
+  { key: 'pollo',    keys: ['pollo', 'brasa', 'brasas'],                imgs: ['pollo_brasa'] },
+  { key: 'marino',   keys: ['marino', 'marina', 'ceviche', 'mariscos', 'pescado'], imgs: ['la_marina', 'marisco'] },
+  { key: 'cafe',     keys: ['cafe', 'café', 'espresso', 'latte'],      imgs: ['caféref'] },
+  { key: 'postre',   keys: ['postre', 'postres', 'dulce', 'torta', 'pastel', 'helado', 'mazamorra'], imgs: ['postresref', 'dulcesazon', 'mazamorra_morada'] },
+  { key: 'criollo',  keys: ['criollo', 'criolla', 'anticucho', 'aji de gallina', 'lomo saltado'],   imgs: ['criolla', 'antojos_criollos'] }
 ];
 
 export default {
