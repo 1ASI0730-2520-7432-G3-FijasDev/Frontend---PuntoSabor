@@ -89,6 +89,36 @@
       "services": "Servicios",
       "menu": "Menú"
     },
+    "promos": {
+      "title": "Promociones",
+      "seeDetails": "Ver detalles",
+      "cards": {
+        "pollo": {
+          "title": "2x1 Pollo Hoy",
+          "note": "Locales seleccionados"
+        },
+        "marino": {
+          "title": "Menú Marino S/20",
+          "note": "Lun–Vie 12:00–16:00"
+        },
+        "cafe": {
+          "title": "Café + Brownie",
+          "note": "Solo en Aroma & Sabor"
+        },
+        "parrilla": {
+          "title": "Parrillada Familiar",
+          "note": "15% en fines de semana"
+        },
+        "postre": {
+          "title": "Postres 3x2",
+          "note": "En La Dulcería todo el mes"
+        },
+        "criollo": {
+          "title": "Descuento Criollo",
+          "note": "Platos criollos -10%"
+        }
+      }
+    },
     "labels": {
       "name": "Nombre",
       "category": "Categoría",
