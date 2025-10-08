@@ -388,6 +388,44 @@ export default defineComponent({
 .zones-list .cat{ color:#777; }
 .zones-list .empty{ text-align:center; color:#888; }
 
+/* ===== FIX: imágenes gigantes en popups de Leaflet ===== */
+/* Anula resets globales (max-width:100%) dentro del mapa */
+:deep(.leaflet-pane img){
+  max-width: none !important;
+}
 
+/* Limita el tamaño del popup y su contenido */
+:deep(.leaflet-container .leaflet-popup){
+  max-width: 220px;
+}
+:deep(.leaflet-container .leaflet-popup-content-wrapper){
+  width: auto;
+  max-width: 220px;
+  padding: 6px 6px 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 12px 26px rgba(0,0,0,.16);
+}
+:deep(.leaflet-container .leaflet-popup-content){
+  margin: 6px 8px !important;
+  width: auto !important;
+}
 
+/* Fuerza tamaño exacto de la imagen del popup */
+:deep(.leaflet-container .leaflet-popup-content img),
+:deep(.ps-popup .popup-logo){
+  width: 160px !important;
+  height: 160px !important;
+  max-width: 160px !important;
+  max-height: 160px !important;
+  object-fit: contain !important;
+  display: block;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Sombra de la “puntita” del popup (opcional) */
+:deep(.leaflet-container .leaflet-popup-tip){
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.12));
+}
 </style>
