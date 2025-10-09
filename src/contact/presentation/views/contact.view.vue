@@ -142,6 +142,14 @@ import { reactive, computed, ref, onMounted } from 'vue';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import smallLogo from '@/assets/slogoPuntoSabor.png';
+// ✅ Fix para Leaflet en producción (Netlify/Vite)
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: '/assets/marker-icon-2x.png',
+  iconUrl: '/assets/marker-icon.png',
+  shadowUrl: '/assets/marker-shadow.png',
+});
+
 
 const form = reactive({ name: '', email: '', message: '' });
 const sending = ref(false);
