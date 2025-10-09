@@ -9,12 +9,17 @@
     <div class="grid cards-3 categories-grid">
       <article
           v-for="(c, i) in cats"
-          :key="c"
+          :key="c.id ?? catSlug(c)"
           class="card card--category item"
           :style="stagger(i)"
       >
         <div class="card__media media">
-          <img :src="categoryImg(c)" :alt="tCat(c)" loading="lazy" @error="onImgError" />
+          <img
+              :src="categoryImg(c)"
+              :alt="tCat(c)"
+              loading="lazy"
+              @error="onImgError"
+          />
           <span class="media__badge" :aria-label="tCat(c)">
             {{ tCat(c) }}
           </span>
@@ -27,7 +32,7 @@
         </div>
 
         <footer class="card__footer">
-          <RouterLink class="btn" :to="{ path: '/results', query: { q: c } }">
+          <RouterLink class="btn" :to="{ path: '/results', query: { q: catName(c) } }">
             {{ $t('categories.see') }}
           </RouterLink>
         </footer>
@@ -60,7 +65,16 @@ export default {
   name: 'CategoriesView',
   data: () => ({ cats: [] }),
   async created () {
-    this.cats = await listCategoriesQuery();
+    const raw = await listCategoriesQuery();
+    this.cats = (raw ?? []).map((c, idx) => {
+      if (typeof c === 'string') {
+        return { id: this.slugify(c) || String(idx), name: c };
+      }
+      return {
+        id: c.id ?? this.slugify(c.name ?? `cat-${idx}`),
+        name: c.name ?? String(c) // fallback
+      };
+    });
   },
   methods: {
     slugify (s) {
@@ -70,16 +84,21 @@ export default {
           .replace(/\s+/g, '-')
           .replace(/[^a-z0-9\-]/g, '');
     },
-    /** nombre traducido de la categoría */
+    catName (c) {
+      return typeof c === 'string' ? c : (c?.name ?? '');
+    },
+    catSlug (c) {
+      return this.slugify(this.catName(c));
+    },
     tCat (c) {
-      const key = this.slugify(c);
+      const key = this.catSlug(c); // usar slug del name
       const translated = this.$t(`cat.${key}`);
-
-      return typeof translated === 'string' && translated !== `cat.${key}` ? translated : c;
+      const name = this.catName(c);
+      return (typeof translated === 'string' && translated !== `cat.${key}`) ? translated : name;
     },
 
     categoryImg (c) {
-      const slug = this.slugify(c);
+      const slug = this.catSlug(c);
       const ALIAS = {
         pollo:     ['pollo', 'pollo-brasa', 'pollo_brasa'],
         marina:    ['marisco', 'la-marina', 'la_marina', 'mariscos'],
