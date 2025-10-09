@@ -1454,3 +1454,10 @@ body{
     .contact .map{ height:260px; }
 }
 
+/* === Responsive for 3-column card grids (Promos) === */
+@media (max-width: 1024px){
+    .cards-3 > *{ grid-column: span 6; }   /* 2 columnas */
+}
+@media (max-width: 640px){
+    .cards-3 > *{ grid-column: 1 / -1; }   /* 1 columna */
+}

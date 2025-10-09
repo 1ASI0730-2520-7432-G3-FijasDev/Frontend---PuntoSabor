@@ -4,7 +4,6 @@
       <h2 id="zones-title" class="section-title fx-title">
         {{ $t('map.title') }}
       </h2>
-      <p class="hint">{{ $t('map.hint') }}</p>
     </header>
 
     <!-- Controles -->
@@ -233,21 +232,21 @@ export default defineComponent({
       'Chifa San Joy Lao':'SanJoyLao.jpg',
       'La Dulcería':'dulcesazon.jpg',
       'La Esquinita del Menú':'menuRef.jpg',
-      'Café Aroma & Sabor':'caféRef.jpeg',
-      'Café Central':'caféRef.jpeg',
+      'Café Aroma & Sabor':'aromaysabor.jpg',
+      'Café Central':'cafecentral.jpg',
       'Pollos Don Tito':'dontito.jpg',
       'Mar & Tierra':'MaryTierra.jpg',
-      'Parrilladas Don Mario':'parrillasRef.jpg',
-      'Brasa y Carbón':'parrillasRef.jpg',
-      'Fuego Criollo':'parrillasRef.jpg',
-      'La Parrilla del Norte':'parrillasRef.jpg',
-      'Punto Grill':'parrillasRef.jpg',
+      'Parrilladas Don Mario':'mario.png',
+      'Brasa y Carbón':'brasaycarbon.jpg',
+      'Fuego Criollo':'fuegocriollo.jpg',
+      'La Parrilla del Norte':'parrillanorte.jpg',
+      'Punto Grill':'puntogrill.jpg',
       'La Picantería Peruana':'la_picanteria.jpg',
       'La Casa del Postre':'postresRef.jpg',
       'Chifa Ping Chung Long':'ChifaPing.jpg',
       'El Sabor Norteño':'SaborNorteño.png',
       'La Ola Marina':'Olamarina.jpg',
-      'Menu Don Lucho':'menuRef.jpg'
+      'Menu Don Lucho':'donlucho.jpg'
     }
     const LOGO_BY_CAT = {
       pollo:   'pollo_brasa.jpg',
