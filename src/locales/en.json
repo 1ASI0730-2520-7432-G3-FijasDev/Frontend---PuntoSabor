@@ -1,0 +1,316 @@
+{
+  "brand": "PuntoSabor",
+  "nav": {
+    "categories": "Categories",
+    "promos": "Promos",
+    "plans": "Plans",
+    "contact": "Contact",
+    "map": "Map",
+    "signin": "Sign in"
+  },
+  "home": {
+    "headline": "Discover authentic huariques near you",
+    "subhead": "Explore by category, find promotions, and check real community reviews. Save your favorites and support local businesses.",
+    "searchPlaceholder": "Search by name, district, or category…",
+    "ctaExplore": "Explore",
+    "ctaMap": "View map",
+    "catsTitle": "Explore by categories",
+    "popularNear": "Popular nearby options",
+    "view": "View"
+  },
+  "categories": {
+    "title": "Categories",
+    "see": "See",
+    "exploreInArea": "Explore {category} in your area"
+  },
+  "reviews": {
+    "title": "Reviews"
+  },
+  "plans": {
+    "title": "Membership plans",
+    "subtitle": "Choose the plan that best fits your huarique. You can switch anytime.",
+    "common": {
+      "noCommitment": "No commitment",
+      "securePayments": "Secure payments",
+      "support": "Spanish support"
+    },
+    "ctaHelp": "Have questions about the plans?",
+    "ctaContact": "Contact us →",
+    "basic": {
+      "name": "BASIC",
+      "price": "Free",
+      "button": "Start for free",
+      "tagline": "Perfect to start gaining visibility",
+      "features": [
+        "Publish your huarique",
+        "Profile with essential info",
+        "Access to reviews and ratings"
+      ],
+      "popular": "Popular"
+    },
+    "premium": {
+      "name": "PREMIUM",
+      "price": "$35",
+      "period": "/MO",
+      "button": "Choose Premium",
+      "tagline": "Ideal if you already have reviews and want to grow",
+      "features": [
+        "Everything in Basic plan",
+        "Featured promotion tools",
+        "Visit and comment stats",
+        "Technical support & consulting"
+      ]
+    },
+    "exclusive": {
+      "name": "EXCLUSIVE",
+      "price": "$50",
+      "period": "/MO",
+      "button": "Choose Exclusive",
+      "tagline": "For brands that want maximum exposure",
+      "features": [
+        "Everything in Premium plan",
+        "Priority advertising",
+        "Advanced review management",
+        "Access to special events"
+      ]
+    }
+  },
+  "ownerNew": {
+    "title": "Register huarique",
+    "subtitle": "Fill in the information so people can find you more easily.",
+    "sections": {
+      "data": "Data",
+      "schedules": "Schedules",
+      "address": "Address",
+      "services": "Services",
+      "menu": "Menu"
+    },
+    "promos": {
+      "title": "Promotions",
+      "seeDetails": "See details",
+      "cards": {
+        "pollo": {
+          "title": "2x1 Chicken Today",
+          "note": "Selected restaurants"
+        },
+        "marino": {
+          "title": "Seafood Menu $20",
+          "note": "Mon–Fri 12:00–16:00"
+        },
+        "cafe": {
+          "title": "Coffee + Brownie",
+          "note": "Only at Aroma & Sabor"
+        },
+        "parrilla": {
+          "title": "Family Grill",
+          "note": "15% off on weekends"
+        },
+        "postre": {
+          "title": "Desserts 3x2",
+          "note": "At La Dulcería all month"
+        },
+        "criollo": {
+          "title": "Criollo Discount",
+          "note": "10% off criollo dishes"
+        }
+      }
+    },
+    "labels": {
+      "name": "Name",
+      "category": "Category",
+      "avgPrice": "Average price (S/)",
+      "district": "District",
+      "nearMe": "Near me",
+      "street": "Street / No.",
+      "city": "City",
+      "reference": "Reference",
+      "phone": "Phone",
+      "openAt": "Open",
+      "closeAt": "Close",
+      "closed": "Closed",
+      "delivery": "Delivery",
+      "takeaway": "Takeaway",
+      "dinein": "Dine-in",
+      "itemName": "Name",
+      "price": "Price (S/)",
+      "section": "Section",
+      "addItem": "+ Add item",
+      "save": "Save",
+      "select": "Select…"
+    }
+  },
+
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Enter your email to continue",
+    "emailPlaceholder": "Email",
+    "emailAria": "Email address",
+    "submit": "Sign in",
+    "submitting": "Signing in…",
+    "noAccount": "Don't have an account?",
+    "register": "Sign up",
+    "errorDefault": "We couldn't sign you in. Please try again."
+  },
+
+  "register": {
+    "title": "Hello, friend!",
+    "namePlaceholder": "Name",
+    "nameAria": "Full name",
+    "emailPlaceholder": "Email address",
+    "emailAria": "Email address",
+    "submit": "Create account",
+    "submitting": "Creating…",
+    "helloRight": "Glad to see you!",
+    "subRight": "Create your account with your name and email. It will take less than a minute.",
+    "successToast": "Account created! We’ll take you to choose your role…",
+    "errorToast": "We couldn’t create your account. Please try again."
+  },
+
+  "roleSelect": {
+    "title": "Choose your role",
+    "subtitle": "Select how you want to use PuntoSabor",
+    "radiogroupLabel": "Available roles",
+    "explorerTitle": "Explorer",
+    "explorerDesc": "Find huariques and save your favorites.",
+    "ownerTitle": "Restaurant owner",
+    "ownerDesc": "Publish your huarique and manage your showcase.",
+    "continue": "Continue",
+    "explorerAria": "Explorer role",
+    "ownerAria": "Restaurant owner role"
+  },
+
+  "ownerNew": {
+    "title": "Register huarique",
+    "subtitle": "Fill in the information so people can find you more easily.",
+    "sections": {
+      "data": "Data",
+      "schedules": "Schedules",
+      "address": "Address",
+      "services": "Services",
+      "menu": "Menu"
+    },
+    "promos": {
+      "title": "Promotions",
+      "seeDetails": "See details",
+      "cards": {
+        "pollo": {
+          "title": "2x1 Chicken Today",
+          "note": "Selected restaurants"
+        },
+        "marino": {
+          "title": "Seafood Menu $20",
+          "note": "Mon–Fri 12:00–16:00"
+        },
+        "cafe": {
+          "title": "Coffee + Brownie",
+          "note": "Only at Aroma & Sabor"
+        },
+        "parrilla": {
+          "title": "Family Grill",
+          "note": "15% off on weekends"
+        },
+        "postre": {
+          "title": "Desserts 3x2",
+          "note": "At La Dulcería all month"
+        },
+        "criollo": {
+          "title": "Criollo Discount",
+          "note": "10% off criollo dishes"
+        }
+      }
+    },
+    "labels": {
+      "name": "Name",
+      "category": "Category",
+      "avgPrice": "Average price (S/)",
+      "district": "District",
+      "nearMe": "Near me",
+      "street": "Street / No.",
+      "city": "City",
+      "reference": "Reference",
+      "phone": "Phone",
+      "openAt": "Open",
+      "closeAt": "Close",
+      "closed": "Closed",
+      "delivery": "Delivery",
+      "takeaway": "Takeaway",
+      "dinein": "Dine-in",
+      "itemName": "Name",
+      "price": "Price (S/)",
+      "section": "Section",
+      "addItem": "+ Add item",
+      "remove": "Remove",
+      "save": "Save",
+      "select": "Select…"
+    },
+    "categories": {
+      "anticuchos": "Anticuchos",
+      "ceviche": "Ceviche",
+      "chifa": "Chifa",
+      "polleria": "Pollería"
+    },
+    "placeholders": {
+      "street": "Av. Los Incas 123",
+      "city": "Lima",
+      "reference": "In front of the park",
+      "phone": "+51 999 999 999"
+    },
+    "saveError": "We couldn't save it. Please try again."
+  },
+
+
+  "contact": {
+    "title" : "Contact Us",
+    "formTitle": "Write to us",
+    "nameLabel": "Name",
+    "namePh": "Your name",
+    "emailLabel": "Email",
+    "emailPh": "you@email.com",
+    "messageLabel": "Message",
+    "messagePh": "Tell us how we can help…",
+    "submit": "Send",
+    "submitting": "Sending…",
+    "mapTitle": "Find us",
+    "mapAria": "Map and contact details",
+    "info": {
+      "address": "Av. Sabor 123, Lima",
+      "hours": "Mon–Fri: 9:00–18:00"
+    }
+  },
+  "map": {
+    "title": "Huariques near you",
+    "searchPlaceholder": "Search by name…",
+    "filters": {
+      "all": "All",
+      "pollo": "Chicken",
+      "criollo": "Creole",
+      "mar": "Seafood",
+      "chifa": "Chifa",
+      "postre": "Desserts",
+      "menu": "Menu",
+      "cafe": "Coffee",
+      "parri": "Grill"
+    },
+    "quick": {
+      "recommended": "Recommended",
+      "nearby": "Nearby",
+      "reviews": "Reviews"
+    },
+    "actions": {
+      "viewMenu": "View menu",
+      "directions": "Directions",
+      "call": "Call",
+      "share": "Share"
+    },
+    "empty": "Select a huarique to see its details",
+    "noResults": "No results for “{q}”.",
+    "shareText": "Sharing this huarique: {name}. Hours: {hours}.",
+    "copied": "Link copied",
+    "aria": {
+      "filterByCat": "Filter by category",
+      "search": "Search huarique",
+      "map": "Huariques map",
+      "list": "Huariques list"
+    }
+  }
+}
