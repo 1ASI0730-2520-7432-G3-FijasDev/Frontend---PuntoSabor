@@ -179,15 +179,45 @@
     "ownerAria": "Restaurant owner role"
   },
 
-  "ownerNewView": {
+  "ownerNew": {
     "title": "Register huarique",
     "subtitle": "Fill in the information so people can find you more easily.",
     "sections": {
       "data": "Data",
-      "address": "Address",
       "schedules": "Schedules",
+      "address": "Address",
       "services": "Services",
       "menu": "Menu"
+    },
+    "promos": {
+      "title": "Promotions",
+      "seeDetails": "See details",
+      "cards": {
+        "pollo": {
+          "title": "2x1 Chicken Today",
+          "note": "Selected restaurants"
+        },
+        "marino": {
+          "title": "Seafood Menu $20",
+          "note": "Mon–Fri 12:00–16:00"
+        },
+        "cafe": {
+          "title": "Coffee + Brownie",
+          "note": "Only at Aroma & Sabor"
+        },
+        "parrilla": {
+          "title": "Family Grill",
+          "note": "15% off on weekends"
+        },
+        "postre": {
+          "title": "Desserts 3x2",
+          "note": "At La Dulcería all month"
+        },
+        "criollo": {
+          "title": "Criollo Discount",
+          "note": "10% off criollo dishes"
+        }
+      }
     },
     "labels": {
       "name": "Name",
@@ -207,30 +237,30 @@
       "dinein": "Dine-in",
       "itemName": "Name",
       "price": "Price (S/)",
-      "section": "Section"
+      "section": "Section",
+      "addItem": "+ Add item",
+      "remove": "Remove",
+      "save": "Save",
+      "select": "Select…"
+    },
+    "categories": {
+      "anticuchos": "Anticuchos",
+      "ceviche": "Ceviche",
+      "chifa": "Chifa",
+      "polleria": "Pollería"
     },
     "placeholders": {
-      "select": "Select…",
       "street": "Av. Los Incas 123",
       "city": "Lima",
       "reference": "In front of the park",
-      "phone": "+51 999 999 999",
-      "menuName": "Name",
-      "menuPrice": "Price (S/)",
-      "menuSection": "Section"
+      "phone": "+51 999 999 999"
     },
-    "actions": {
-      "addItem": "+ Add item",
-      "save": "Save",
-      "removeItemAria": "Remove"
-    },
-    "feedback": {
-      "saveError": "We couldn't save. Please try again."
-    }
+    "saveError": "We couldn't save it. Please try again."
   },
 
 
   "contact": {
+    "title" : "Contact Us",
     "formTitle": "Write to us",
     "nameLabel": "Name",
     "namePh": "Your name",
@@ -249,7 +279,6 @@
   },
   "map": {
     "title": "Huariques near you",
-    "hint": "Map with Leaflet, filters, search, and a local detail card.",
     "searchPlaceholder": "Search by name…",
     "filters": {
       "all": "All",

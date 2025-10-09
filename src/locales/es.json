@@ -23,10 +23,7 @@
     "see": "Ver",
     "exploreInArea": "Explora {category} en tu zona"
   },
-  "contact": {
-    "title": "Contáctanos",
-    "sent": "¡Gracias! Recibimos tu consulta."
-  },
+
   "reviews": {
     "title": "Reseñas"
   },
@@ -183,15 +180,45 @@
     "ownerAria": "Rol de dueño de restaurante"
   },
 
-  "ownerNewView": {
+  "ownerNew": {
     "title": "Registrar huarique",
     "subtitle": "Completa la información para que te encuentren más fácil.",
     "sections": {
       "data": "Datos",
-      "address": "Dirección",
       "schedules": "Horarios",
+      "address": "Dirección",
       "services": "Servicios",
       "menu": "Menú"
+    },
+    "promos": {
+      "title": "Promociones",
+      "seeDetails": "Ver detalles",
+      "cards": {
+        "pollo": {
+          "title": "2x1 Pollo Hoy",
+          "note": "Locales seleccionados"
+        },
+        "marino": {
+          "title": "Menú Marino S/20",
+          "note": "Lun–Vie 12:00–16:00"
+        },
+        "cafe": {
+          "title": "Café + Brownie",
+          "note": "Solo en Aroma & Sabor"
+        },
+        "parrilla": {
+          "title": "Parrillada Familiar",
+          "note": "15% en fines de semana"
+        },
+        "postre": {
+          "title": "Postres 3x2",
+          "note": "En La Dulcería todo el mes"
+        },
+        "criollo": {
+          "title": "Descuento Criollo",
+          "note": "Platos criollos -10%"
+        }
+      }
     },
     "labels": {
       "name": "Nombre",
@@ -211,30 +238,30 @@
       "dinein": "En salón",
       "itemName": "Nombre",
       "price": "Precio (S/)",
-      "section": "Sección"
+      "section": "Sección",
+      "addItem": "+ Añadir ítem",
+      "remove": "Eliminar",
+      "save": "Guardar",
+      "select": "Selecciona…"
+    },
+    "categories": {
+      "anticuchos": "Anticuchos",
+      "ceviche": "Ceviche",
+      "chifa": "Chifa",
+      "polleria": "Pollería"
     },
     "placeholders": {
-      "select": "Selecciona…",
       "street": "Av. Los Incas 123",
       "city": "Lima",
       "reference": "Frente al parque",
-      "phone": "+51 999 999 999",
-      "menuName": "Nombre",
-      "menuPrice": "Precio (S/)",
-      "menuSection": "Sección"
+      "phone": "+51 999 999 999"
     },
-    "actions": {
-      "addItem": "+ Añadir ítem",
-      "save": "Guardar",
-      "removeItemAria": "Eliminar"
-    },
-    "feedback": {
-      "saveError": "No se pudo guardar. Inténtalo otra vez."
-    }
+    "saveError": "No se pudo guardar. Inténtalo otra vez."
   },
 
 
   "contact": {
+    "title" : "Contáctanos",
     "formTitle": "Escríbenos",
     "nameLabel": "Nombre",
     "namePh": "Tu nombre",
@@ -253,7 +280,6 @@
   },
   "map": {
     "title": "Huaríques cerca de ti",
-    "hint": "Mapa con Leaflet, filtros, búsqueda y ficha con detalles del local.",
     "searchPlaceholder": "Buscar por nombre…",
     "filters": {
       "all": "Todos",
