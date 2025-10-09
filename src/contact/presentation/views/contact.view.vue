@@ -85,7 +85,6 @@
             <ul class="contact-info">
               <li>
                 <span class="badge-ico badge-ico--sm" aria-hidden="true">
-                  <!-- Home -->
                   <svg viewBox="0 0 24 24" class="ico-svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                           d="M3 9.75 12 3l9 6.75M4.5 10.875V21h15V10.875"/>
@@ -138,49 +137,95 @@
 </template>
 
 <script setup>
-import { reactive, computed, ref, onMounted } from 'vue';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import smallLogo from '@/assets/slogoPuntoSabor.png';
-// ✅ Fix para Leaflet en producción (Netlify/Vite)
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: '/assets/marker-icon-2x.png',
-  iconUrl: '/assets/marker-icon.png',
-  shadowUrl: '/assets/marker-shadow.png',
-});
+import { reactive, computed, ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import L from 'leaflet'
+import 'leaflet/dist/leaflet.css'
+import smallLogo from '@/assets/slogoPuntoSabor.png'
 
+// === i18n local (evita fetch de JSON al entrar directo a /contact) ===
+const { mergeLocaleMessage } = useI18n()
 
-const form = reactive({ name: '', email: '', message: '' });
-const sending = ref(false);
-const sent = ref(false);
+const enContact = {
+  contact: {
+    title: 'Contact Us',
+    formTitle: 'Write to us',
+    nameLabel: 'Name',
+    namePh: 'Your name',
+    emailLabel: 'Email',
+    emailPh: 'you@email.com',
+    messageLabel: 'Message',
+    messagePh: 'Tell us how we can help…',
+    submit: 'Send',
+    submitting: 'Sending…',
+    sent: 'Message sent!',
+    mapTitle: 'Find us',
+    mapAria: 'Map with our location',
+    info: { address: 'Av. Sabor 123, Lima', hours: 'Mon–Fri: 9:00–18:00' }
+  },
+  home: { subhead: 'Explore by category, find promotions, and check reviews.' }
+}
+const esContact = {
+  contact: {
+    title: 'Contáctanos',
+    formTitle: 'Escríbenos',
+    nameLabel: 'Nombre',
+    namePh: 'Tu nombre',
+    emailLabel: 'Correo',
+    emailPh: 'tucorreo@correo.com',
+    messageLabel: 'Mensaje',
+    messagePh: 'Cuéntanos cómo podemos ayudarte…',
+    submit: 'Enviar',
+    submitting: 'Enviando…',
+    sent: '¡Mensaje enviado!',
+    mapTitle: 'Encuéntranos',
+    mapAria: 'Mapa con nuestra ubicación',
+    info: { address: 'Av. Sabor 123, Lima', hours: 'Lun–Vie: 9:00–18:00' }
+  },
+  home: { subhead: 'Explora por categoría, encuentra promociones y reseñas.' }
+}
+mergeLocaleMessage('en', enContact)
+mergeLocaleMessage('es', esContact)
+
+// === Leaflet: mapea íconos desde el paquete (sin /public) ===
+import iconUrl from 'leaflet/dist/images/marker-icon.png'
+import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png'
+import shadowUrl from 'leaflet/dist/images/marker-shadow.png'
+
+delete L.Icon.Default.prototype._getIconUrl
+L.Icon.Default.mergeOptions({ iconRetinaUrl, iconUrl, shadowUrl })
+
+// === Tu lógica original ===
+const form = reactive({ name: '', email: '', message: '' })
+const sending = ref(false)
+const sent = ref(false)
 
 const canSend = computed(() => {
-  const emailOk = /\S+@\S+\.\S+/.test(form.email || '');
-  return !!form.name?.trim() && emailOk && !!form.message?.trim();
-});
+  const emailOk = /\S+@\S+\.\S+/.test(form.email || '')
+  return !!form.name?.trim() && emailOk && !!form.message?.trim()
+})
 
-async function onSubmit() {
-  if (!canSend.value || sending.value) return;
-  sending.value = true; sent.value = false;
-  await new Promise(r => setTimeout(r, 900));
-  sending.value = false; sent.value = true;
-  setTimeout(() => { sent.value = false; }, 3000);
+async function onSubmit () {
+  if (!canSend.value || sending.value) return
+  sending.value = true; sent.value = false
+  await new Promise(r => setTimeout(r, 900))
+  sending.value = false; sent.value = true
+  setTimeout(() => { sent.value = false }, 3000)
 }
 
-const mapEl = ref(null);
-const center = [-12.0464, -77.0428];
+const mapEl = ref(null)
+const center = [-12.0464, -77.0428]
 
 onMounted(() => {
-  if (!mapEl.value) return;
+  if (!mapEl.value) return
 
-  const map = L.map(mapEl.value, { scrollWheelZoom: true, zoomControl: true }).setView(center, 13);
+  const map = L.map(mapEl.value, { scrollWheelZoom: true, zoomControl: true }).setView(center, 13)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  }).addTo(map)
 
   const psIcon = L.icon({
     iconUrl: smallLogo,
@@ -188,13 +233,13 @@ onMounted(() => {
     iconAnchor: [22, 42],
     popupAnchor: [0, -40],
     className: 'ps-marker'
-  });
+  })
 
   L.marker(center, { icon: psIcon })
       .addTo(map)
       .bindPopup('<b>PuntoSabor</b><br>Av. Sabor 123, Lima')
-      .openPopup();
+      .openPopup()
 
-  setTimeout(() => map.invalidateSize(), 250);
-});
+  setTimeout(() => map.invalidateSize(), 250)
+})
 </script>
