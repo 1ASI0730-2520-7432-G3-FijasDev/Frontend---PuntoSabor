@@ -3,6 +3,7 @@
     <div class="blob"></div>
 
     <div class="hero__grid">
+      <!-- Texto principal -->
       <div>
         <h1>{{ $t('home.headline') }}</h1>
         <p class="hero__lead">{{ $t('home.subhead') }}</p>
@@ -12,17 +13,17 @@
           <button class="btn">{{ $t('home.ctaExplore') }}</button>
         </form>
 
+        <!-- Chips rápidas -->
         <div class="chips">
           <button class="chip" @click="quick('Pollo')">Pollo</button>
           <button class="chip" @click="quick('Marina')">Marina</button>
           <button class="chip" @click="quick('Menú')">Menú</button>
-
           <RouterLink class="chip" to="/categories">{{ $t('home.ctaExplore') }}</RouterLink>
           <RouterLink class="chip" to="/map">{{ $t('home.ctaMap') }}</RouterLink>
         </div>
       </div>
 
-      <!-- Logo con nombre -->
+      <!-- Logo -->
       <div class="pinwrap">
         <div class="pin pin--img">
           <img :src="smallLogo" alt="PuntoSabor" />
@@ -32,22 +33,24 @@
     </div>
   </section>
 
+  <!-- Sección de categorías -->
   <section class="wrap" v-if="cats.length">
     <h2 class="section-title">{{ $t('home.catsTitle') }}</h2>
+
     <div class="grid cards-4">
-      <article v-for="c in cats" :key="c" class="card card--category">
+      <article v-for="c in cats" :key="c.id ?? c.name" class="card card--category">
         <div class="card__media media">
-          <img :src="categoryImg(c)" :alt="c" loading="lazy" @error="onImgError" />
-          <span class="media__badge">{{ c }}</span>
+          <img :src="categoryImg(c.name)" :alt="c.name" loading="lazy" @error="onImgError" />
+          <span class="media__badge">{{ c.name }}</span>
         </div>
 
         <div class="card__body">
-          <strong>{{ c }}</strong>
+          <strong>{{ c.name }}</strong>
           <p class="meta">{{ $t('home.popularNear') }}</p>
         </div>
 
         <div class="card__footer">
-          <RouterLink class="btn" :to="{ path:'/results', query:{ q:c } }">
+          <RouterLink class="btn" :to="{ path:'/results', query:{ q:c.name } }">
             {{ $t('home.view') }}
           </RouterLink>
           <span class="meta">+10</span>
@@ -65,12 +68,14 @@ const modules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp}', {
   eager: true,
   as: 'url'
 });
+
 const IMG_MAP = Object.fromEntries(
     Object.entries(modules).map(([path, url]) => {
       const filename = path.split('/').pop().toLowerCase().replace(/\.[^.]+$/, '');
       return [filename, url];
     })
 );
+
 const FALLBACK =
     IMG_MAP['slogopuntosabor'] ||
     IMG_MAP['logopuntosabor'] ||
@@ -84,7 +89,11 @@ export default {
     smallLogo
   }),
   async created() {
-    this.cats = (await listCategoriesQuery()).slice(0, 4);
+    const raw = await listCategoriesQuery();
+    // Normalizamos a objetos { id, name }
+    this.cats = (raw ?? []).map((c, i) => (
+        typeof c === 'string' ? { id: i + 1, name: c } : c
+    )).slice(0, 4);
   },
   methods: {
     goSearch() {
@@ -93,23 +102,22 @@ export default {
     quick(term) {
       this.$router.push({ path: '/results', query: { q: term } });
     },
-    categoryImg(c) {
-      const slug = String(c).toLowerCase();
+    categoryImg(catName) {
+      const slug = String(catName).toLowerCase();
       const ALIAS = {
         pollo:   ['pollo_brasa'],
         marina:  ['marisco'],
         criolla: ['criolla'],
         chifa:   ['chifaref'],
         postres: ['postresref'],
-        menu:    ['menu', 'menú', 'menuRef'],
-        cafe:    ['cafe', 'café', 'caféRef', 'cafeRef']
+        menu:    ['menu', 'menú', 'menuref'],
+        cafe:    ['cafe', 'café', 'caferef'],
+        parrillas: ['parrillas', 'parrillasref']
       };
       const candidates = (ALIAS[slug] || [slug])
           .map(k => [k, k.replace(/-/g, '_')])
           .flat();
-      for (const key of candidates) {
-        if (IMG_MAP[key]) return IMG_MAP[key];
-      }
+      for (const key of candidates) if (IMG_MAP[key]) return IMG_MAP[key];
       return FALLBACK;
     },
     onImgError(e) {
