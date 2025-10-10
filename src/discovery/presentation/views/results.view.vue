@@ -109,11 +109,11 @@ export default {
       }
       const ALIAS = {
         pollo:     ['pollo', 'pollo-brasa', 'pollo_brasa', 'parrillasref', 'elbrasero', 'dontito', 'donlucho'],
-        marina:    ['marina', 'la-marina', 'la_marina', 'marisco', 'mariscos', 'olamarina', 'rinconmarino'],
-        criolla:   ['criolla', 'antojos-criollos', 'antojos_criollos', 'dona', 'lapicanteria', 'sabornorteno', 'marytierra'],
+        marina:    ['rinconmarino','marytierra','olamarina'],
+        criolla:   ['dona', 'la_picanteria', 'sabornorteno'],
         chifa:     ['chifaref', 'chifaping', 'don-pepe', 'don_pepe', 'el-forastero', 'el_forastero', 'sanjoylao'],
         postres:   ['postresref', 'dulces', 'dulcesazon', 'mazamorra', 'mazamorra-morada', 'mazamorra_morada', 'lacaspdelpostre', 'lapasteleria'],
-        menu:      ['menuref', 'menu', 'menu-del-dia', 'menu_del_dia', 'aesqui'],
+        menu:      ['aesqui','donlucho'],
         cafe:      ['caferef', 'cafe', 'cafecentral', 'aromaysabor']
       };
 
