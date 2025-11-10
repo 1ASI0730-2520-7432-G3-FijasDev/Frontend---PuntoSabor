@@ -23,10 +23,6 @@
     "see": "Ver",
     "exploreInArea": "Explora {category} en tu zona"
   },
-
-  "reviews": {
-    "title": "Reseñas"
-  },
   "plans": {
     "title": "Planes de membresía",
     "subtitle": "Elige el plan que mejor se adapte a tu huarique. Puedes cambiarlo cuando quieras.",
@@ -313,7 +309,20 @@
       "map": "Mapa de huariques",
       "list": "Listado de huariques"
     }
+  },
+  "common": { "saving": "Guardando..." },
+  "reviews": {
+    "title": "Reseñas",
+    "cta": { "reviewThisPlace": "Reseñar", "viewReviews": "Ver reseñas" },
+    "new": { "title": "Nueva reseña", "subtitle": "Cuéntanos tu experiencia" },
+    "form": {
+      "rating": "Calificación",
+      "comment": "Reseña",
+      "placeholder": "Escribe tu opinión (mín. 5 caracteres)",
+      "submit": "Enviar reseña"
+    }
   }
+
 
 
 }

@@ -1,8 +1,9 @@
 {
   "/categories": "/categories",
-  "/huariques*": "/huariques",
+  "/huariques": "/huariques",
+  "/huariques/:id": "/huariques/:id",
   "/promos": "/promos",
   "/reviews": "/reviews",
   "/plans": "/plans",
-  "/users*": "/users"
+  "/users": "/users"
 }

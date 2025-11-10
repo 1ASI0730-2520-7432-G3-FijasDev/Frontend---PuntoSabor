@@ -23,9 +23,6 @@
     "see": "See",
     "exploreInArea": "Explore {category} in your area"
   },
-  "reviews": {
-    "title": "Reviews"
-  },
   "plans": {
     "title": "Membership plans",
     "subtitle": "Choose the plan that best fits your huarique. You can switch anytime.",
@@ -311,6 +308,18 @@
       "search": "Search huarique",
       "map": "Huariques map",
       "list": "Huariques list"
+    }
+  },
+  "common": { "saving": "Saving..." },
+  "reviews": {
+    "title": "Reviews",
+    "cta": { "reviewThisPlace": "Review", "viewReviews": "View reviews"},
+    "new": { "title": "New review", "subtitle": "Tell us about your experience" },
+    "form": {
+      "rating": "Rating",
+      "comment": "Review",
+      "placeholder": "Write your opinion (min. 5 characters)",
+      "submit": "Send review"
     }
   }
 }

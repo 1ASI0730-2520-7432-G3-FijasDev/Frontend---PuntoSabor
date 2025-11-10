@@ -10,10 +10,12 @@ function detectLocale() {
 
 export const i18n = createI18n({
     legacy: false,
+    globalInjection: true,
     locale: detectLocale(),
     fallbackLocale: 'en',
     messages: { en, es }
 });
+
 
 document.documentElement.setAttribute('lang', i18n.global.locale.value);
 
