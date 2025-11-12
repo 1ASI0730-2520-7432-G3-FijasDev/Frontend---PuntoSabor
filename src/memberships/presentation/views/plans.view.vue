@@ -1,11 +1,11 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { listPlansQuery } from '../../application/list-plan.query.js'
 
 const { t, tm, locale } = useI18n()
 
-// precios desde API (id, price)
 const serverPlans = ref([])
 
 onMounted(async () => {
@@ -17,34 +17,28 @@ onMounted(async () => {
   }
 })
 
-// Mapa rápido de precios por id
 const priceById = computed(() => {
   const m = new Map()
   for (const p of serverPlans.value || []) m.set(String(p.id).toLowerCase(), p.price)
   return m
 })
 
-// Formateo de precio según idioma
 function formatPrice(n) {
   if (typeof n !== 'number') return ''
-  if (n === 0) return t('plans.basic.price') // Free / Gratis
+  if (n === 0) return t('plans.basic.price')
   const symbol = locale.value === 'es' ? 'S/' : '$'
   return `${symbol}${n}`
 }
 
 const plans = computed(() => {
   const P = tm('plans') || {}
-
-  const get = (id, key, fb = '') =>
-      (P?.[id]?.[key] ?? fb)
-
+  const get = (id, key, fb = '') => (P?.[id]?.[key] ?? fb)
   const ids = ['premium', 'basic', 'exclusive']
   return ids.map(id => {
     const priceNum = priceById.value.get(id)
     const priceText = (typeof priceNum === 'number')
         ? formatPrice(priceNum)
-        : (get(id, 'price', '') || '') // fallback i18n si no hay server
-
+        : (get(id, 'price', '') || '')
     return {
       key: id,
       name: get(id, 'name', id.toUpperCase()),
@@ -60,6 +54,11 @@ const plans = computed(() => {
 })
 
 const displayPrice = (p) => p.period ? `${p.priceText} ${p.period}` : p.priceText
+const router = useRouter()
+
+function goToPayment(planKey) {
+  router.push({ path: '/memberships/payment', query: { planId: planKey } })
+}
 </script>
 
 <template>
@@ -68,7 +67,6 @@ const displayPrice = (p) => p.period ? `${p.priceText} ${p.period}` : p.priceTex
     <h1 class="section-title">{{ $t('plans.title') }}</h1>
     <p class="section-lead">{{ $t('plans.subtitle') }}</p>
 
-    <!-- Beneficios comunes -->
     <div class="common-benefits">
       <span class="benefit">{{ $t('plans.common.noCommitment') }}</span>
       <span class="benefit">{{ $t('plans.common.securePayments') }}</span>
@@ -84,11 +82,9 @@ const displayPrice = (p) => p.period ? `${p.priceText} ${p.period}` : p.priceTex
       >
         <header class="plan-head">
           <h3 class="plan-name">{{ p.name }}</h3>
-
           <div class="price">
             <span class="price-main">{{ displayPrice(p) }}</span>
           </div>
-
           <div v-if="p.popular" class="ribbon">
             <span>{{ p.popularText }}</span>
           </div>
@@ -102,7 +98,7 @@ const displayPrice = (p) => p.period ? `${p.priceText} ${p.period}` : p.priceTex
         </ul>
 
         <footer class="plan-cta">
-          <button class="btn cta">{{ p.cta }}</button>
+          <button class="btn cta" @click="goToPayment(p.key)">{{ p.cta }}</button>
           <p class="tagline" v-if="p.tagline">{{ p.tagline }}</p>
         </footer>
       </article>

@@ -510,6 +510,45 @@
         "createFailed": "Failed to create promotion"
       }
     }
+  },
+
+  "payment": {
+    "title": "Update Membership",
+    "subtitle": "Confirm your details and payment method.",
+    "card": "Card",
+    "wallet": "Wallet",
+    "cardData": "Card Details",
+    "holderName": "Cardholder",
+    "holderPh": "Juan Pérez",
+    "number": "Card Number",
+    "numberPh": "4532 1488 0343 6467",
+    "month": "Month",
+    "year": "Year",
+    "walletIdLabel": "{name} ID",
+    "walletIdPh": "Your ID or Phone Number",
+    "amount": "Amount",
+    "cycle": "Billing Cycle",
+    "monthly": "Monthly",
+    "quarterly": "Quarterly",
+    "annual": "Annually",
+    "total": "Total Due",
+    "processing": "Processing...",
+
+    "payAmount": "Pay S/ {amount}",
+
+    "success": "Payment Successful!",
+
+    "activated": "Your membership has been activated.",
+
+    "txId": "Transaction ID",
+
+    "plan": "Plan",
+
+    "back": "Back",
+
+    "error": "Error",
+
+    "errorGeneric": "Error processing payment"
   }
 
 
