@@ -23,10 +23,6 @@
     "see": "Ver",
     "exploreInArea": "Explora {category} en tu zona"
   },
-
-  "reviews": {
-    "title": "Reseñas"
-  },
   "plans": {
     "title": "Planes de membresía",
     "subtitle": "Elige el plan que mejor se adapte a tu huarique. Puedes cambiarlo cuando quieras.",
@@ -116,7 +112,31 @@
         }
       }
     },
-    "labels": {
+
+  "contact": {
+    "title": "Contáctanos",
+    "formTitle": "Escríbenos",
+    "nameLabel": "Nombre",
+    "namePh": "Tu nombre",
+    "emailLabel": "Correo",
+    "emailPh": "tucorreo@correo.com",
+    "messageLabel": "Mensaje",
+    "messagePh": "Cuéntanos cómo podemos ayudarte…",
+    "submit": "Enviar",
+    "submitting": "Enviando…",
+    "sent": "¡Mensaje enviado!",
+    "mapTitle": "Encuéntranos",
+    "mapAria": "Mapa con nuestra ubicación",
+    "info": {
+      "address": "Av. Sabor 123, Lima",
+      "hours": "Lun–Vie: 9:00–18:00"
+    }
+  },
+  "home": {
+    "subhead": "Explora por categoría, encuentra promociones y reseñas."
+  },
+
+"labels": {
       "name": "Nombre",
       "category": "Categoría",
       "avgPrice": "Precio promedio (S/)",
@@ -150,7 +170,8 @@
     "submitting": "Ingresando…",
     "noAccount": "¿No tienes cuenta?",
     "register": "Regístrate",
-    "errorDefault": "No pudimos iniciar sesión. Intenta nuevamente."
+    "errorDefault": "No pudimos iniciar sesión. Intenta nuevamente.",
+    "forgotPassword": "¿Olvidaste tu contraseña?"
   },
 
   "register": {
@@ -313,6 +334,55 @@
       "map": "Mapa de huariques",
       "list": "Listado de huariques"
     }
+  },
+  "common": { "saving": "Guardando..." },
+  "reviews": {
+    "title": "Reseñas",
+    "cta": { "reviewThisPlace": "Reseñar", "viewReviews": "Ver reseñas" },
+    "new": { "title": "Nueva reseña", "subtitle": "Cuéntanos tu experiencia" },
+    "form": {
+      "rating": "Calificación",
+      "comment": "Reseña",
+      "placeholder": "Escribe tu opinión (mín. 5 caracteres)",
+      "submit": "Enviar reseña"
+    }
+  },
+
+  "passwordRecovery": {
+    "title": "Recuperar Contraseña",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "submit": "Enviar Instrucciones",
+    "submitting": "Enviando…",
+    "successTitle": "¡Correo enviado!",
+    "successLead": "Se han enviado instrucciones de recuperación a:",
+    "successNote": "Revisa tu correo (incluida la carpeta de spam) y sigue el enlace para restablecer tu contraseña.",
+    "retry": "Volver a Intentar",
+    "backToLogin": "Volver a login",
+    "errorDefault": "No pudimos procesar la solicitud. Intenta otra vez.",
+    "haveLink": "¿Ya tienes el enlace?",
+    "gotLink": "¿Ya recibiste el enlace?",
+    "resetNow": "Restablecer ahora"
+  },
+
+  "resetPassword": {
+    "title": "Restablecer Contraseña",
+    "invalidTitle": "Enlace Inválido o Expirado",
+    "tokenMissing": "No se encontró token de recuperación",
+    "requestNewLink": "Solicitar Nuevo Enlace",
+    "newPassword": "Nueva Contraseña",
+    "minCharsPh": "Mínimo 6 caracteres",
+    "minChars": "Mínimo 6 caracteres",
+    "confirmPassword": "Confirmar Contraseña",
+    "repeatPasswordPh": "Repite tu contraseña",
+    "passwordsMatch": "Las contraseñas coinciden",
+    "passwordsNoMatch": "Las contraseñas no coinciden",
+    "updating": "Actualizando...",
+    "updateBtn": "Actualizar Contraseña",
+    "errorDefault": "Error al restablecer contraseña. Inténtalo otra vez.",
+    "successTitle": "¡Contraseña Actualizada!",
+    "successLead": "Tu contraseña ha sido restablecida exitosamente.",
+    "goToLogin": "Ir a Login"
   }
 
 

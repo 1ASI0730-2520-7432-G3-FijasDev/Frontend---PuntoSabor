@@ -23,9 +23,6 @@
     "see": "See",
     "exploreInArea": "Explore {category} in your area"
   },
-  "reviews": {
-    "title": "Reviews"
-  },
   "plans": {
     "title": "Membership plans",
     "subtitle": "Choose the plan that best fits your huarique. You can switch anytime.",
@@ -115,6 +112,30 @@
         }
       }
     },
+
+    "contact": {
+      "title": "Contact Us",
+      "formTitle": "Write to us",
+      "nameLabel": "Name",
+      "namePh": "Your name",
+      "emailLabel": "Email",
+      "emailPh": "you@email.com",
+      "messageLabel": "Message",
+      "messagePh": "Tell us how we can help…",
+      "submit": "Send",
+      "submitting": "Sending…",
+      "sent": "Message sent!",
+      "mapTitle": "Find us",
+      "mapAria": "Map with our location",
+      "info": {
+        "address": "Av. Sabor 123, Lima",
+        "hours": "Mon–Fri: 9:00–18:00"
+      }
+    },
+    "home": {
+      "subhead": "Explore by category, find promotions, and check reviews."
+    },
+
     "labels": {
       "name": "Name",
       "category": "Category",
@@ -149,7 +170,8 @@
     "submitting": "Signing in…",
     "noAccount": "Don't have an account?",
     "register": "Sign up",
-    "errorDefault": "We couldn't sign you in. Please try again."
+    "errorDefault": "We couldn't sign you in. Please try again.",
+    "forgotPassword": "Forgot your password?"
   },
 
   "register": {
@@ -270,6 +292,7 @@
     "messagePh": "Tell us how we can help…",
     "submit": "Send",
     "submitting": "Sending…",
+    "sent": "Message sent!",
     "mapTitle": "Find us",
     "mapAria": "Map and contact details",
     "info": {
@@ -312,5 +335,56 @@
       "map": "Huariques map",
       "list": "Huariques list"
     }
+  },
+  "common": { "saving": "Saving..." },
+  "reviews": {
+    "title": "Reviews",
+    "cta": { "reviewThisPlace": "Review", "viewReviews": "View reviews"},
+    "new": { "title": "New review", "subtitle": "Tell us about your experience" },
+    "form": {
+      "rating": "Rating",
+      "comment": "Review",
+      "placeholder": "Write your opinion (min. 5 characters)",
+      "submit": "Send review"
+    }
+  },
+
+  "passwordRecovery": {
+    "title": "Password recovery",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@email.com",
+    "submit": "Send instructions",
+    "submitting": "Sending…",
+    "successTitle": "Email sent!",
+    "successLead": "We have sent recovery instructions to:",
+    "successNote": "Check your inbox (including the spam folder) and follow the link to reset your password.",
+    "retry": "Try again",
+    "backToLogin": "Back to login",
+    "errorDefault": "We couldn’t process your request. Please try again.",
+    "haveLink": "Already have the link?",
+    "gotLink": "Already received the link?",
+    "resetNow": "Reset now"
+  },
+
+  "resetPassword": {
+    "title": "Reset Password",
+    "invalidTitle": "Invalid or Expired Link",
+    "tokenMissing": "No recovery token was found",
+    "requestNewLink": "Request New Link",
+    "newPassword": "New Password",
+    "minCharsPh": "Minimum 6 characters",
+    "minChars": "Minimum 6 characters",
+    "confirmPassword": "Confirm Password",
+    "repeatPasswordPh": "Repeat your password",
+    "passwordsMatch": "Passwords match",
+    "passwordsNoMatch": "Passwords do not match",
+    "updating": "Updating...",
+    "updateBtn": "Update Password",
+    "errorDefault": "Couldn't reset password. Please try again.",
+    "successTitle": "Password Updated!",
+    "successLead": "Your password has been reset successfully.",
+    "goToLogin": "Go to Login"
   }
+
+
 }

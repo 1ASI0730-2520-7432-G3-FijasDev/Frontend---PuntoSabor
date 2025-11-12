@@ -35,6 +35,11 @@
           {{ $t('login.noAccount') }}
           <RouterLink to="/register" class="link">{{ $t('login.register') }}</RouterLink>
         </p>
+        <p class="meta">
+          <RouterLink to="/auth/password-recovery" class="link">
+            {{ $t('login.forgotPassword') }}
+          </RouterLink>
+        </p>
 
         <transition name="toast">
           <p v-if="error" class="error" role="alert">{{ error }}</p>

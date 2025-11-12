@@ -1,71 +1,481 @@
 {
   "categories": [
-    { "id": 1, "name": "Pollo" },
-    { "id": 2, "name": "Marina" },
-    { "id": 3, "name": "Criolla" },
-    { "id": 4, "name": "Chifa" },
-    { "id": 5, "name": "Postres" },
-    { "id": 6, "name": "Menú" },
-    { "id": 7, "name": "Café" },
-    { "id": 8, "name": "Parrillas" }
+    {
+      "id": 1,
+      "name": "Pollo"
+    },
+    {
+      "id": 2,
+      "name": "Marina"
+    },
+    {
+      "id": 3,
+      "name": "Criolla"
+    },
+    {
+      "id": 4,
+      "name": "Chifa"
+    },
+    {
+      "id": 5,
+      "name": "Postres"
+    },
+    {
+      "id": 6,
+      "name": "Menú"
+    },
+    {
+      "id": 7,
+      "name": "Café"
+    },
+    {
+      "id": 8,
+      "name": "Parrillas"
+    }
   ],
-
   "huariques": [
-    { "id": 1,  "name": "El Brasero",               "category": "Pollo",     "categoryId": 1, "price": 22, "rating": 4.6, "district": "Surco",                   "near": true  },
-    { "id": 2,  "name": "Rincón Marino",            "category": "Marina",    "categoryId": 2, "price": 28, "rating": 4.8, "district": "Chorrillos",             "near": false },
-    { "id": 3,  "name": "Doña Peta Criolla",        "category": "Criolla",   "categoryId": 3, "price": 25, "rating": 4.5, "district": "Barranco",               "near": true  },
-    { "id": 4,  "name": "Chifa San Joy Lao",        "category": "Chifa",     "categoryId": 4, "price": 21, "rating": 4.4, "district": "Miraflores",             "near": false },
-    { "id": 5,  "name": "La Dulcería",              "category": "Postres",   "categoryId": 5, "price": 15, "rating": 4.9, "district": "San Isidro",             "near": false },
-    { "id": 6,  "name": "La Esquinita del Menú",    "category": "Menú",      "categoryId": 6, "price": 12, "rating": 4.2, "district": "San Borja",              "near": true  },
-    { "id": 7,  "name": "Café Aroma & Sabor",       "category": "Café",      "categoryId": 7, "price": 10, "rating": 4.7, "district": "Miraflores",             "near": false },
-    { "id": 8,  "name": "Pollos Don Tito",          "category": "Pollo",     "categoryId": 1, "price": 24, "rating": 4.7, "district": "La Molina",              "near": false },
-    { "id": 9,  "name": "Mar & Tierra",             "category": "Marina",    "categoryId": 2, "price": 30, "rating": 4.3, "district": "San Miguel",             "near": true  },
-    { "id": 10, "name": "Café Central",             "category": "Café",      "categoryId": 7, "price": 11, "rating": 4.5, "district": "Centro de Lima",         "near": false },
-    { "id": 11, "name": "Parrilladas Don Mario",    "category": "Parrillas", "categoryId": 8, "price": 35, "rating": 4.8, "district": "Surquillo",              "near": true  },
-    { "id": 12, "name": "Brasa y Carbón",           "category": "Parrillas", "categoryId": 8, "price": 38, "rating": 4.6, "district": "Lince",                  "near": false },
-    { "id": 13, "name": "Fuego Criollo",            "category": "Parrillas", "categoryId": 8, "price": 36, "rating": 4.7, "district": "San Juan de Miraflores", "near": true  },
-    { "id": 14, "name": "La Parrilla del Norte",    "category": "Parrillas", "categoryId": 8, "price": 33, "rating": 4.5, "district": "Los Olivos",             "near": false },
-    { "id": 15, "name": "Punto Grill",              "category": "Parrillas", "categoryId": 8, "price": 40, "rating": 4.9, "district": "San Isidro",             "near": false },
-    { "id": 16, "name": "La Picantería Peruana",    "category": "Criolla",   "categoryId": 3, "price": 27, "rating": 4.7, "district": "Surquillo",              "near": true  },
-    { "id": 17, "name": "La Casa del Postre",       "category": "Postres",   "categoryId": 5, "price": 13, "rating": 4.7, "district": "Surquillo",              "near": true  },
-    { "id": 18, "name": "Chifa Ping Chung Long",    "category": "Chifa",     "categoryId": 4, "price": 20, "rating": 4.2, "district": "Lince",                  "near": false },
-    { "id": 19, "name": "El Sabor Norteño",         "category": "Criolla",   "categoryId": 3, "price": 23, "rating": 4.2, "district": "Los Olivos",             "near": false },
-    { "id": 20, "name": "La Ola Marina",            "category": "Marina",    "categoryId": 2, "price": 29, "rating": 4.4, "district": "Magdalena",              "near": true  },
-    { "id": 21, "name": "Menu Don Lucho",           "category": "Menú",      "categoryId": 6, "price": 12, "rating": 4.2, "district": "El Agustino",            "near": true  }
+    {
+      "id": 1,
+      "name": "El Brasero",
+      "category": "Pollo",
+      "categoryId": 1,
+      "price": 22,
+      "rating": 4.6,
+      "district": "Surco",
+      "near": true
+    },
+    {
+      "id": 2,
+      "name": "Rincón Marino",
+      "category": "Marina",
+      "categoryId": 2,
+      "price": 28,
+      "rating": 4.8,
+      "district": "Chorrillos",
+      "near": false
+    },
+    {
+      "id": 3,
+      "name": "Doña Peta Criolla",
+      "category": "Criolla",
+      "categoryId": 3,
+      "price": 25,
+      "rating": 4.5,
+      "district": "Barranco",
+      "near": true
+    },
+    {
+      "id": 4,
+      "name": "Chifa San Joy Lao",
+      "category": "Chifa",
+      "categoryId": 4,
+      "price": 21,
+      "rating": 4.4,
+      "district": "Miraflores",
+      "near": false
+    },
+    {
+      "id": 5,
+      "name": "La Dulcería",
+      "category": "Postres",
+      "categoryId": 5,
+      "price": 15,
+      "rating": 4.9,
+      "district": "San Isidro",
+      "near": false
+    },
+    {
+      "id": 6,
+      "name": "La Esquinita del Menú",
+      "category": "Menú",
+      "categoryId": 6,
+      "price": 12,
+      "rating": 4.2,
+      "district": "San Borja",
+      "near": true
+    },
+    {
+      "id": 7,
+      "name": "Café Aroma & Sabor",
+      "category": "Café",
+      "categoryId": 7,
+      "price": 10,
+      "rating": 4.7,
+      "district": "Miraflores",
+      "near": false
+    },
+    {
+      "id": 8,
+      "name": "Pollos Don Tito",
+      "category": "Pollo",
+      "categoryId": 1,
+      "price": 24,
+      "rating": 4.7,
+      "district": "La Molina",
+      "near": false
+    },
+    {
+      "id": 9,
+      "name": "Mar & Tierra",
+      "category": "Marina",
+      "categoryId": 2,
+      "price": 30,
+      "rating": 4.3,
+      "district": "San Miguel",
+      "near": true
+    },
+    {
+      "id": 10,
+      "name": "Café Central",
+      "category": "Café",
+      "categoryId": 7,
+      "price": 11,
+      "rating": 4.5,
+      "district": "Centro de Lima",
+      "near": false
+    },
+    {
+      "id": 11,
+      "name": "Parrilladas Don Mario",
+      "category": "Parrillas",
+      "categoryId": 8,
+      "price": 35,
+      "rating": 4.8,
+      "district": "Surquillo",
+      "near": true
+    },
+    {
+      "id": 12,
+      "name": "Brasa y Carbón",
+      "category": "Parrillas",
+      "categoryId": 8,
+      "price": 38,
+      "rating": 4.6,
+      "district": "Lince",
+      "near": false
+    },
+    {
+      "id": 13,
+      "name": "Fuego Criollo",
+      "category": "Parrillas",
+      "categoryId": 8,
+      "price": 36,
+      "rating": 4.7,
+      "district": "San Juan de Miraflores",
+      "near": true
+    },
+    {
+      "id": 14,
+      "name": "La Parrilla del Norte",
+      "category": "Parrillas",
+      "categoryId": 8,
+      "price": 33,
+      "rating": 4.5,
+      "district": "Los Olivos",
+      "near": false
+    },
+    {
+      "id": 15,
+      "name": "Punto Grill",
+      "category": "Parrillas",
+      "categoryId": 8,
+      "price": 40,
+      "rating": 4.9,
+      "district": "San Isidro",
+      "near": false
+    },
+    {
+      "id": 16,
+      "name": "La Picantería Peruana",
+      "category": "Criolla",
+      "categoryId": 3,
+      "price": 27,
+      "rating": 4.7,
+      "district": "Surquillo",
+      "near": true
+    },
+    {
+      "id": 17,
+      "name": "La Casa del Postre",
+      "category": "Postres",
+      "categoryId": 5,
+      "price": 13,
+      "rating": 4.7,
+      "district": "Surquillo",
+      "near": true
+    },
+    {
+      "id": 18,
+      "name": "Chifa Ping Chung Long",
+      "category": "Chifa",
+      "categoryId": 4,
+      "price": 20,
+      "rating": 4.2,
+      "district": "Lince",
+      "near": false
+    },
+    {
+      "id": 19,
+      "name": "El Sabor Norteño",
+      "category": "Criolla",
+      "categoryId": 3,
+      "price": 23,
+      "rating": 4.2,
+      "district": "Los Olivos",
+      "near": false
+    },
+    {
+      "id": 20,
+      "name": "La Ola Marina",
+      "category": "Marina",
+      "categoryId": 2,
+      "price": 29,
+      "rating": 4.4,
+      "district": "Magdalena",
+      "near": true
+    },
+    {
+      "id": 21,
+      "name": "Menu Don Lucho",
+      "category": "Menú",
+      "categoryId": 6,
+      "price": 12,
+      "rating": 4.2,
+      "district": "El Agustino",
+      "near": true
+    }
   ],
-
   "promos": [
-    { "id": 1, "title": "2x1 Pollo Hoy",           "note": "Locales seleccionados" },
-    { "id": 2, "title": "Menú Marino S/20",        "note": "Lun–Vie 12:00–16:00" },
-    { "id": 3, "title": "Café + Brownie",          "note": "Solo en Aroma & Sabor" },
-    { "id": 4, "title": "Parrillada Familiar",     "note": "15% en fines de semana" },
-    { "id": 5, "title": "Postres 3x2",             "note": "En La Dulcería todo el mes" },
-    { "id": 6, "title": "Descuento Criollo",       "note": "Platos criollos -10%" }
+    {
+      "id": 1,
+      "title": "2x1 Pollo Hoy",
+      "note": "Locales seleccionados"
+    },
+    {
+      "id": 2,
+      "title": "Menú Marino S/20",
+      "note": "Lun–Vie 12:00–16:00"
+    },
+    {
+      "id": 3,
+      "title": "Café + Brownie",
+      "note": "Solo en Aroma & Sabor"
+    },
+    {
+      "id": 4,
+      "title": "Parrillada Familiar",
+      "note": "15% en fines de semana"
+    },
+    {
+      "id": 5,
+      "title": "Postres 3x2",
+      "note": "En La Dulcería todo el mes"
+    },
+    {
+      "id": 6,
+      "title": "Descuento Criollo",
+      "note": "Platos criollos -10%"
+    }
   ],
-
   "reviews": [
-    { "id": 1, "by": "Carla D.",     "stars": 5, "text": "Buenazo y barato." },
-    { "id": 2, "by": "Luis P.",      "stars": 4, "text": "Rincón Marino excelente, pero demora un poco." },
-    { "id": 3, "by": "Fernanda M.",  "stars": 5, "text": "La Dulcería, los mejores postres del sur." },
-    { "id": 4, "by": "Miguel R.",    "stars": 4, "text": "Fuego Criollo espectacular, carnes suaves." },
-    { "id": 5, "by": "Daniela G.",   "stars": 5, "text": "Punto Grill es otro nivel, todo premium." },
-    { "id": 6, "by": "Julio H.",     "stars": 3, "text": "El Brasero normalito, pero buen precio." },
-    { "id": 7, "by": "Lucía V.",     "stars": 4, "text": "Doña Peta Criolla buen sazón, menú variado." },
-    { "id": 8, "by": "Renato F.",    "stars": 5, "text": "Don Mario la rompe con su parrillada familiar" },
-    { "id": 9, "by": "María L.",     "stars": 4, "text": "Brasa y Carbón deliciosa, atención rápida." },
-    { "id": 10, "by": "Karen T.",    "stars": 5, "text": "Café Central con el mejor espresso." }
+    {
+      "id": 1,
+      "huariqueId": 1,
+      "userId": 1,
+      "rating": 5,
+      "comment": "Buenazo y barato.",
+      "createdAt": "2025-11-01T15:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "huariqueId": 2,
+      "userId": 2,
+      "rating": 4,
+      "comment": "Rincón Marino excelente, pero demora un poco.",
+      "createdAt": "2025-11-02T12:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "huariqueId": 5,
+      "userId": 3,
+      "rating": 5,
+      "comment": "La Dulcería, los mejores postres del sur.",
+      "createdAt": "2025-11-02T18:40:00.000Z"
+    },
+    {
+      "id": 4,
+      "huariqueId": 11,
+      "userId": 2,
+      "rating": 4,
+      "comment": "Fuego Criollo espectacular, carnes suaves.",
+      "createdAt": "2025-11-03T10:05:00.000Z"
+    },
+    {
+      "id": 5,
+      "huariqueId": 15,
+      "userId": 4,
+      "rating": 5,
+      "comment": "Punto Grill es otro nivel, todo premium.",
+      "createdAt": "2025-11-03T21:25:00.000Z"
+    },
+    {
+      "id": 6,
+      "huariqueId": 1,
+      "userId": 3,
+      "rating": 3,
+      "comment": "El Brasero normalito, pero buen precio.",
+      "createdAt": "2025-11-04T09:15:00.000Z"
+    },
+    {
+      "id": 7,
+      "huariqueId": 3,
+      "userId": 1,
+      "rating": 4,
+      "comment": "Doña Peta Criolla buen sazón, menú variado.",
+      "createdAt": "2025-11-04T14:30:00.000Z"
+    },
+    {
+      "id": 8,
+      "huariqueId": 11,
+      "userId": 2,
+      "rating": 5,
+      "comment": "Don Mario la rompe con su parrillada familiar.",
+      "createdAt": "2025-11-05T11:50:00.000Z"
+    },
+    {
+      "id": 9,
+      "huariqueId": 12,
+      "userId": 4,
+      "rating": 4,
+      "comment": "Brasa y Carbón deliciosa, atención rápida.",
+      "createdAt": "2025-11-05T19:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "huariqueId": 10,
+      "userId": 3,
+      "rating": 5,
+      "comment": "Café Central con el mejor espresso.",
+      "createdAt": "2025-11-06T08:45:00.000Z"
+    },
+    {
+      "huariqueId": 1,
+      "userId": 0,
+      "rating": 2,
+      "comment": "buen resto",
+      "createdAt": "2025-11-09T22:40:39.134Z",
+      "id": 11
+    },
+    {
+      "huariqueId": 1,
+      "userId": 0,
+      "rating": 5,
+      "comment": "buen restauranteee",
+      "createdAt": "2025-11-09T23:39:17.106Z",
+      "id": 12
+    },
+    {
+      "huariqueId": 7,
+      "userId": 0,
+      "rating": 4,
+      "comment": "perfecto el café",
+      "createdAt": "2025-11-09T23:40:10.594Z",
+      "id": 13
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 5,
+      "comment": "el mejor pollo de la molina",
+      "createdAt": "2025-11-09T23:55:02.500Z",
+      "id": 14
+    },
+    {
+      "huariqueId": 2,
+      "userId": 0,
+      "rating": 4,
+      "comment": "que rico ceviche!!!",
+      "createdAt": "2025-11-10T00:01:31.120Z",
+      "id": 15
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 4,
+      "comment": "buen pollo y precio",
+      "createdAt": "2025-11-10T00:12:32.117Z",
+      "id": 16
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 5,
+      "comment": "rico rico",
+      "createdAt": "2025-11-10T00:17:45.054Z",
+      "id": 17
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 4,
+      "comment": "asasa",
+      "createdAt": "2025-11-10T00:22:06.635Z",
+      "id": 18
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 2,
+      "comment": "se demoraron mucho al servirme",
+      "createdAt": "2025-11-10T00:30:44.296Z",
+      "id": 19
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 1,
+      "comment": "soy pepa?",
+      "createdAt": "2025-11-10T00:48:19.887Z",
+      "id": 20
+    }
   ],
-
   "plans": [
-    { "id": "premium",   "name": "Premium",   "price": 35 },
-    { "id": "basic",     "name": "Básico",    "price": 0 },
-    { "id": "exclusive", "name": "Exclusive", "price": 50 }
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price": 35
+    },
+    {
+      "id": "basic",
+      "name": "Básico",
+      "price": 0
+    },
+    {
+      "id": "exclusive",
+      "name": "Exclusive",
+      "price": 50
+    }
   ],
-
   "users": [
-    { "id": 1, "name": "demo",      "email": "demo@upc.edu.pe" },
-    { "id": 2, "name": "SoyElPepe", "email": "wa@gmail.com" },
-    { "id": 3, "name": "Luna C.",   "email": "luna@puntosabor.pe" },
-    { "id": 4, "name": "Sebastián", "email": "sebastian@upc.pe" }
+    {
+      "id": 1,
+      "name": "demo",
+      "email": "demo@upc.edu.pe"
+    },
+    {
+      "id": 2,
+      "name": "SoyElPepe",
+      "email": "wa@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Luna C.",
+      "email": "luna@puntosabor.pe"
+    },
+    {
+      "id": 4,
+      "name": "Sebastián",
+      "email": "sebastian@upc.pe"
+    }
   ]
 }
