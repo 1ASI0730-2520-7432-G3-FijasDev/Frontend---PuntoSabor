@@ -1,4 +1,3 @@
-// src/discovery/infrastructure/discovery.repository.js
 import { api } from '@/shared/infrastructure/base-api';
 
 export const DiscoveryRepository = {

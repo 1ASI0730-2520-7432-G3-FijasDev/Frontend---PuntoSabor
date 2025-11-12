@@ -1,8 +1,8 @@
 <template>
   <section class="wrap contact" aria-labelledby="title">
     <header class="page-head">
-      <h1 id="title" class="section-title">{{ $t('contact.title') }}</h1>
-      <p class="section-sub">{{ $t('home.subhead') }}</p>
+      <h1 id="title" class="section-title">{{ t('contact.title') }}</h1>
+      <p class="section-sub">{{ t('home.subhead') }}</p>
     </header>
 
     <div class="sheet">
@@ -17,56 +17,59 @@
                       d="M3.75 7.5 12 12.75 20.25 7.5"/>
               </svg>
             </span>
-            <h3 class="card__title">{{ $t('contact.formTitle') }}</h3>
+            <h3 class="card__title">{{ t('contact.formTitle') }}</h3>
           </div>
 
           <div class="card__body">
             <div class="field">
-              <label for="name">{{ $t('contact.nameLabel') }}</label>
+              <label for="name">{{ t('contact.nameLabel') }}</label>
               <input
                   id="name"
                   v-model.trim="form.name"
                   type="text"
                   autocomplete="name"
                   required
-                  :placeholder="$t('contact.namePh')"
+                  :placeholder="t('contact.namePh')"
               />
             </div>
 
             <div class="field">
-              <label for="email">{{ $t('contact.emailLabel') }}</label>
+              <label for="email">{{ t('contact.emailLabel') }}</label>
               <input
                   id="email"
                   v-model.trim="form.email"
                   type="email"
                   autocomplete="email"
                   required
-                  :placeholder="$t('contact.emailPh')"
+                  :placeholder="t('contact.emailPh')"
               />
             </div>
 
             <div class="field">
-              <label for="message">{{ $t('contact.messageLabel') }}</label>
+              <label for="message">{{ t('contact.messageLabel') }}</label>
               <textarea
                   id="message"
                   v-model.trim="form.message"
                   rows="6"
                   required
-                  :placeholder="$t('contact.messagePh')"
+                  :placeholder="t('contact.messagePh')"
               ></textarea>
             </div>
 
             <div class="actions">
               <button class="btn" type="submit" :disabled="!canSend || sending">
-                <span v-if="!sending">{{ $t('contact.submit') }}</span>
-                <span v-else>{{ $t('contact.submitting') }}</span>
+                <span v-if="!sending">{{ t('contact.submit') }}</span>
+                <span v-else>{{ t('contact.submitting') }}</span>
               </button>
-              <span v-if="sent" class="sent-badge">{{ $t('contact.sent') }}</span>
+
+              <span v-if="sent" class="sent-badge" aria-live="polite">
+                {{ t('contact.sent') }}
+              </span>
             </div>
           </div>
         </form>
 
-        <aside class="card map-card" :aria-label="$t('contact.mapAria')">
+        <aside class="card map-card" :aria-label="t('contact.mapAria')">
           <div class="card__head">
             <span class="badge-ico" aria-hidden="true">
               <svg viewBox="0 0 24 24" class="ico-svg">
@@ -76,11 +79,11 @@
                       d="M19.5 10.5c0 5.25-7.5 10.125-7.5 10.125S4.5 15.75 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
               </svg>
             </span>
-            <h3 class="card__title">{{ $t('contact.mapTitle') }}</h3>
+            <h3 class="card__title">{{ t('contact.mapTitle') }}</h3>
           </div>
 
           <div class="card__body map-body">
-            <div ref="mapEl" class="map" :aria-label="$t('contact.mapAria')"></div>
+            <div ref="mapEl" class="map" :aria-label="t('contact.mapAria')"></div>
 
             <ul class="contact-info">
               <li>
@@ -92,7 +95,7 @@
                           d="M9 21v-6h6v6"/>
                   </svg>
                 </span>
-                <span>{{ $t('contact.info.address') }}</span>
+                <span>{{ t('contact.info.address') }}</span>
               </li>
 
               <li>
@@ -126,7 +129,7 @@
                           d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                   </svg>
                 </span>
-                <span>{{ $t('contact.info.hours') }}</span>
+                <span>{{ t('contact.info.hours') }}</span>
               </li>
             </ul>
           </div>
@@ -143,51 +146,8 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import smallLogo from '@/assets/slogoPuntoSabor.png'
 
-// === i18n local (evita fetch de JSON al entrar directo a /contact) ===
-const { mergeLocaleMessage } = useI18n()
+const { t } = useI18n({ useScope: 'global' })
 
-const enContact = {
-  contact: {
-    title: 'Contact Us',
-    formTitle: 'Write to us',
-    nameLabel: 'Name',
-    namePh: 'Your name',
-    emailLabel: 'Email',
-    emailPh: 'you@email.com',
-    messageLabel: 'Message',
-    messagePh: 'Tell us how we can help…',
-    submit: 'Send',
-    submitting: 'Sending…',
-    sent: 'Message sent!',
-    mapTitle: 'Find us',
-    mapAria: 'Map with our location',
-    info: { address: 'Av. Sabor 123, Lima', hours: 'Mon–Fri: 9:00–18:00' }
-  },
-  home: { subhead: 'Explore by category, find promotions, and check reviews.' }
-}
-const esContact = {
-  contact: {
-    title: 'Contáctanos',
-    formTitle: 'Escríbenos',
-    nameLabel: 'Nombre',
-    namePh: 'Tu nombre',
-    emailLabel: 'Correo',
-    emailPh: 'tucorreo@correo.com',
-    messageLabel: 'Mensaje',
-    messagePh: 'Cuéntanos cómo podemos ayudarte…',
-    submit: 'Enviar',
-    submitting: 'Enviando…',
-    sent: '¡Mensaje enviado!',
-    mapTitle: 'Encuéntranos',
-    mapAria: 'Mapa con nuestra ubicación',
-    info: { address: 'Av. Sabor 123, Lima', hours: 'Lun–Vie: 9:00–18:00' }
-  },
-  home: { subhead: 'Explora por categoría, encuentra promociones y reseñas.' }
-}
-mergeLocaleMessage('en', enContact)
-mergeLocaleMessage('es', esContact)
-
-// === Leaflet: mapea íconos desde el paquete (sin /public) ===
 import iconUrl from 'leaflet/dist/images/marker-icon.png'
 import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png'
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png'
@@ -195,7 +155,6 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png'
 delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({ iconRetinaUrl, iconUrl, shadowUrl })
 
-// === Tu lógica original ===
 const form = reactive({ name: '', email: '', message: '' })
 const sending = ref(false)
 const sent = ref(false)
@@ -208,6 +167,7 @@ const canSend = computed(() => {
 async function onSubmit () {
   if (!canSend.value || sending.value) return
   sending.value = true; sent.value = false
+  // simula request
   await new Promise(r => setTimeout(r, 900))
   sending.value = false; sent.value = true
   setTimeout(() => { sent.value = false }, 3000)
