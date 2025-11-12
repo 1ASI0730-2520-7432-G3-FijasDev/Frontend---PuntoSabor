@@ -510,6 +510,37 @@
         "createFailed": "Error al crear promoción"
       }
     }
+  },
+
+  "payment": {
+    "title": "Actualizar Membresía",
+    "subtitle": "Confirma tus datos y método de pago.",
+    "card": "Tarjeta",
+    "wallet": "Billetera",
+    "cardData": "Datos de Tarjeta",
+    "holderName": "Titular",
+    "holderPh": "Juan Pérez",
+    "number": "Número de tarjeta",
+    "numberPh": "4532 1488 0343 6467",
+    "month": "Mes",
+    "year": "Año",
+    "walletIdLabel": "ID de {name}",
+    "walletIdPh": "Tu ID o teléfono",
+    "amount": "Monto",
+    "cycle": "Ciclo de Facturación",
+    "monthly": "Mensual",
+    "quarterly": "Trimestral",
+    "annual": "Anual",
+    "total": "Total a Pagar",
+    "processing": "Procesando...",
+    "payAmount": "Pagar S/ {amount}",
+    "success": "¡Pago Exitoso!",
+    "activated": "Tu membresía ha sido activada.",
+    "txId": "ID Transacción",
+    "plan": "Plan",
+    "back": "Volver",
+    "error": "Error",
+    "errorGeneric": "Error al procesar pago"
   }
 
 
