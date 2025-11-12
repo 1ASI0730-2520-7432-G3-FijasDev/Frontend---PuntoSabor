@@ -1715,3 +1715,261 @@ body{
     text-align:center; padding:20px; background:#fee; border-radius:12px; color:#c33;
 }
 .reset-password-container .error-message .btn-primary{ display:inline-block; width:auto; padding:10px 20px; }
+
+/* ====== Toolbar ====== */
+.toolbar{
+    display:flex; align-items:center; justify-content:space-between;
+}
+
+/* ====== Botones ====== */
+.ps-btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    gap:.5rem; font-weight:700; padding:.7rem 1.1rem;
+    border-radius:.9rem; border:2px solid transparent; cursor:pointer;
+    transition:transform .08s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.ps-btn--pill{ border-radius:9999px; }
+.ps-btn--sm{ padding:.45rem .8rem; font-size:.9rem; }
+.ps-btn--primary{
+    color:#fff; background:#D9902B; border-color:#BF7E1F;
+    box-shadow:0 2px 0 rgba(0,0,0,.07) inset, 0 6px 14px rgba(0,0,0,.10);
+}
+.ps-btn--primary:hover{ background:#BF7E1F; border-color:#995F14; transform:translateY(-1px); }
+.ps-btn--ghost{ color:#6d4b32; background:transparent; border-color:#d7c4b4; }
+.ps-btn--ghost:hover{ background:#f5efe9; }
+.ps-btn--danger{ color:#fff; background:#e74c3c; border-color:#c0392b; }
+.ps-btn--danger:hover{ background:#c0392b; border-color:#a72f23; }
+
+/* ====== Modal base ====== */
+.ps-modal{
+    position:fixed; inset:0; background:rgba(0,0,0,.35);
+    display:grid; place-items:center; z-index:70; padding:1rem;
+}
+.ps-modal__card{
+    width:min(640px,96vw); background:#fff; border-radius:1rem;
+    box-shadow:0 18px 50px rgba(0,0,0,.18); overflow:hidden;
+}
+.ps-modal__card--md{ width:min(720px,96vw); }
+.ps-modal__head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1rem 1.2rem; background:#faf7ef; border-bottom:1px solid #efe5dc;
+}
+.ps-modal__head h3{ font-size:1.15rem; margin:0; color:#5a3a26; }
+.ps-icon-btn{
+    border:0; background:transparent; font-size:1.2rem; line-height:1;
+    padding:.25rem .4rem; cursor:pointer; color:#7a553d;
+}
+.ps-icon-btn:hover{ color:#5a3a26; }
+.ps-modal__body{ padding:1rem 1.2rem; }
+.ps-modal__actions{
+    display:flex; justify-content:flex-end; gap:.6rem;
+    padding:1rem 1.2rem 1.25rem; border-top:1px solid #efe5dc;
+}
+
+/* ====== Formulario ====== */
+.ps-form{ display:grid; gap:12px; }
+.ps-field label{ display:block; margin-bottom:6px; color:#6d4b32; font-weight:700; font-size:14px; }
+.ps-field input, .ps-field select{
+    width:100%; padding:10px 12px; border:1.5px solid #e7d7c8; border-radius:.7rem; font-size:14px; font-family:inherit;
+    background:#f7f2e9; transition:border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.ps-field input:focus, .ps-field select:focus{
+    outline:none; border-color:#BF7E1F; box-shadow:0 0 0 3px rgba(191,126,31,.12); background:#fff;
+}
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.hint{ color:#666; margin-top:6px; font-size:.9rem; }
+
+/* ====== Chips / detalles modal ====== */
+.ps-chip{
+    display:inline-flex; align-items:center; gap:.3rem; padding:.25rem .6rem; border-radius:9999px;
+    font-size:.82rem; font-weight:700; line-height:1;
+}
+.ps-chip--amber{ color:#fff; background:#BF7E1F; }
+.ps-chip--green{ color:#0f5132; background:#d1e7dd; border:1px solid #badbcc; }
+.ps-chip--blue{ color:#084298; background:#cfe2ff; border:1px solid #b6d4fe; }
+.ps-chip--red{ color:#842029; background:#f8d7da; border:1px solid #f5c2c7; }
+.ps-chip--gray{ color:#41464b; background:#e2e3e5; border:1px solid #d3d6d8; }
+
+.ps-details__top{ display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:.6rem; }
+.ps-details__desc{ color:#4b3a2d; margin:.4rem 0 1rem; }
+.ps-dl{ display:grid; gap:.4rem; }
+.ps-dl__row{ display:grid; grid-template-columns:120px 1fr; gap:.6rem; align-items:center; }
+.ps-dl__row dt{ color:#6d4b32; font-weight:700; }
+.ps-dl__row dd{ margin:0; color:#2b1f19; }
+
+/* ====== Mensajes ====== */
+.error{ color:#e74c3c; }
+.section-title{ color:#5a3a26; }
+
+/* ==== Promotions Management ==== */
+.promotions-container{
+    padding:20px; background:#eaf4c4; min-height:100vh;
+}
+.promotions-layout{
+    max-width:1200px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr; gap:20px;
+}
+@media (max-width:768px){
+    .promotions-layout{ grid-template-columns:1fr; }
+}
+
+.create-panel, .list-panel{
+    background:#fff; border-radius:12px; padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+.create-panel h2, .list-panel h2{
+    color:#333; margin-bottom:20px; font-size:22px;
+}
+
+.search-input{
+    width:100%; padding:12px; border:1.5px solid #e7d7c8;
+    border-radius:.7rem; margin-bottom:20px; font-size:14px; background:#f7f2e9;
+}
+.loading{ text-align:center; padding:40px 20px; color:#999; }
+.success-message{ text-align:center; padding:20px; }
+.success-message .icon{ font-size:40px; color:#27ae60; display:block; margin-bottom:15px; }
+.success-message h3{ color:#333; margin-bottom:10px; }
+.success-message p{ color:#666; margin-bottom:15px; }
+
+/* Lista de promociones */
+.promotions-list{ display:grid; gap:15px; }
+.empty-state{ text-align:center; padding:40px 20px; color:#999; }
+
+.promo-card{
+    border:2px solid #ffc107; border-radius:8px; padding:15px;
+    background:#fffbf0; position:relative; overflow:hidden;
+}
+.promo-card::before{
+    content:'⭐'; position:absolute; top:10px; right:10px; font-size:20px;
+}
+.promo-header{
+    display:flex; justify-content:space-between; align-items:start; margin-bottom:10px;
+}
+.promo-header h3{ color:#333; font-size:16px; margin:0; }
+.badge{
+    background:#ff6b6b; color:#fff; padding:4px 10px; border-radius:20px;
+    font-size:12px; font-weight:700;
+}
+.description{ color:#666; font-size:13px; margin:8px 0; }
+
+.promo-stats{
+    display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0; font-size:12px;
+}
+.stat{ display:flex; justify-content:space-between; }
+.stat .label{ color:#999; }
+.stat .value{ font-weight:700; color:#333; }
+
+.progress-bar{
+    width:100%; height:6px; background:#ddd; border-radius:3px; overflow:hidden; margin:8px 0;
+}
+.progress-fill{ height:100%; background:linear-gradient(90deg,#667eea,#764ba2); transition:width .3s; }
+.usage-text{ font-size:12px; color:#999; margin:6px 0; }
+
+.promo-actions{ display:flex; gap:.6rem; margin-top:.4rem; }
+.full{ width:100%; }
+
+
+.owner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.owner-grid--2 .card {
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: #fff;
+}
+
+.owner-grid .card__head {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.owner-grid .card__body {
+    padding: 20px;
+}
+
+.owner-grid .ps-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.owner-grid .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.owner-grid .full {
+    width: 100%;
+}
+
+.owner-grid .loading,
+.owner-grid .empty-state {
+    padding: 16px;
+    color: #6b6b6b;
+}
+
+.owner-grid .promo-card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 14px;
+    margin: 12px 0;
+    background: rgba(255, 247, 237, 0.6); /* tono cálido del sitio */
+}
+
+.owner-grid .promo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.owner-grid .badge {
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-weight: 600;
+    background: #ffedd5;
+}
+
+.owner-grid .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f3f3f3;
+    border-radius: 999px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.owner-grid .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+}
+
+.owner-grid .usage-text {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-top: 4px;
+}
+
+.owner-grid .success {
+    text-align: center;
+    padding: 12px;
+}
+
+.owner-grid .emoji {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 920px) {
+    .owner-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

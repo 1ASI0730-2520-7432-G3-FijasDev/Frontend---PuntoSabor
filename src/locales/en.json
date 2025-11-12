@@ -211,36 +211,7 @@
       "services": "Services",
       "menu": "Menu"
     },
-    "promos": {
-      "title": "Promotions",
-      "seeDetails": "See details",
-      "cards": {
-        "pollo": {
-          "title": "2x1 Chicken Today",
-          "note": "Selected restaurants"
-        },
-        "marino": {
-          "title": "Seafood Menu $20",
-          "note": "Mon–Fri 12:00–16:00"
-        },
-        "cafe": {
-          "title": "Coffee + Brownie",
-          "note": "Only at Aroma & Sabor"
-        },
-        "parrilla": {
-          "title": "Family Grill",
-          "note": "15% off on weekends"
-        },
-        "postre": {
-          "title": "Desserts 3x2",
-          "note": "At La Dulcería all month"
-        },
-        "criollo": {
-          "title": "Criollo Discount",
-          "note": "10% off criollo dishes"
-        }
-      }
-    },
+
     "labels": {
       "name": "Name",
       "category": "Category",
@@ -265,21 +236,129 @@
       "save": "Save",
       "select": "Select…"
     },
+
     "categories": {
       "anticuchos": "Anticuchos",
       "ceviche": "Ceviche",
       "chifa": "Chifa",
       "polleria": "Pollería"
     },
+
     "placeholders": {
       "street": "Av. Los Incas 123",
       "city": "Lima",
       "reference": "In front of the park",
       "phone": "+51 999 999 999"
     },
-    "saveError": "We couldn't save it. Please try again."
-  },
 
+    "saveError": "We couldn't save it. Please try again.",
+
+    "promos": {
+      "title": "Promotions",
+      "seeDetails": "See details",
+      "addBtn": "Add Promotion",
+      "manageBtn": "Manage Promos",
+
+      "create": { "title": "Create Promotion" },
+
+      "fields": {
+        "title": "Title",
+        "note": "Note / Description",
+        "discount": "Discount (%)",
+        "maxUses": "Quota (0 = no limit)",
+        "start": "Start",
+        "end": "End",
+        "huarique": "Huarique",
+        "selectPlaceholder": "-- Select --"
+      },
+
+      "noHuariquesHint": "There are no huariques available. Please register one from 'Publish your huarique' before creating a promotion.",
+
+      "actions": {
+        "close": "Close",
+        "create": "Create",
+        "creating": "Creating...",
+        "delete": "Delete"
+      },
+
+      "labels": { "off": "OFF" },
+
+      "details": {
+        "validity": "Validity",
+        "available": "Available"
+      },
+
+      "status": {
+        "active": "Active",
+        "upcoming": "Upcoming",
+        "expired": "Expired",
+        "complete": "Sold out"
+      },
+
+      "errors": {
+        "titleRequired": "Title is required",
+        "createFailed": "Failed to create promotion"
+      },
+
+      "confirm": { "delete": "Delete this promotion?" },
+
+      "alerts": {
+        "deleted": "Promotion deleted",
+        "deleteFailed": "Could not delete the promotion"
+      },
+
+      "cards": {
+        "pollo":   { "title": "2x1 Chicken Today", "note": "Selected restaurants" },
+        "marino":  { "title": "Seafood Menu $20",  "note": "Mon–Fri 12:00–16:00" },
+        "cafe":    { "title": "Coffee + Brownie",  "note": "Only at Aroma & Sabor" },
+        "parrilla":{ "title": "Family Grill",      "note": "15% off on weekends" },
+        "postre":  { "title": "Desserts 3x2",      "note": "At La Dulcería all month" },
+        "criollo": { "title": "Criollo Discount",  "note": "10% off criollo dishes" }
+      }
+    },
+
+
+    "promosMgmt": {
+      "create": { "title": "Create Featured Promotion" },
+      "form": {
+        "titleLabel": "Promotion Title",
+        "titlePh": "2x1 Chicken, 30% Discount, etc.",
+        "descriptionLabel": "Description",
+        "descriptionPh": "Promotion details...",
+        "discountLabel": "Discount (%)",
+        "startLabel": "Start Date",
+        "endLabel": "End Date",
+        "maxUsesLabel": "Quota (0 = no limit)"
+      },
+      "actions": {
+        "publish": "Publish Featured Promotion",
+        "publishing": "Creating..."
+      },
+      "success": {
+        "title": "Promotion Published!",
+        "lead": "Your promotion will appear as featured in the listings.",
+        "createAnother": "Create Another"
+      },
+      "list": {
+        "title": "Active Featured Promotions",
+        "loading": "Loading promotions...",
+        "searchPh": "Search promotion...",
+        "empty": "There are no active promotions at the moment"
+      },
+      "card": {
+        "daysRemaining": "Days remaining:",
+        "available": "Available:",
+        "usage": "{percent}% used",
+        "claim": "Claim Offer"
+      },
+      "errors": {
+        "createFailed": "Error creating promotion"
+      },
+      "confirm": {
+        "deleteIrreversible": "Delete this promotion? This action can't be undone in the mock."
+      }
+    }
+  },
 
   "contact": {
     "title" : "Contact Us",
@@ -384,6 +463,53 @@
     "successTitle": "Password Updated!",
     "successLead": "Your password has been reset successfully.",
     "goToLogin": "Go to Login"
+  },
+
+  "ownerManage": {
+    "promos": {
+      "title": "Create Featured Promotion",
+      "listTitle": "Active Featured Promotions",
+      "loading": "Loading promotions...",
+      "empty": "There are no active promotions at the moment",
+      "searchPlaceholder": "Search promotion...",
+      "fields": {
+        "title": "Promotion Title",
+        "description": "Description",
+        "discount": "Discount (%)",
+        "maxUses": "Quota (0 = no limit)",
+        "start": "Start Date",
+        "end": "End Date"
+      },
+      "placeholders": {
+        "title": "2x1 Chicken, 30% Off, etc.",
+        "description": "Promotion details..."
+      },
+      "details": {
+        "validity": "Validity",
+        "daysRemaining": "Days remaining",
+        "available": "Available"
+      },
+      "labels": { "used": "used" },
+      "actions": {
+        "publish": "Publish Featured Promotion",
+        "creating": "Creating...",
+        "claim": "Claim Offer",
+        "delete": "Delete",
+        "createAnother": "Create Another"
+      },
+      "success": {
+        "title": "Promotion Published!",
+        "body": "Your promotion will appear featured in the listings."
+      },
+      "confirm": { "delete": "Delete this promotion? This action cannot be undone in the mock." },
+      "alerts": {
+        "deleted": "Promotion deleted",
+        "deleteFailed": "Could not delete the promotion"
+      },
+      "errors": {
+        "createFailed": "Failed to create promotion"
+      }
+    }
   }
 
 

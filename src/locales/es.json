@@ -211,36 +211,7 @@
       "services": "Servicios",
       "menu": "Menú"
     },
-    "promos": {
-      "title": "Promociones",
-      "seeDetails": "Ver detalles",
-      "cards": {
-        "pollo": {
-          "title": "2x1 Pollo Hoy",
-          "note": "Locales seleccionados"
-        },
-        "marino": {
-          "title": "Menú Marino S/20",
-          "note": "Lun–Vie 12:00–16:00"
-        },
-        "cafe": {
-          "title": "Café + Brownie",
-          "note": "Solo en Aroma & Sabor"
-        },
-        "parrilla": {
-          "title": "Parrillada Familiar",
-          "note": "15% en fines de semana"
-        },
-        "postre": {
-          "title": "Postres 3x2",
-          "note": "En La Dulcería todo el mes"
-        },
-        "criollo": {
-          "title": "Descuento Criollo",
-          "note": "Platos criollos -10%"
-        }
-      }
-    },
+
     "labels": {
       "name": "Nombre",
       "category": "Categoría",
@@ -265,20 +236,129 @@
       "save": "Guardar",
       "select": "Selecciona…"
     },
+
     "categories": {
       "anticuchos": "Anticuchos",
       "ceviche": "Ceviche",
       "chifa": "Chifa",
       "polleria": "Pollería"
     },
+
     "placeholders": {
       "street": "Av. Los Incas 123",
       "city": "Lima",
       "reference": "Frente al parque",
       "phone": "+51 999 999 999"
     },
-    "saveError": "No se pudo guardar. Inténtalo otra vez."
+
+    "saveError": "No se pudo guardar. Inténtalo otra vez.",
+
+    "promos": {
+      "title": "Promociones",
+      "seeDetails": "Ver detalles",
+      "addBtn": "Agregar Promoción",
+      "manageBtn": "Gestionar Promos",
+
+      "create": { "title": "Crear Promoción" },
+
+      "fields": {
+        "title": "Título",
+        "note": "Nota / Descripción",
+        "discount": "Descuento (%)",
+        "maxUses": "Cupo (0 = sin límite)",
+        "start": "Inicio",
+        "end": "Fin",
+        "huarique": "Huarique",
+        "selectPlaceholder": "-- Seleccione --"
+      },
+
+      "noHuariquesHint": "No hay huariques disponibles. Registre uno desde 'Publicar tu huarique' antes de crear una promoción.",
+
+      "actions": {
+        "close": "Cerrar",
+        "create": "Crear",
+        "creating": "Creando...",
+        "delete": "Eliminar"
+      },
+
+      "labels": { "off": "OFF" },
+
+      "details": {
+        "validity": "Vigencia",
+        "available": "Disponibles"
+      },
+
+      "status": {
+        "active": "Activa",
+        "upcoming": "Próxima",
+        "expired": "Vencida",
+        "complete": "Completa"
+      },
+
+      "errors": {
+        "titleRequired": "Título requerido",
+        "createFailed": "Error creando promoción"
+      },
+
+      "confirm": { "delete": "¿Eliminar esta promoción?" },
+
+      "alerts": {
+        "deleted": "Promoción eliminada",
+        "deleteFailed": "No se pudo eliminar la promoción"
+      },
+
+      "cards": {
+        "pollo":   { "title": "2x1 Pollo Hoy",        "note": "Locales seleccionados" },
+        "marino":  { "title": "Menú Marino S/20",     "note": "Lun–Vie 12:00–16:00" },
+        "cafe":    { "title": "Café + Brownie",       "note": "Solo en Aroma & Sabor" },
+        "parrilla":{ "title": "Parrillada Familiar",  "note": "15% en fines de semana" },
+        "postre":  { "title": "Postres 3x2",          "note": "En La Dulcería todo el mes" },
+        "criollo": { "title": "Descuento Criollo",    "note": "Platos criollos -10%" }
+      }
+    },
+
+    "promosMgmt": {
+      "create": { "title": "Crear Promoción Destacada" },
+      "form": {
+        "titleLabel": "Título de la Promoción",
+        "titlePh": "2x1 Pollo, Descuento 30%, etc.",
+        "descriptionLabel": "Descripción",
+        "descriptionPh": "Detalles de la promoción...",
+        "discountLabel": "Descuento (%)",
+        "startLabel": "Fecha de Inicio",
+        "endLabel": "Fecha de Fin",
+        "maxUsesLabel": "Cupo (0 = sin límite)"
+      },
+      "actions": {
+        "publish": "Publicar Promoción Destacada",
+        "publishing": "Creando..."
+      },
+      "success": {
+        "title": "¡Promoción Publicada!",
+        "lead": "Tu promoción aparecerá destacada en los listados.",
+        "createAnother": "Crear Otra"
+      },
+      "list": {
+        "title": "Promociones Destacadas Activas",
+        "loading": "Cargando promociones...",
+        "searchPh": "Buscar promoción...",
+        "empty": "No hay promociones activas en este momento"
+      },
+      "card": {
+        "daysRemaining": "Días restantes:",
+        "available": "Disponibles:",
+        "usage": "{percent}% usado",
+        "claim": "Reclamar Oferta"
+      },
+      "errors": {
+        "createFailed": "Error al crear promoción"
+      },
+      "confirm": {
+        "deleteIrreversible": "¿Eliminar esta promoción? Esta acción no tiene reversa en el mock."
+      }
+    }
   },
+
 
 
   "contact": {
@@ -383,6 +463,53 @@
     "successTitle": "¡Contraseña Actualizada!",
     "successLead": "Tu contraseña ha sido restablecida exitosamente.",
     "goToLogin": "Ir a Login"
+  },
+
+  "ownerManage": {
+    "promos": {
+      "title": "Crear Promoción Destacada",
+      "listTitle": "Promociones Destacadas Activas",
+      "loading": "Cargando promociones...",
+      "empty": "No hay promociones activas en este momento",
+      "searchPlaceholder": "Buscar promoción...",
+      "fields": {
+        "title": "Título de la Promoción",
+        "description": "Descripción",
+        "discount": "Descuento (%)",
+        "maxUses": "Cupo (0 = sin límite)",
+        "start": "Fecha de Inicio",
+        "end": "Fecha de Fin"
+      },
+      "placeholders": {
+        "title": "2x1 Pollo, Descuento 30%, etc.",
+        "description": "Detalles de la promoción..."
+      },
+      "details": {
+        "validity": "Vigencia",
+        "daysRemaining": "Días restantes",
+        "available": "Disponibles"
+      },
+      "labels": { "used": "usado" },
+      "actions": {
+        "publish": "Publicar Promoción Destacada",
+        "creating": "Creando...",
+        "claim": "Reclamar Oferta",
+        "delete": "Eliminar",
+        "createAnother": "Crear Otra"
+      },
+      "success": {
+        "title": "¡Promoción Publicada!",
+        "body": "Tu promoción aparecerá destacada en los listados."
+      },
+      "confirm": { "delete": "¿Eliminar esta promoción? Esta acción no tiene reversa en el mock." },
+      "alerts": {
+        "deleted": "Promoción eliminada",
+        "deleteFailed": "No se pudo eliminar la promoción"
+      },
+      "errors": {
+        "createFailed": "Error al crear promoción"
+      }
+    }
   }
 
 
