@@ -7,7 +7,7 @@
     "plans": "Planes",
     "contact": "Contacto",
     "map": "Mapa",
-    "signin": "Ingresar"
+    "signin": "Iniciar sesión"
   },
 
   "home": {
@@ -16,7 +16,7 @@
     "searchPlaceholder": "Busca por nombre, distrito o categoría…",
     "ctaExplore": "Explorar",
     "ctaMap": "Ver mapa",
-    "catsTitle": "Explorar por categorías",
+    "catsTitle": "Explora por categorías",
     "popularNear": "Opciones populares cerca",
     "view": "Ver"
   },
@@ -24,12 +24,12 @@
   "categories": {
     "title": "Categorías",
     "see": "Ver",
-    "exploreInArea": "Explorar {category} en tu zona"
+    "exploreInArea": "Explora {category} en tu zona"
   },
 
   "plans": {
     "title": "Planes de membresía",
-    "subtitle": "Elige el plan que mejor se ajuste a tu huarique. Puedes cambiarlo cuando quieras.",
+    "subtitle": "Elige el plan que mejor se ajuste a tu huarique. Puedes cambiar cuando quieras.",
     "common": {
       "noCommitment": "Sin compromiso",
       "securePayments": "Pagos seguros",
@@ -40,7 +40,7 @@
     "basic": {
       "name": "BÁSICO",
       "price": "Gratis",
-      "button": "Empieza gratis",
+      "button": "Comenzar gratis",
       "tagline": "Perfecto para empezar a ganar visibilidad",
       "features": [
         "Publica tu huarique",
@@ -57,9 +57,9 @@
       "tagline": "Ideal si ya tienes reseñas y quieres crecer",
       "features": [
         "Todo lo del plan Básico",
-        "Herramientas de promociones destacadas",
+        "Herramientas de promoción destacada",
         "Estadísticas de visitas y comentarios",
-        "Soporte técnico y consultoría"
+        "Soporte técnico y asesoría"
       ]
     },
     "exclusive": {
@@ -85,14 +85,14 @@
       "schedules": "Horarios",
       "address": "Dirección",
       "services": "Servicios",
-      "menu": "Carta"
+      "menu": "Menú"
     },
     "promos": {
       "title": "Promociones",
       "seeDetails": "Ver detalles",
       "cards": {
         "pollo": { "title": "2x1 en Pollo Hoy", "note": "Locales seleccionados" },
-        "marino": { "title": "Menú Marino $20", "note": "Lun–Vie 12:00–16:00" },
+        "marino": { "title": "Menú Marino S/ 20", "note": "Lun–Vie 12:00–16:00" },
         "cafe": { "title": "Café + Brownie", "note": "Solo en Aroma & Sabor" },
         "parrilla": { "title": "Parrilla Familiar", "note": "15% off fines de semana" },
         "postre": { "title": "Postres 3x2", "note": "En La Dulcería todo el mes" },
@@ -114,14 +114,14 @@
       "closed": "Cerrado",
       "delivery": "Delivery",
       "takeaway": "Para llevar",
-      "dinein": "En salón",
+      "dinein": "Para comer en local",
       "itemName": "Nombre",
       "price": "Precio (S/)",
       "section": "Sección",
       "addItem": "+ Agregar ítem",
-      "remove": "Quitar",
+      "remove": "Eliminar",
       "save": "Guardar",
-      "select": "Selecciona…"
+      "select": "Seleccionar…"
     },
     "categories": {
       "anticuchos": "Anticuchos",
@@ -135,33 +135,33 @@
       "reference": "Frente al parque",
       "phone": "+51 999 999 999"
     },
-    "saveError": "No pudimos guardar. Intenta nuevamente."
+    "saveError": "No pudimos guardar. Inténtalo nuevamente."
   },
 
   "login": {
-    "title": "Ingresar",
-    "subtitle": "Escribe tu correo para continuar",
-    "emailPlaceholder": "Correo",
-    "emailAria": "Dirección de correo",
-    "submit": "Ingresar",
+    "title": "Iniciar sesión",
+    "subtitle": "Ingresa tu correo para continuar",
+    "emailPlaceholder": "Correo electrónico",
+    "emailAria": "Correo electrónico",
+    "submit": "Iniciar sesión",
     "submitting": "Ingresando…",
     "noAccount": "¿No tienes cuenta?",
     "register": "Regístrate",
-    "errorDefault": "No pudimos iniciar sesión. Intenta de nuevo."
+    "errorDefault": "No pudimos iniciar sesión. Intenta otra vez."
   },
 
   "register": {
-    "title": "¡Hola!",
+    "title": "¡Hola, amigo!",
     "namePlaceholder": "Nombre",
     "nameAria": "Nombre completo",
     "emailPlaceholder": "Correo electrónico",
-    "emailAria": "Dirección de correo",
+    "emailAria": "Correo electrónico",
     "submit": "Crear cuenta",
     "submitting": "Creando…",
     "helloRight": "¡Qué gusto verte!",
     "subRight": "Crea tu cuenta con tu nombre y correo. Tardarás menos de un minuto.",
     "successToast": "¡Cuenta creada! Te llevamos a elegir tu rol…",
-    "errorToast": "No pudimos crear tu cuenta. Intenta nuevamente."
+    "errorToast": "No pudimos crear tu cuenta. Inténtalo de nuevo."
   },
 
   "roleSelect": {
@@ -173,8 +173,8 @@
     "ownerTitle": "Dueño de restaurante",
     "ownerDesc": "Publica tu huarique y gestiona tu vitrina.",
     "continue": "Continuar",
-    "explorerAria": "Rol explorador",
-    "ownerAria": "Rol dueño de restaurante"
+    "explorerAria": "Rol Explorador",
+    "ownerAria": "Rol Dueño de restaurante"
   },
 
   "contact": {
@@ -211,12 +211,12 @@
       "parri": "Parrillas"
     },
     "quick": {
-      "recommended": "Recomendado",
-      "nearby": "Cerca de ti",
+      "recommended": "Recomendados",
+      "nearby": "Cerca",
       "reviews": "Reseñas"
     },
     "actions": {
-      "viewMenu": "Ver carta",
+      "viewMenu": "Ver menú",
       "directions": "Cómo llegar",
       "call": "Llamar",
       "share": "Compartir"
@@ -258,7 +258,7 @@
   },
 
   "report": {
-    "action": "Reportar info",
+    "action": "Reportar información incorrecta",
     "title": "Reportar información incorrecta",
     "subtitle": "Ayúdanos a mantener los datos correctos.",
     "field": {
@@ -266,8 +266,8 @@
       "options": {
         "name": "Nombre",
         "address": "Dirección",
-        "hours": "Horario",
-        "other": "Otro dato"
+        "hours": "Horario de atención",
+        "other": "Otros datos"
       }
     },
     "current": "Valor actual",
@@ -281,6 +281,41 @@
     "submitting": "Enviando…",
     "cancel": "Cancelar",
     "toastSaved": "¡Gracias! Revisaremos tu reporte.",
-    "toastError": "No pudimos enviar el reporte. Intenta nuevamente."
+    "toastError": "No pudimos enviar el reporte. Inténtalo nuevamente."
+  },
+
+  "reports": {
+    "report": {
+      "action": "Reportar información incorrecta",
+      "title": "Reportar información incorrecta",
+      "subtitle": "Ayúdanos a mantener los datos correctos.",
+      "field": {
+        "label": "¿Qué deseas corregir?",
+        "options": {
+          "name": "Nombre",
+          "address": "Dirección",
+          "hours": "Horario de atención",
+          "other": "Otros datos"
+        }
+      },
+      "current": "Valor actual",
+      "suggested": "Valor correcto",
+      "comment": "Comentario (opcional)",
+      "placeholders": {
+        "suggested": "Escribe el valor correcto…",
+        "comment": "Explica qué está mal o comparte un enlace de referencia…"
+      },
+      "submit": "Enviar reporte",
+      "submitting": "Enviando…",
+      "cancel": "Cancelar",
+      "toastSaved": "¡Gracias! Revisaremos tu reporte.",
+      "toastError": "No pudimos enviar el reporte. Inténtalo nuevamente."
+    }
+  },
+
+  "status": {
+    "open": "Abierto ahora",
+    "closed": "Cerrado",
+    "unknown": "Estado no confirmado"
   }
 }

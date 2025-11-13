@@ -1568,7 +1568,7 @@ body{
 
 .ps-control:focus {
     border-color: var(--ps-brand);
-    /* si tu build soporta color-mix — Vite+modern browsers ok */
+
     box-shadow: 0 0 0 4px color-mix(in oklab, var(--ps-brand) 14%, transparent);
 }
 
@@ -1624,6 +1624,72 @@ body{
     cursor: not-allowed;
     box-shadow: none;
 }
+
+
+:root{
+
+    --state-open-bg:#e7f6e8;
+    --state-open-bd:#cfead1;
+    --state-open-tx:#1e7b54;
+
+    --state-closed-bg:#fdecec;
+    --state-closed-bd:#f7c9c9;
+    --state-closed-tx:#7a1f1f;
+
+    --state-unk-bg:#fff8e1;
+    --state-unk-bd:#f1e0a6;
+    --state-unk-tx:#6a4a0b;
+}
+
+.zones-wrap .hours-row{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+
+.zones-wrap .status-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:.78rem;
+    font-weight:800;
+    line-height:1;
+    border:1px solid transparent;
+    background:#fff;
+    user-select:none;
+}
+
+
+.zones-wrap .status-badge .status-dot{
+    width:8px; height:8px; border-radius:50%; background:currentColor;
+}
+
+
+.zones-wrap .status-badge.is-open{
+    color:var(--state-open-tx);
+    background:var(--state-open-bg);
+    border-color:var(--state-open-bd);
+}
+.zones-wrap .status-badge.is-closed{
+    color:var(--state-closed-tx);
+    background:var(--state-closed-bg);
+    border-color:var(--state-closed-bd);
+}
+.zones-wrap .status-badge.is-unknown{
+    color:var(--state-unk-tx);
+    background:var(--state-unk-bg);
+    border-color:var(--state-unk-bd);
+}
+
+
+@media (max-width:420px){
+    .zones-wrap .status-badge{ padding:4px 8px; font-size:.75rem; }
+}
+
 
 /* === Responsive for 3-column card grids (Promos) === */
 @media (max-width: 1024px){

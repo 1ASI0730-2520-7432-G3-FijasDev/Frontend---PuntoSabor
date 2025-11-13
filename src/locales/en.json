@@ -311,5 +311,11 @@
       "toastSaved": "Thanks! We’ll review your report.",
       "toastError": "We couldn’t submit the report. Please try again."
     }
+  },
+
+  "status": {
+    "open": "Open now",
+    "closed": "Closed",
+    "unknown": "Not confirmed"
   }
 }
