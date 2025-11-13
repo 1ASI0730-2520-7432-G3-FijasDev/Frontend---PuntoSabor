@@ -11,6 +11,8 @@ const PromotionsRoutes  = () => import('./promotions/presentation/promotions-rou
 const ReviewsRoutes     = () => import('./reviews/reviews-routes.js');
 const MembershipsRoutes = () => import('./memberships/presentation/memberships-routes.js');
 const ContactRoutes     = () => import('./contact/presentation/contact-routes.js');
+const ReportsRoutes = () => import('./reports/presentation/reports-routes.js');
+
 
 const router = createRouter({
     history: createWebHistory(),
@@ -46,7 +48,6 @@ router.afterEach((to) => {
     if (typeof document !== 'undefined') document.title = title;
 });
 
-
 (async () => {
     const ctxs = [
         (await AuthRoutes()).default,
@@ -54,7 +55,8 @@ router.afterEach((to) => {
         (await PromotionsRoutes()).default,
         (await ReviewsRoutes()).default,
         (await MembershipsRoutes()).default,
-        (await ContactRoutes()).default
+        (await ContactRoutes()).default,
+        (await ReportsRoutes()).default,
     ];
     ctxs.flat().forEach(r => router.addRoute(r));
 })();
