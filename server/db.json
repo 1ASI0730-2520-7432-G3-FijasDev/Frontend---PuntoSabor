@@ -295,18 +295,6 @@
       "stars": 5,
       "text": "Café Central con el mejor espresso.",
       "status": "approved"
-    },
-    {
-      "rating": 3,
-      "content": "maso",
-      "userId": 10,
-      "by": "snay",
-      "stars": 3,
-      "text": "maso",
-      "status": "approved",
-      "createdAt": "2025-11-12T10:47:58.940Z",
-      "requiresReview": false,
-      "id": 11
     }
   ],
   "plans": [
