@@ -437,14 +437,6 @@
       "comment": "soy pepa?",
       "createdAt": "2025-11-10T00:48:19.887Z",
       "id": 20
-    },
-    {
-      "huariqueId": 1,
-      "userId": 0,
-      "rating": 5,
-      "comment": "Rico\noiii",
-      "createdAt": "2025-11-12T21:05:57.867Z",
-      "id": 21
     }
   ],
   "plans": [
@@ -484,21 +476,6 @@
       "id": 4,
       "name": "Sebastián",
       "email": "sebastian@upc.pe"
-    },
-    {
-      "name": "asdas",
-      "email": "aasds@gmail.com",
-      "id": 5
-    },
-    {
-      "name": "asdsa",
-      "email": "sadsa@asdas.com",
-      "id": 6
-    },
-    {
-      "name": "carlos",
-      "email": "carloswaye@oiii.com",
-      "id": 7
     }
   ]
 }

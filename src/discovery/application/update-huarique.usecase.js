@@ -1,4 +1,4 @@
-    import { DiscoveryRepository } from '../infrastructure/discovery.repository';
+import { DiscoveryRepository } from '../infrastructure/discovery.repository';
 
 export async function updateHuarique(id, payload) {
     const repo = new DiscoveryRepository();
