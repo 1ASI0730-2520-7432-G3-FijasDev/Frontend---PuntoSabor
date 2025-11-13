@@ -16,7 +16,6 @@ export const i18n = createI18n({
     messages: { en, es }
 });
 
-
 document.documentElement.setAttribute('lang', i18n.global.locale.value);
 
 export function setLocale(locale) {

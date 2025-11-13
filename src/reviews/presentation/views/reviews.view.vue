@@ -1,7 +1,43 @@
 <template>
-  <section class="revlist">
-    <h1 class="revlist__title">{{ $t('reviews.title') }}</h1>
+  <section class="revlist wrap">
+    <!-- Encabezado con acciones -->
+    <div class="section-head">
+      <h1 class="revlist__title section-title">
+        {{ $t('reviews.title') }}
+      </h1>
 
+      <div class="actions">
+        <!-- Solo admins / owners -->
+        <RouterLink
+            v-if="isAdmin"
+            class="btn btn--admin"
+            :to="{ path: '/reviews/admin' }"
+        >
+          Panel Admin
+        </RouterLink>
+
+        <!-- Botón para crear reseña del huarique actual -->
+        <RouterLink
+            v-if="isLoggedIn"
+            class="btn btn--primary"
+            :to="{ name: 'review-new', params: { huariqueId: currentHuariqueId } }"
+        >
+          Escribir reseña
+        </RouterLink>
+
+        <!-- Si no está logueado -->
+        <button
+            v-else
+            class="btn btn--primary btn--disabled"
+            title="Debes estar logueado"
+            disabled
+        >
+          Escribir reseña
+        </button>
+      </div>
+    </div>
+
+    <!-- Lista de reseñas  -->
     <div v-if="reviews.length" class="revlist__grid">
       <article v-for="r in reviews" :key="r.id" class="revitem" role="article">
         <header class="revitem__head">
@@ -34,26 +70,53 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import { getSession } from '@/auth/application/get-session.query.js';
 import { ReviewsRepository } from '@/reviews/infrastructure/reviews.repository.js';
 
 export default {
   name: 'ReviewsView',
+  components: { RouterLink },
   setup() {
     const { t } = useI18n();
     return { t };
   },
-  data: () => ({ reviews: [] }),
+  data: () => ({
+    reviews: [],
+    session: null
+  }),
+  computed: {
+    currentHuariqueId() {
+      const id = Number(this.$route.params.huariqueId);
+      return Number.isNaN(id) ? 0 : id;
+    },
+    isLoggedIn() {
+      return !!(this.session && this.session.id);
+    },
+    isAdmin() {
+      const role = this.session?.role;
+      return role === 'owner' || role === 'admin';
+    }
+  },
   async created() {
-    const id = Number(this.$route.params.huariqueId);
+    // Cargar reseñas
+    const id = this.currentHuariqueId;
     this.reviews = id
         ? await ReviewsRepository.listByHuarique(id)
         : await ReviewsRepository.list();
+
+    // Cargar sesión para los botones
+    try {
+      this.session = await getSession();
+    } catch (e) {
+      this.session = null;
+    }
   },
   watch: {
     '$route.params.huariqueId': {
-      async handler(n) {
-        const id = Number(n);
+      async handler() {
+        const id = this.currentHuariqueId;
         this.reviews = id
             ? await ReviewsRepository.listByHuarique(id)
             : await ReviewsRepository.list();
@@ -99,6 +162,7 @@ export default {
   margin: 1.75rem auto 2.5rem;
   padding: 0 1rem;
 }
+
 .revlist__title{
   color: var(--ps-brown);
   font-size: 2.2rem;
@@ -107,6 +171,49 @@ export default {
   margin: .35rem 0 1.25rem;
 }
 
+/* Encabezado + acciones  */
+.section-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:18px;
+}
+.actions{
+  display:flex;
+  gap:8px;
+}
+.btn{
+  background:linear-gradient(90deg,#667eea,#764ba2);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-size: .9rem;
+}
+.btn:hover{
+  opacity:0.95;
+  transform:translateY(-1px);
+}
+.btn--admin{
+  background:linear-gradient(90deg,#f39c12,#e67e22);
+}
+.btn--primary{
+  background:linear-gradient(90deg,#667eea,#764ba2);
+}
+.btn--disabled{
+  opacity:0.5;
+  cursor:not-allowed;
+}
+.btn--disabled:hover{
+  opacity:0.5;
+  transform:none;
+}
+
+/* Grid de tarjetas  */
 .revlist__grid{
   display: grid;
   gap: 1rem 1.25rem;
@@ -162,7 +269,6 @@ export default {
   font-size: .85rem; color: #8b6a4c;
 }
 
-/* Estado vacío */
 .revlist__empty{
   background: var(--ps-cream);
   border: 1px dashed rgba(231,163,62,.45);
