@@ -6,7 +6,9 @@
     "plans": "Planes",
     "contact": "Contacto",
     "map": "Mapa",
-    "signin": "Ingresar"
+    "signin": "Ingresar",
+    "favorites": "Favoritos",
+    "profile": "Perfil"
   },
   "home": {
     "headline": "Descubre huariques auténticos cerca de ti",
@@ -541,7 +543,32 @@
     "back": "Volver",
     "error": "Error",
     "errorGeneric": "Error al procesar pago"
+  },
+
+  "favorites": {
+    "title": "Mis huariques favoritos",
+    "subtitle": "Aquí se guardan los huariques que marcaste como favoritos.",
+    "empty": "Aún no tienes huariques en tu lista de favoritos.",
+    "ctaExplore": "Explorar huariques",
+    "cta": {
+      "add": "Guardar {name} como favorito",
+      "remove": "Quitar {name} de favoritos",
+      "addShort": "Guardar",
+      "inFavorites": "En favoritos"
+    }
+  },
+  "notifications": {
+    "title": "Configuración de notificaciones",
+    "intro": "Activa o desactiva las notificaciones según tu preferencia.",
+    "section": {
+      "general": "Preferencias generales"
+    },
+    "fields": {
+      "app": "Notificaciones dentro de la aplicación",
+      "promos": "Promociones y descuentos de huariques",
+      "reviews": "Nuevas reseñas de mis huariques"
+    },
+    "save": "Guardar preferencias",
+    "saved": "Tus preferencias se aplicaron correctamente."
   }
-
-
 }
