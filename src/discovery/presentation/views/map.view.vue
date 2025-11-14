@@ -66,12 +66,20 @@
                   </svg>
                   <span>{{ selectedMeta.address }}</span>
                 </li>
-                <li>
+
+                <!-- Horario + estado -->
+                <li class="hours-row">
                   <svg class="i i--stroke" viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="12" r="9.5" />
                     <path d="M12 7v5l4 2" />
                   </svg>
+
                   <span>{{ selectedMeta.hours }}</span>
+
+                  <span v-if="statusText" class="status-badge" :class="statusClass">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    {{ statusText }}
+                  </span>
                 </li>
               </ul>
 
@@ -98,7 +106,7 @@
                     class="btn btn--ghost"
                     :to="{
                     name: 'report-issue',
-                    params: { id: selectedPlace?.id },     // slug del huarique
+                    params: { id: selectedPlace?.id },
                     query: { name: selectedPlace?.name, address: selectedMeta?.address, hours: selectedMeta?.hours }
                   }"
                 >
@@ -266,7 +274,7 @@ export default defineComponent({
     // places + META
     const places = HUARIQUES.map(h => {
       const cat = CAT[h.category]?.code ?? 'otros'
-      return { id: slug(h.name), name: h.name, cat } // id = slug (string) ✔
+      return { id: slug(h.name), name: h.name, cat } // id = slug (string)
     })
     const META = {}
     HUARIQUES.forEach(h => {
@@ -378,7 +386,6 @@ export default defineComponent({
     function onChip (cat) {
       state.activeCat = cat || 'all'
       if (state.activeId && !filteredPlaces.value.some(p => p.id === state.activeId)) state.activeId = null
-      // seleccionar el primero para que nunca quede vacío
       if (!state.activeId && filteredPlaces.value.length) selectPlace(filteredPlaces.value[0].id, true)
     }
     function selectPlace (id, center = false) {
@@ -429,11 +436,58 @@ export default defineComponent({
     })
     onBeforeUnmount(() => { if (map) { map.remove(); markersById.clear() } })
 
+    /* ======== Estado junto al horario ======== */
+    const effectiveStatus = computed(() => {
+      const s = selectedMeta.value?.status
+      if (s === 'open' || s === 'closed' || s === 'unknown') return s
+      return inferStatusFromHours(selectedMeta.value?.hours)
+    })
+
+    const statusText = computed(() => {
+      switch (effectiveStatus.value) {
+        case 'open':   return t('status.openNow')
+        case 'closed': return t('status.closed')
+        default:       return t('status.unconfirmed')
+      }
+    })
+
+    const statusClass = computed(() => ({
+      'is-open':    effectiveStatus.value === 'open',
+      'is-closed':  effectiveStatus.value === 'closed',
+      'is-unknown': effectiveStatus.value !== 'open' && effectiveStatus.value !== 'closed'
+    }))
+
+    function inferStatusFromHours (hoursStr) {
+      if (!hoursStr || typeof hoursStr !== 'string') return 'unknown'
+      const m = hoursStr.match(/(\d{1,2}:\d{2})\s*–\s*(\d{1,2}:\d{2})/)
+      if (!m) return 'unknown'
+
+      const toMin = (s) => {
+        const [h, mm] = s.split(':').map(Number)
+        return h * 60 + mm
+      }
+
+      const open = toMin(m[1])
+      let close  = toMin(m[2])
+
+      const now  = new Date()
+      let cur    = now.getHours() * 60 + now.getMinutes()
+
+      // Horarios que cruzan medianoche (ej. 18:00–02:00)
+      if (close <= open) {
+        close += 24 * 60
+        if (cur < open) cur += 24 * 60
+      }
+
+      return cur >= open && cur <= close ? 'open' : 'closed'
+    }
+
     return {
       mapEl, chipOptions, catLabel,
       filteredPlaces, selectedPlace, selectedMeta, filteredTags,
       selectPlace, onChip, callActive, shareActive,
-      logoUrl, mapsHref, queryText, activeCat, activeId
+      logoUrl, mapsHref, queryText, activeCat, activeId,
+      statusText, statusClass
     }
   }
 })

@@ -605,6 +605,11 @@
     "cancel": "Cancel",
     "toastSaved": "Thanks! We’ll review your report.",
     "toastError": "We couldn’t submit the report. Please try again."
+  },
+  "status": {
+    "openNow": "Open now",
+    "closed": "Closed",
+    "unconfirmed": "Not confirmed"
   }
 
 }

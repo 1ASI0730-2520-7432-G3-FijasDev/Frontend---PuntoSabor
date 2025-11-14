@@ -623,5 +623,11 @@
   "cancel": "Cancelar",
   "toastSaved": "¡Gracias! Revisaremos tu reporte.",
   "toastError": "No pudimos enviar el reporte. Intenta nuevamente."
-}
+},
+  "status": {
+    "openNow": "Abierto ahora",
+    "closed": "Cerrado",
+    "unconfirmed": "Sin confirmar"
+  }
+
 }
