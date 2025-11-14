@@ -8,7 +8,8 @@
     "map": "Mapa",
     "signin": "Ingresar",
     "favorites": "Favoritos",
-    "profile": "Perfil"
+    "profile": "Perfil",
+    "preferences": "Preferencias"
   },
   "home": {
     "headline": "Descubre huariques auténticos cerca de ti",
@@ -628,6 +629,22 @@
     "openNow": "Abierto ahora",
     "closed": "Cerrado",
     "unconfirmed": "Sin confirmar"
+  "preferences": {
+    "title": "Configuración de preferencias",
+    "subtitle": "Personaliza tus recomendaciones según tu estilo de huariques.",
+
+    "cuisineTitle": "Tipo de cocina preferida",
+    "cuisineHint": "Puedes elegir más de una.",
+
+    "budgetTitle": "Presupuesto por persona",
+
+    "locationTitle": "Ubicación",
+    "district": "Distrito preferido",
+    "placeholderDistrict": "Ej: Surco, Miraflores…",
+    "nearOnly": "Solo mostrar huariques cerca de mí",
+
+    "save": "Guardar preferencias",
+    "saving": "Guardando…"
   }
 
 }
