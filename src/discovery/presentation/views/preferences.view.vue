@@ -3,7 +3,7 @@ import { ref, onMounted, computed } from 'vue';
 import { getPreferencesQuery } from '@/discovery/application/get-preferences.query';
 import { updatePreferencesUsecase } from '@/discovery/application/update-preferences.usecase';
 import { listCategoriesQuery } from '@/discovery/application/list-categories.query';
-import { getSession } from '@/auth/application/get-session.query.js'; // 👈 igual que en App.vue
+import { getSession } from '@/auth/application/get-session.query.js';
 
 const loading = ref(true);
 const saving = ref(false);
@@ -25,6 +25,7 @@ const budgets = [
   { label: 'Hasta S/ 30', value: 30 },
 ];
 
+// si falla la API de categorías
 const fallbackCategories = [
   'Pollo',
   'Marina',
@@ -36,7 +37,6 @@ const fallbackCategories = [
   'Parrillas',
 ];
 
-// email directamente desde la sesión guardada en localStorage
 const userEmail = computed(() => session.value?.email || null);
 
 async function loadCategories() {
@@ -50,10 +50,7 @@ async function loadCategories() {
 
 async function loadSessionAndPreferences() {
   try {
-    // 👇 igual que en App.vue, es síncrono
     session.value = getSession();
-    console.log('SESSION EN PREFERENCES:', session.value);
-
     if (!userEmail.value) {
       console.warn('No hay email en sesión, ¿seguro que estás logeado?');
       return;
@@ -99,10 +96,10 @@ async function onSubmit() {
   <section class="wrap prefs-wrap" aria-labelledby="prefs-title">
     <header class="page-head">
       <h2 id="prefs-title" class="section-title">
-        Configuración de preferencias
+        {{ $t('preferences.title') }}
       </h2>
       <p class="section-subtitle">
-        Personaliza tus recomendaciones según tu estilo de huariques.
+        {{ $t('preferences.subtitle') }}
       </p>
     </header>
 
@@ -111,13 +108,18 @@ async function onSubmit() {
     <form v-else class="prefs-form" @submit.prevent="onSubmit">
       <!-- Tipo de cocina -->
       <fieldset class="prefs-group">
-        <!-- Legend solo para accesibilidad, se oculta por CSS -->
-        <legend>Tipo de cocina preferida</legend>
+        <!-- Legend solo accesible -->
+        <legend>{{ $t('preferences.cuisineTitle') }}</legend>
 
-        <!-- TÍTULO VISIBLE -->
-        <p class="prefs-group-title">Tipo de cocina preferida</p>
+        <!-- Título visible -->
+        <p class="prefs-group-title">
+          {{ $t('preferences.cuisineTitle') }}
+        </p>
 
-        <p class="hint">Puedes elegir más de una.</p>
+        <p class="hint">
+          {{ $t('preferences.cuisineHint') }}
+        </p>
+
         <div class="chips-grid">
           <label
               v-for="cat in categories"
@@ -136,10 +138,11 @@ async function onSubmit() {
 
       <!-- Presupuesto -->
       <fieldset class="prefs-group">
-        <legend>Presupuesto por persona</legend>
+        <legend>{{ $t('preferences.budgetTitle') }}</legend>
 
-        <!-- TÍTULO VISIBLE -->
-        <p class="prefs-group-title">Presupuesto por persona</p>
+        <p class="prefs-group-title">
+          {{ $t('preferences.budgetTitle') }}
+        </p>
 
         <select v-model="form.maxPrice">
           <option
@@ -154,28 +157,29 @@ async function onSubmit() {
 
       <!-- Ubicación -->
       <fieldset class="prefs-group">
-        <legend>Ubicación</legend>
+        <legend>{{ $t('preferences.locationTitle') }}</legend>
 
-        <!-- TÍTULO VISIBLE -->
-        <p class="prefs-group-title">Ubicación</p>
+        <p class="prefs-group-title">
+          {{ $t('preferences.locationTitle') }}
+        </p>
 
         <label class="field">
-          <span>Distrito preferido</span>
+          <span>{{ $t('preferences.district') }}</span>
           <input
               type="text"
               v-model="form.district"
-              placeholder="Ej: Surco, Miraflores…"
+              :placeholder="$t('preferences.placeholderDistrict')"
           />
         </label>
 
         <label class="field checkbox">
           <input type="checkbox" v-model="form.nearOnly" />
-          <span>Solo mostrar huariques cerca de mí</span>
+          <span>{{ $t('preferences.nearOnly') }}</span>
         </label>
       </fieldset>
 
       <button class="btn-primary" type="submit" :disabled="saving">
-        {{ saving ? 'Guardando…' : 'Guardar preferencias' }}
+        {{ saving ? $t('preferences.saving') : $t('preferences.save') }}
       </button>
     </form>
   </section>

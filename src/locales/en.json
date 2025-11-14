@@ -8,7 +8,8 @@
     "map": "Map",
     "signin": "Sign in",
     "favorites": "Favorites",
-    "profile": "Profile"
+    "profile": "Profile",
+    "preferences": "Preferences"
   },
   "home": {
     "headline": "Discover authentic huariques near you",
@@ -579,5 +580,23 @@
     },
     "save": "Save preferences",
     "saved": "Your notification preferences were saved successfully."
+  },
+  "preferences": {
+    "title": "Preference Settings",
+    "subtitle": "Customize your recommendations based on your huarique style.",
+
+    "cuisineTitle": "Preferred cuisine type",
+    "cuisineHint": "You can choose more than one.",
+
+    "budgetTitle": "Budget per person",
+
+    "locationTitle": "Location",
+    "district": "Preferred district",
+    "placeholderDistrict": "E.g.: Surco, Miraflores…",
+    "nearOnly": "Only show huariques near me",
+
+    "save": "Save preferences",
+    "saving": "Saving…"
   }
+
 }
