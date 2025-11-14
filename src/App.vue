@@ -20,7 +20,7 @@
 
         <template v-else>
           <RouterLink to="/favorites">{{ $t('nav.favorites') }}</RouterLink>
-          <RouterLink to="/preferences">Preferencias</RouterLink>
+          <RouterLink to="/preferences">{{ $t('nav.preferences') }}</RouterLink>
           <RouterLink to="/profile">{{ $t('nav.profile') }}</RouterLink>
 
           <span class="user-label" :title="userName" aria-label="Sesión iniciada">
