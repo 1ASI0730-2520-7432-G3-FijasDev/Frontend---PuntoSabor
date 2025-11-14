@@ -1,48 +1,53 @@
 {
   "brand": "PuntoSabor",
+
   "nav": {
     "categories": "Categorías",
     "promos": "Promos",
     "plans": "Planes",
     "contact": "Contacto",
     "map": "Mapa",
+    "signin": "Iniciar sesión"
     "signin": "Ingresar",
     "favorites": "Favoritos",
     "profile": "Perfil"
   },
+
   "home": {
     "headline": "Descubre huariques auténticos cerca de ti",
-    "subhead": "Explora por categoría, encuentra promociones y revisa reseñas reales de la comunidad. Guarda tus favoritos y apoya a los pequeños negocios.",
-    "searchPlaceholder": "Buscar por nombre, distrito o categoría…",
+    "subhead": "Explora por categoría, encuentra promociones y revisa opiniones reales de la comunidad. Guarda tus favoritos y apoya a los negocios locales.",
+    "searchPlaceholder": "Busca por nombre, distrito o categoría…",
     "ctaExplore": "Explorar",
     "ctaMap": "Ver mapa",
     "catsTitle": "Explora por categorías",
-    "popularNear": "Opciones populares cerca de ti",
+    "popularNear": "Opciones populares cerca",
     "view": "Ver"
   },
+
   "categories": {
     "title": "Categorías",
     "see": "Ver",
     "exploreInArea": "Explora {category} en tu zona"
   },
+
   "plans": {
     "title": "Planes de membresía",
-    "subtitle": "Elige el plan que mejor se adapte a tu huarique. Puedes cambiarlo cuando quieras.",
+    "subtitle": "Elige el plan que mejor se ajuste a tu huarique. Puedes cambiar cuando quieras.",
     "common": {
-      "noCommitment": "Sin permanencia",
+      "noCommitment": "Sin compromiso",
       "securePayments": "Pagos seguros",
       "support": "Soporte en español"
     },
-    "ctaHelp": "¿Tienes dudas sobre los planes?",
+    "ctaHelp": "¿Dudas sobre los planes?",
     "ctaContact": "Contáctanos →",
     "basic": {
       "name": "BÁSICO",
       "price": "Gratis",
-      "button": "Empezar gratis",
-      "tagline": "Perfecto para empezar a tener visibilidad",
+      "button": "Comenzar gratis",
+      "tagline": "Perfecto para empezar a ganar visibilidad",
       "features": [
         "Publica tu huarique",
-        "Perfil con datos esenciales",
+        "Perfil con información esencial",
         "Acceso a reseñas y calificaciones"
       ],
       "popular": "Popular"
@@ -52,7 +57,7 @@
       "price": "$35",
       "period": "/MES",
       "button": "Elegir Premium",
-      "tagline": "Ideal si ya tienes reseñas y buscas crecer",
+      "tagline": "Ideal si ya tienes reseñas y quieres crecer",
       "features": [
         "Todo lo del plan Básico",
         "Herramientas de promoción destacada",
@@ -65,7 +70,7 @@
       "price": "$50",
       "period": "/MES",
       "button": "Elegir Exclusivo",
-      "tagline": "Para marcas que quieren destacar al máximo",
+      "tagline": "Para marcas que buscan máxima exposición",
       "features": [
         "Todo lo del plan Premium",
         "Publicidad prioritaria",
@@ -74,6 +79,7 @@
       ]
     }
   },
+
   "ownerNew": {
     "title": "Registrar huarique",
     "subtitle": "Completa la información para que te encuentren más fácil.",
@@ -88,30 +94,12 @@
       "title": "Promociones",
       "seeDetails": "Ver detalles",
       "cards": {
-        "pollo": {
-          "title": "2x1 Pollo Hoy",
-          "note": "Locales seleccionados"
-        },
-        "marino": {
-          "title": "Menú Marino S/20",
-          "note": "Lun–Vie 12:00–16:00"
-        },
-        "cafe": {
-          "title": "Café + Brownie",
-          "note": "Solo en Aroma & Sabor"
-        },
-        "parrilla": {
-          "title": "Parrillada Familiar",
-          "note": "15% en fines de semana"
-        },
-        "postre": {
-          "title": "Postres 3x2",
-          "note": "En La Dulcería todo el mes"
-        },
-        "criollo": {
-          "title": "Descuento Criollo",
-          "note": "Platos criollos -10%"
-        }
+        "pollo": { "title": "2x1 en Pollo Hoy", "note": "Locales seleccionados" },
+        "marino": { "title": "Menú Marino S/ 20", "note": "Lun–Vie 12:00–16:00" },
+        "cafe": { "title": "Café + Brownie", "note": "Solo en Aroma & Sabor" },
+        "parrilla": { "title": "Parrilla Familiar", "note": "15% off fines de semana" },
+        "postre": { "title": "Postres 3x2", "note": "En La Dulcería todo el mes" },
+        "criollo": { "title": "Descuento Criollo", "note": "10% en platos criollos" }
       }
     },
 
@@ -144,34 +132,49 @@
       "avgPrice": "Precio promedio (S/)",
       "district": "Distrito",
       "nearMe": "Cerca de mí",
-      "street": "Calle / Nro.",
+      "street": "Calle / N.º",
       "city": "Ciudad",
       "reference": "Referencia",
       "phone": "Teléfono",
-      "openAt": "Abrimos",
-      "closeAt": "Cerramos",
+      "openAt": "Abre",
+      "closeAt": "Cierra",
       "closed": "Cerrado",
       "delivery": "Delivery",
       "takeaway": "Para llevar",
-      "dinein": "En salón",
+      "dinein": "Para comer en local",
       "itemName": "Nombre",
       "price": "Precio (S/)",
       "section": "Sección",
-      "addItem": "+ Añadir ítem",
+      "addItem": "+ Agregar ítem",
+      "remove": "Eliminar",
       "save": "Guardar",
-      "select": "Selecciona…"
-    }
+      "select": "Seleccionar…"
+    },
+    "categories": {
+      "anticuchos": "Anticuchos",
+      "ceviche": "Ceviche",
+      "chifa": "Chifa",
+      "polleria": "Pollería"
+    },
+    "placeholders": {
+      "street": "Av. Los Incas 123",
+      "city": "Lima",
+      "reference": "Frente al parque",
+      "phone": "+51 999 999 999"
+    },
+    "saveError": "No pudimos guardar. Inténtalo nuevamente."
   },
 
   "login": {
-    "title": "Inicia sesión",
+    "title": "Iniciar sesión",
     "subtitle": "Ingresa tu correo para continuar",
-    "emailPlaceholder": "Correo",
+    "emailPlaceholder": "Correo electrónico",
     "emailAria": "Correo electrónico",
-    "submit": "Ingresar",
+    "submit": "Iniciar sesión",
     "submitting": "Ingresando…",
     "noAccount": "¿No tienes cuenta?",
     "register": "Regístrate",
+    "errorDefault": "No pudimos iniciar sesión. Intenta otra vez."
     "errorDefault": "No pudimos iniciar sesión. Intenta nuevamente.",
     "forgotPassword": "¿Olvidaste tu contraseña?"
   },
@@ -185,20 +188,24 @@
     "submit": "Crear cuenta",
     "submitting": "Creando…",
     "helloRight": "¡Qué gusto verte!",
-    "subRight": "Crea tu cuenta con tu nombre y correo. Te tomará menos de un minuto.",
+    "subRight": "Crea tu cuenta con tu nombre y correo. Tardarás menos de un minuto.",
     "successToast": "¡Cuenta creada! Te llevamos a elegir tu rol…",
-    "errorToast": "No pudimos crear tu cuenta. Intenta nuevamente."
+    "errorToast": "No pudimos crear tu cuenta. Inténtalo de nuevo."
   },
 
   "roleSelect": {
     "title": "Elige tu rol",
     "subtitle": "Selecciona cómo quieres usar PuntoSabor",
     "radiogroupLabel": "Roles disponibles",
-    "explorerTitle": "Descubridor",
+    "explorerTitle": "Explorador",
     "explorerDesc": "Encuentra huariques y guarda tus favoritos.",
     "ownerTitle": "Dueño de restaurante",
     "ownerDesc": "Publica tu huarique y gestiona tu vitrina.",
     "continue": "Continuar",
+    "explorerAria": "Rol Explorador",
+    "ownerAria": "Rol Dueño de restaurante"
+  },
+
     "explorerAria": "Rol de descubridor",
     "ownerAria": "Rol de dueño de restaurante"
   },
@@ -364,31 +371,32 @@
 
 
   "contact": {
-    "title" : "Contáctanos",
+    "title": "Contáctanos",
     "formTitle": "Escríbenos",
     "nameLabel": "Nombre",
     "namePh": "Tu nombre",
     "emailLabel": "Correo",
-    "emailPh": "tucorreo@dominio.com",
+    "emailPh": "tu@email.com",
     "messageLabel": "Mensaje",
-    "messagePh": "Cuéntanos en qué podemos ayudarte…",
+    "messagePh": "Cuéntanos cómo podemos ayudarte…",
     "submit": "Enviar",
     "submitting": "Enviando…",
-    "mapTitle": "Ubícanos",
+    "mapTitle": "Encuéntranos",
     "mapAria": "Mapa y datos de contacto",
     "info": {
       "address": "Av. Sabor 123, Lima",
       "hours": "Lun–Vie: 9:00–18:00"
     }
   },
+
   "map": {
-    "title": "Huaríques cerca de ti",
+    "title": "Huariques cerca de ti",
     "searchPlaceholder": "Buscar por nombre…",
     "filters": {
       "all": "Todos",
       "pollo": "Pollo",
       "criollo": "Criollo",
-      "mar": "Marina",
+      "mar": "Marinos",
       "chifa": "Chifa",
       "postre": "Postres",
       "menu": "Menú",
@@ -396,8 +404,8 @@
       "parri": "Parrillas"
     },
     "quick": {
-      "recommended": "Recomendado",
-      "nearby": "Cerca de ti",
+      "recommended": "Recomendados",
+      "nearby": "Cerca",
       "reviews": "Reseñas"
     },
     "actions": {
@@ -406,22 +414,34 @@
       "call": "Llamar",
       "share": "Compartir"
     },
-    "empty": "Selecciona un huarique para ver su descripción",
+    "empty": "Selecciona un huarique para ver sus detalles",
     "noResults": "No hay resultados para “{q}”.",
-    "shareText": "Te comparto este huarique: {name}. Horario: {hours}.",
+    "shareText": "Compartiendo este huarique: {name}. Horario: {hours}.",
     "copied": "Enlace copiado",
     "aria": {
       "filterByCat": "Filtrar por categoría",
       "search": "Buscar huarique",
       "map": "Mapa de huariques",
-      "list": "Listado de huariques"
+      "list": "Lista de huariques"
     }
   },
-  "common": { "saving": "Guardando..." },
+
+  "common": {
+    "cancel": "Cancelar",
+    "saving": "Guardando...",
+    "sending": "Enviando..."
+  },
+
   "reviews": {
     "title": "Reseñas",
-    "cta": { "reviewThisPlace": "Reseñar", "viewReviews": "Ver reseñas" },
-    "new": { "title": "Nueva reseña", "subtitle": "Cuéntanos tu experiencia" },
+    "cta": {
+      "reviewThisPlace": "Reseñar",
+      "viewReviews": "Ver reseñas"
+    },
+    "new": {
+      "title": "Nueva reseña",
+      "subtitle": "Cuéntanos tu experiencia"
+    },
     "form": {
       "rating": "Calificación",
       "comment": "Reseña",
@@ -429,6 +449,67 @@
       "submit": "Enviar reseña"
     }
   },
+
+  "report": {
+    "action": "Reportar información incorrecta",
+    "title": "Reportar información incorrecta",
+    "subtitle": "Ayúdanos a mantener los datos correctos.",
+    "field": {
+      "label": "¿Qué deseas corregir?",
+      "options": {
+        "name": "Nombre",
+        "address": "Dirección",
+        "hours": "Horario de atención",
+        "other": "Otros datos"
+      }
+    },
+    "current": "Valor actual",
+    "suggested": "Valor correcto",
+    "comment": "Comentario (opcional)",
+    "placeholders": {
+      "suggested": "Escribe el valor correcto…",
+      "comment": "Explica qué está mal o comparte un enlace de referencia…"
+    },
+    "submit": "Enviar reporte",
+    "submitting": "Enviando…",
+    "cancel": "Cancelar",
+    "toastSaved": "¡Gracias! Revisaremos tu reporte.",
+    "toastError": "No pudimos enviar el reporte. Inténtalo nuevamente."
+  },
+
+  "reports": {
+    "report": {
+      "action": "Reportar información incorrecta",
+      "title": "Reportar información incorrecta",
+      "subtitle": "Ayúdanos a mantener los datos correctos.",
+      "field": {
+        "label": "¿Qué deseas corregir?",
+        "options": {
+          "name": "Nombre",
+          "address": "Dirección",
+          "hours": "Horario de atención",
+          "other": "Otros datos"
+        }
+      },
+      "current": "Valor actual",
+      "suggested": "Valor correcto",
+      "comment": "Comentario (opcional)",
+      "placeholders": {
+        "suggested": "Escribe el valor correcto…",
+        "comment": "Explica qué está mal o comparte un enlace de referencia…"
+      },
+      "submit": "Enviar reporte",
+      "submitting": "Enviando…",
+      "cancel": "Cancelar",
+      "toastSaved": "¡Gracias! Revisaremos tu reporte.",
+      "toastError": "No pudimos enviar el reporte. Inténtalo nuevamente."
+    }
+  },
+
+  "status": {
+    "open": "Abierto ahora",
+    "closed": "Cerrado",
+    "unknown": "Estado no confirmado"
 
   "passwordRecovery": {
     "title": "Recuperar Contraseña",

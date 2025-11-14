@@ -1,5 +1,6 @@
 {
   "brand": "PuntoSabor",
+
   "nav": {
     "categories": "Categories",
     "promos": "Promos",
@@ -10,6 +11,7 @@
     "favorites": "Favorites",
     "profile": "Profile"
   },
+
   "home": {
     "headline": "Discover authentic huariques near you",
     "subhead": "Explore by category, find promotions, and check real community reviews. Save your favorites and support local businesses.",
@@ -20,11 +22,13 @@
     "popularNear": "Popular nearby options",
     "view": "View"
   },
+
   "categories": {
     "title": "Categories",
     "see": "See",
     "exploreInArea": "Explore {category} in your area"
   },
+
   "plans": {
     "title": "Membership plans",
     "subtitle": "Choose the plan that best fits your huarique. You can switch anytime.",
@@ -74,6 +78,7 @@
       ]
     }
   },
+
   "ownerNew": {
     "title": "Register huarique",
     "subtitle": "Fill in the information so people can find you more easily.",
@@ -88,30 +93,12 @@
       "title": "Promotions",
       "seeDetails": "See details",
       "cards": {
-        "pollo": {
-          "title": "2x1 Chicken Today",
-          "note": "Selected restaurants"
-        },
-        "marino": {
-          "title": "Seafood Menu $20",
-          "note": "Mon–Fri 12:00–16:00"
-        },
-        "cafe": {
-          "title": "Coffee + Brownie",
-          "note": "Only at Aroma & Sabor"
-        },
-        "parrilla": {
-          "title": "Family Grill",
-          "note": "15% off on weekends"
-        },
-        "postre": {
-          "title": "Desserts 3x2",
-          "note": "At La Dulcería all month"
-        },
-        "criollo": {
-          "title": "Criollo Discount",
-          "note": "10% off criollo dishes"
-        }
+        "pollo": { "title": "2x1 Chicken Today", "note": "Selected restaurants" },
+        "marino": { "title": "Seafood Menu $20", "note": "Mon–Fri 12:00–16:00" },
+        "cafe": { "title": "Coffee + Brownie", "note": "Only at Aroma & Sabor" },
+        "parrilla": { "title": "Family Grill", "note": "15% off on weekends" },
+        "postre": { "title": "Desserts 3x2", "note": "At La Dulcería all month" },
+        "criollo": { "title": "Criollo Discount", "note": "10% off criollo dishes" }
       }
     },
 
@@ -158,9 +145,23 @@
       "price": "Price (S/)",
       "section": "Section",
       "addItem": "+ Add item",
+      "remove": "Remove",
       "save": "Save",
       "select": "Select…"
-    }
+    },
+    "categories": {
+      "anticuchos": "Anticuchos",
+      "ceviche": "Ceviche",
+      "chifa": "Chifa",
+      "polleria": "Pollería"
+    },
+    "placeholders": {
+      "street": "Av. Los Incas 123",
+      "city": "Lima",
+      "reference": "In front of the park",
+      "phone": "+51 999 999 999"
+    },
+    "saveError": "We couldn't save it. Please try again."
   },
 
   "login": {
@@ -363,7 +364,7 @@
   },
 
   "contact": {
-    "title" : "Contact Us",
+    "title": "Contact Us",
     "formTitle": "Write to us",
     "nameLabel": "Name",
     "namePh": "Your name",
@@ -381,6 +382,7 @@
       "hours": "Mon–Fri: 9:00–18:00"
     }
   },
+
   "map": {
     "title": "Huariques near you",
     "searchPlaceholder": "Search by name…",
@@ -417,11 +419,23 @@
       "list": "Huariques list"
     }
   },
-  "common": { "saving": "Saving..." },
+
+  "common": {
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "sending": "Sending..."
+  },
+
   "reviews": {
     "title": "Reviews",
-    "cta": { "reviewThisPlace": "Review", "viewReviews": "View reviews"},
-    "new": { "title": "New review", "subtitle": "Tell us about your experience" },
+    "cta": {
+      "reviewThisPlace": "Review",
+      "viewReviews": "View reviews"
+    },
+    "new": {
+      "title": "New review",
+      "subtitle": "Tell us about your experience"
+    },
     "form": {
       "rating": "Rating",
       "comment": "Review",
@@ -430,6 +444,66 @@
     }
   },
 
+  "report": {
+    "action": "Report incorrect info",
+    "title": "Report incorrect information",
+    "subtitle": "Help us keep the data accurate.",
+    "field": {
+      "label": "What do you want to correct?",
+      "options": {
+        "name": "Name",
+        "address": "Address",
+        "hours": "Opening hours",
+        "other": "Other data"
+      }
+    },
+    "current": "Current value",
+    "suggested": "Correct value",
+    "comment": "Comment (optional)",
+    "placeholders": {
+      "suggested": "Type the correct value…",
+      "comment": "Explain what's wrong or share a reference link…"
+    },
+    "submit": "Submit report",
+    "submitting": "Submitting…",
+    "cancel": "Cancel",
+    "toastSaved": "Thanks! We’ll review your report.",
+    "toastError": "We couldn’t submit the report. Please try again."
+  },
+
+  "reports": {
+    "report": {
+      "action": "Report incorrect info",
+      "title": "Report incorrect information",
+      "subtitle": "Help us keep the data accurate.",
+      "field": {
+        "label": "What do you want to correct?",
+        "options": {
+          "name": "Name",
+          "address": "Address",
+          "hours": "Opening hours",
+          "other": "Other data"
+        }
+      },
+      "current": "Current value",
+      "suggested": "Correct value",
+      "comment": "Comment (optional)",
+      "placeholders": {
+        "suggested": "Type the correct value…",
+        "comment": "Explain what's wrong or share a reference link…"
+      },
+      "submit": "Submit report",
+      "submitting": "Submitting…",
+      "cancel": "Cancel",
+      "toastSaved": "Thanks! We’ll review your report.",
+      "toastError": "We couldn’t submit the report. Please try again."
+    }
+  },
+
+  "status": {
+    "open": "Open now",
+    "closed": "Closed",
+    "unknown": "Not confirmed"
   "passwordRecovery": {
     "title": "Password recovery",
     "emailLabel": "Email address",

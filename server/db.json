@@ -291,6 +291,99 @@
     },
     {
       "id": 10,
+      "huariqueId": 10,
+      "userId": 3,
+      "rating": 5,
+      "comment": "Café Central con el mejor espresso.",
+      "createdAt": "2025-11-06T08:45:00.000Z"
+    },
+    {
+      "huariqueId": 1,
+      "userId": 0,
+      "rating": 2,
+      "comment": "buen resto",
+      "createdAt": "2025-11-09T22:40:39.134Z",
+      "id": 11
+    },
+    {
+      "huariqueId": 1,
+      "userId": 0,
+      "rating": 5,
+      "comment": "buen restauranteee",
+      "createdAt": "2025-11-09T23:39:17.106Z",
+      "id": 12
+    },
+    {
+      "huariqueId": 7,
+      "userId": 0,
+      "rating": 4,
+      "comment": "perfecto el café",
+      "createdAt": "2025-11-09T23:40:10.594Z",
+      "id": 13
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 5,
+      "comment": "el mejor pollo de la molina",
+      "createdAt": "2025-11-09T23:55:02.500Z",
+      "id": 14
+    },
+    {
+      "huariqueId": 2,
+      "userId": 0,
+      "rating": 4,
+      "comment": "que rico ceviche!!!",
+      "createdAt": "2025-11-10T00:01:31.120Z",
+      "id": 15
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 4,
+      "comment": "buen pollo y precio",
+      "createdAt": "2025-11-10T00:12:32.117Z",
+      "id": 16
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 5,
+      "comment": "rico rico",
+      "createdAt": "2025-11-10T00:17:45.054Z",
+      "id": 17
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 4,
+      "comment": "asasa",
+      "createdAt": "2025-11-10T00:22:06.635Z",
+      "id": 18
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 2,
+      "comment": "se demoraron mucho al servirme",
+      "createdAt": "2025-11-10T00:30:44.296Z",
+      "id": 19
+    },
+    {
+      "huariqueId": 8,
+      "userId": 0,
+      "rating": 1,
+      "comment": "soy pepa?",
+      "createdAt": "2025-11-10T00:48:19.887Z",
+      "id": 20
+    },
+    {
+      "huariqueId": 1,
+      "userId": 0,
+      "rating": 5,
+      "comment": "Rico\noiii",
+      "createdAt": "2025-11-12T21:05:57.867Z",
+      "id": 21
       "by": "Karen T.",
       "stars": 5,
       "text": "Café Central con el mejor espresso.",
@@ -363,6 +456,24 @@
       }
     },
     {
+      "id": 4,
+      "name": "Sebastián",
+      "email": "sebastian@upc.pe"
+    },
+    {
+      "name": "asdas",
+      "email": "aasds@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "asdsa",
+      "email": "sadsa@asdas.com",
+      "id": 6
+    },
+    {
+      "name": "carlos",
+      "email": "carloswaye@oiii.com",
+      "id": 7
       "name": "snay",
       "email": "schneider.0104.dc@gmail.com",
       "id": 10,

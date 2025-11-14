@@ -11,6 +11,14 @@ import reviewsRoutes from './reviews/reviews-routes.js';
 import membershipsRoutes from './memberships/presentation/memberships-routes.js';
 import contactRoutes from './contact/presentation/contact-routes.js';
 
+const AuthRoutes        = () => import('./auth/presentation/auth-routes.js');
+const DiscoveryRoutes   = () => import('./discovery/presentation/discovery-routes.js');
+const PromotionsRoutes  = () => import('./promotions/presentation/promotions-routes.js');
+const ReviewsRoutes     = () => import('./reviews/reviews-routes.js');
+const MembershipsRoutes = () => import('./memberships/presentation/memberships-routes.js');
+const ContactRoutes     = () => import('./contact/presentation/contact-routes.js');
+const ReportsRoutes = () => import('./reports/presentation/reports-routes.js');
+
 const routes = [
 
     { path: '/', name: 'home', component: Home, meta: { title: 'PuntoSabor' } },
@@ -65,5 +73,18 @@ router.afterEach((to) => {
     const title = to.meta?.title ? `${to.meta.title} · ${base}` : base;
     if (typeof document !== 'undefined') document.title = title;
 });
+
+(async () => {
+    const ctxs = [
+        (await AuthRoutes()).default,
+        (await DiscoveryRoutes()).default,
+        (await PromotionsRoutes()).default,
+        (await ReviewsRoutes()).default,
+        (await MembershipsRoutes()).default,
+        (await ContactRoutes()).default,
+        (await ReportsRoutes()).default,
+    ];
+    ctxs.flat().forEach(r => router.addRoute(r));
+})();
 
 export default router;
