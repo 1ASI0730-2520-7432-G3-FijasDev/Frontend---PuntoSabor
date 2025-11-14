@@ -10,6 +10,8 @@ import promotionsRoutes from './promotions/presentation/promotions-routes.js';
 import reviewsRoutes from './reviews/reviews-routes.js';
 import membershipsRoutes from './memberships/presentation/memberships-routes.js';
 import contactRoutes from './contact/presentation/contact-routes.js';
+import reportsRoutes from './reports/presentation/reports-routes.js';
+
 
 const routes = [
 
@@ -21,6 +23,7 @@ const routes = [
     ...reviewsRoutes,
     ...membershipsRoutes,
     ...contactRoutes,
+    ...reportsRoutes,
 
     {
         path: '/profile',

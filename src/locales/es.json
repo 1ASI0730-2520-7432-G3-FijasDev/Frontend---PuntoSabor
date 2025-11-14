@@ -570,5 +570,58 @@
     },
     "save": "Guardar preferencias",
     "saved": "Tus preferencias se aplicaron correctamente."
-  }
+  },
+  "reports": {
+    "report": {
+      "action": "Report incorrect info",
+      "title": "Report incorrect information",
+      "subtitle": "Help us keep the data accurate.",
+      "field": {
+        "label": "What do you want to correct?",
+        "options": {
+          "name": "Name",
+          "address": "Address",
+          "hours": "Opening hours",
+          "other": "Other data"
+        }
+      },
+      "current": "Current value",
+      "suggested": "Correct value",
+      "comment": "Comment (optional)",
+      "placeholders": {
+        "suggested": "Type the correct value…",
+        "comment": "Explain what's wrong or share a reference link…"
+      },
+      "submit": "Submit report",
+      "submitting": "Submitting…",
+      "cancel": "Cancel",
+      "toastSaved": "Thanks! We’ll review your report.",
+      "toastError": "We couldn’t submit the report. Please try again."
+    }
+  },"report": {
+  "action": "Reportar info",
+  "title": "Reportar información incorrecta",
+  "subtitle": "Ayúdanos a mantener los datos correctos.",
+  "field": {
+    "label": "¿Qué deseas corregir?",
+    "options": {
+      "name": "Nombre",
+      "address": "Dirección",
+      "hours": "Horario",
+      "other": "Otro dato"
+    }
+  },
+  "current": "Valor actual",
+  "suggested": "Valor correcto",
+  "comment": "Comentario (opcional)",
+  "placeholders": {
+    "suggested": "Escribe el valor correcto…",
+    "comment": "Explica qué está mal o comparte un enlace de referencia…"
+  },
+  "submit": "Enviar reporte",
+  "submitting": "Enviando…",
+  "cancel": "Cancelar",
+  "toastSaved": "¡Gracias! Revisaremos tu reporte.",
+  "toastError": "No pudimos enviar el reporte. Intenta nuevamente."
+}
 }
