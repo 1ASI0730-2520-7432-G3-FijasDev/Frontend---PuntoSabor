@@ -332,32 +332,96 @@
     {
       "name": "luis",
       "email": "prueba1231@gmail.com",
-      "id": 6
+      "id": 6,
+      "preferences": {
+        "cuisines": [],
+        "maxPrice": null,
+        "district": "",
+        "nearOnly": false
+      }
     },
     {
       "name": "snay",
       "email": "snay@gmail.com",
-      "id": 7
+      "id": 7,
+      "preferences": {
+        "cuisines": [],
+        "maxPrice": null,
+        "district": "",
+        "nearOnly": false
+      }
     },
     {
       "name": "hola",
       "email": "hola@gmail.com",
-      "id": 8
+      "id": 8,
+      "preferences": {
+        "cuisines": [],
+        "maxPrice": null,
+        "district": "",
+        "nearOnly": false
+      }
     },
     {
       "name": "snay",
       "email": "schneider.0104.dc@gmail.com",
-      "id": 10
+      "id": 10,
+      "preferences": {
+        "cuisines": [],
+        "maxPrice": null,
+        "district": "",
+        "nearOnly": false
+      }
     },
     {
       "name": "Carlos",
       "email": "carlos@gmail.com",
-      "id": 13
+      "id": 13,
+      "preferences": {
+        "cuisines": [],
+        "maxPrice": null,
+        "district": "",
+        "nearOnly": false
+      }
     },
     {
       "name": "Manuel Tumi",
       "email": "manueltumi@hotmail.com",
-      "id": 14
+      "id": 14,
+      "preferences": {
+        "cuisines": [
+          "Pollo"
+        ],
+        "maxPrice": 20,
+        "district": "surco",
+        "nearOnly": true
+      }
+    },
+    {
+      "name": "Ysaac",
+      "email": "ysaac123@gmail.com",
+      "id": 15,
+      "preferences": {
+        "cuisines": [
+          "Pollo"
+        ],
+        "maxPrice": 25,
+        "district": "surco",
+        "nearOnly": true
+      }
+    },
+    {
+      "name": "preferencestest",
+      "email": "preferencestest@gmail.com",
+      "id": 16,
+      "preferences": {
+        "cuisines": [
+          "Pollo"
+        ],
+        "maxPrice": 25,
+        "district": "los olivos",
+        "nearOnly": false
+      }
     }
   ]
 }
