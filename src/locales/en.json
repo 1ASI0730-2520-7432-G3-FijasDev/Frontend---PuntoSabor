@@ -581,6 +581,36 @@
     "save": "Save preferences",
     "saved": "Your notification preferences were saved successfully."
   },
+  "report": {
+    "action": "Report info",
+    "title": "Report incorrect information",
+    "subtitle": "Help us keep the data accurate.",
+    "field": {
+      "label": "What do you want to correct?",
+      "options": {
+        "name": "Name",
+        "address": "Address",
+        "hours": "Opening hours",
+        "other": "Other data"
+      }
+    },
+    "current": "Current value",
+    "suggested": "Correct value",
+    "comment": "Comment (optional)",
+    "placeholders": {
+      "suggested": "Type the correct value…",
+      "comment": "Explain what's wrong or share a reference link…"
+    },
+    "submit": "Submit report",
+    "submitting": "Submitting…",
+    "cancel": "Cancel",
+    "toastSaved": "Thanks! We’ll review your report.",
+    "toastError": "We couldn’t submit the report. Please try again."
+  },
+  "status": {
+    "openNow": "Open now",
+    "closed": "Closed",
+    "unconfirmed": "Not confirmed"
   "preferences": {
     "title": "Preference Settings",
     "subtitle": "Customize your recommendations based on your huarique style.",
