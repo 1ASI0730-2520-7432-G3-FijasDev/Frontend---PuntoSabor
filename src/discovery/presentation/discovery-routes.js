@@ -9,6 +9,13 @@ export default [
     },
 
     {
+        path: '/preferences',
+        name: 'preferences',
+        component: () => import('./views/preferences.view.vue'),
+        meta: { requiresAuth: true, title: 'Mis preferencias' }
+    },
+
+    {
         path: '/owner/huariques/new',
         name: 'owner-huarique-new',
         component: () => import('./views/owner-huarique-new.view.vue'),
