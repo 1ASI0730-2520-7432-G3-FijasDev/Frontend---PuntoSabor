@@ -6,7 +6,9 @@
     "plans": "Plans",
     "contact": "Contact",
     "map": "Map",
-    "signin": "Sign in"
+    "signin": "Sign in",
+    "favorites": "Favorites",
+    "profile": "Profile"
   },
   "home": {
     "headline": "Discover authentic huariques near you",
@@ -549,7 +551,33 @@
     "error": "Error",
 
     "errorGeneric": "Error processing payment"
+  },
+
+  "favorites": {
+    "title": "My favorite huariques",
+    "subtitle": "Huariques you have marked as favorites.",
+    "empty": "You don't have any favorites yet.",
+    "ctaExplore": "Explore huariques",
+    "cta": {
+      "add": "Save {name} as favorite",
+      "remove": "Remove {name} from favorites",
+      "addShort": "Save",
+      "inFavorites": "In favorites"
+    }
+  },
+
+  "notifications": {
+    "title": "Notification settings",
+    "intro": "Turn notifications on or off according to your preferences.",
+    "section": {
+      "general": "General preferences"
+    },
+    "fields": {
+      "app": "In-app notifications",
+      "promos": "Promotions and discounts",
+      "reviews": "New reviews of my huariques"
+    },
+    "save": "Save preferences",
+    "saved": "Your notification preferences were saved successfully."
   }
-
-
 }

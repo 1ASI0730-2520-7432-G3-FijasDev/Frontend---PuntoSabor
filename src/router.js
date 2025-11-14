@@ -22,6 +22,13 @@ const routes = [
     ...membershipsRoutes,
     ...contactRoutes,
 
+    {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('./shared/presentations/views/profile.view.vue'),
+        meta: { requiresAuth: true, title: 'Mi perfil' }
+    },
+
     { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound, meta: { title: 'Página no encontrada' } },
 ];
 

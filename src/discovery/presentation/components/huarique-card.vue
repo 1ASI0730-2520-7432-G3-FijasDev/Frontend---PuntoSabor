@@ -44,6 +44,22 @@
       </div>
 
       <div class="ps-actions">
+        <!-- Favorito -->
+        <button
+            type="button"
+            class="ps-btn ps-btn--ghost"
+            :class="{ 'ps-btn--favorite': isFav }"
+            @click.stop="toggleFav"
+            :aria-pressed="isFav"
+            :aria-label="isFav
+        ? $t('favorites.cta.remove', { name: item.name })
+        : $t('favorites.cta.add', { name: item.name })"
+        >
+          <span aria-hidden="true">{{ isFav ? '★' : '☆' }}</span>
+          <span>
+      {{ isFav ? $t('favorites.cta.inFavorites') : $t('favorites.cta.addShort') }}
+          </span>
+        </button>
         <!-- Ver reseñas -->
         <router-link
             class="ps-btn ps-btn--ghost"
@@ -70,6 +86,7 @@
 
 <script>
 import { api } from '@/shared/infrastructure/base-api';
+import { isFavorite, toggleFavorite } from '@/shared/infrastructure/favorites.service.js';
 
 export default {
   name: 'HuariqueCard',
@@ -80,7 +97,7 @@ export default {
     promo: { type: Object, default: null }
   },
   data() {
-    return { reviewStats: null };
+    return { reviewStats: null, isFav: false};
   },
   computed: {
     hid() {
@@ -92,6 +109,7 @@ export default {
   },
   async mounted() {
     try {
+      this.isFav = isFavorite(this.hid);
       const all = await api('/reviews');
       const reviews = all.filter(r => Number(r.huariqueId) === this.hid);
       if (reviews.length > 0) {
@@ -116,6 +134,21 @@ export default {
     },
     onImgError(e) {
       e.target.style.opacity = 0;
+    },
+    toggleFav() {
+      const it = this.item || {};
+      const payload = {
+        id: this.hid,
+        name: it.name,
+        category: it.category,
+        district: it.district,
+        address: it.address,
+        imgUrl: this.img || it.imgUrl,
+        price: it.price,
+        rating: it.rating
+      };
+      toggleFavorite(payload);
+      this.isFav = isFavorite(this.hid);
     }
   }
 };
@@ -213,4 +246,14 @@ export default {
 .promo-title{
   font-weight:600;
 }
+
+.ps-btn--favorite {
+  border: 1px solid var(--ps-gold);
+}
+
+.ps-btn--favorite[aria-pressed="true"] {
+  background: var(--ps-gold);
+  color: #41240e;
+}
+
 </style>
