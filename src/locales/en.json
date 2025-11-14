@@ -7,7 +7,9 @@
     "plans": "Plans",
     "contact": "Contact",
     "map": "Map",
-    "signin": "Sign in"
+    "signin": "Sign in",
+    "favorites": "Favorites",
+    "profile": "Profile"
   },
 
   "home": {
@@ -99,6 +101,30 @@
         "criollo": { "title": "Criollo Discount", "note": "10% off criollo dishes" }
       }
     },
+
+    "contact": {
+      "title": "Contact Us",
+      "formTitle": "Write to us",
+      "nameLabel": "Name",
+      "namePh": "Your name",
+      "emailLabel": "Email",
+      "emailPh": "you@email.com",
+      "messageLabel": "Message",
+      "messagePh": "Tell us how we can help…",
+      "submit": "Send",
+      "submitting": "Sending…",
+      "sent": "Message sent!",
+      "mapTitle": "Find us",
+      "mapAria": "Map with our location",
+      "info": {
+        "address": "Av. Sabor 123, Lima",
+        "hours": "Mon–Fri: 9:00–18:00"
+      }
+    },
+    "home": {
+      "subhead": "Explore by category, find promotions, and check reviews."
+    },
+
     "labels": {
       "name": "Name",
       "category": "Category",
@@ -147,7 +173,8 @@
     "submitting": "Signing in…",
     "noAccount": "Don't have an account?",
     "register": "Sign up",
-    "errorDefault": "We couldn't sign you in. Please try again."
+    "errorDefault": "We couldn't sign you in. Please try again.",
+    "forgotPassword": "Forgot your password?"
   },
 
   "register": {
@@ -177,6 +204,165 @@
     "ownerAria": "Restaurant owner role"
   },
 
+  "ownerNew": {
+    "title": "Register huarique",
+    "subtitle": "Fill in the information so people can find you more easily.",
+    "sections": {
+      "data": "Data",
+      "schedules": "Schedules",
+      "address": "Address",
+      "services": "Services",
+      "menu": "Menu"
+    },
+
+    "labels": {
+      "name": "Name",
+      "category": "Category",
+      "avgPrice": "Average price (S/)",
+      "district": "District",
+      "nearMe": "Near me",
+      "street": "Street / No.",
+      "city": "City",
+      "reference": "Reference",
+      "phone": "Phone",
+      "openAt": "Open",
+      "closeAt": "Close",
+      "closed": "Closed",
+      "delivery": "Delivery",
+      "takeaway": "Takeaway",
+      "dinein": "Dine-in",
+      "itemName": "Name",
+      "price": "Price (S/)",
+      "section": "Section",
+      "addItem": "+ Add item",
+      "remove": "Remove",
+      "save": "Save",
+      "select": "Select…"
+    },
+
+    "categories": {
+      "anticuchos": "Anticuchos",
+      "ceviche": "Ceviche",
+      "chifa": "Chifa",
+      "polleria": "Pollería"
+    },
+
+    "placeholders": {
+      "street": "Av. Los Incas 123",
+      "city": "Lima",
+      "reference": "In front of the park",
+      "phone": "+51 999 999 999"
+    },
+
+    "saveError": "We couldn't save it. Please try again.",
+
+    "promos": {
+      "title": "Promotions",
+      "seeDetails": "See details",
+      "addBtn": "Add Promotion",
+      "manageBtn": "Manage Promos",
+
+      "create": { "title": "Create Promotion" },
+
+      "fields": {
+        "title": "Title",
+        "note": "Note / Description",
+        "discount": "Discount (%)",
+        "maxUses": "Quota (0 = no limit)",
+        "start": "Start",
+        "end": "End",
+        "huarique": "Huarique",
+        "selectPlaceholder": "-- Select --"
+      },
+
+      "noHuariquesHint": "There are no huariques available. Please register one from 'Publish your huarique' before creating a promotion.",
+
+      "actions": {
+        "close": "Close",
+        "create": "Create",
+        "creating": "Creating...",
+        "delete": "Delete"
+      },
+
+      "labels": { "off": "OFF" },
+
+      "details": {
+        "validity": "Validity",
+        "available": "Available"
+      },
+
+      "status": {
+        "active": "Active",
+        "upcoming": "Upcoming",
+        "expired": "Expired",
+        "complete": "Sold out"
+      },
+
+      "errors": {
+        "titleRequired": "Title is required",
+        "createFailed": "Failed to create promotion"
+      },
+
+      "confirm": { "delete": "Delete this promotion?" },
+
+      "alerts": {
+        "deleted": "Promotion deleted",
+        "deleteFailed": "Could not delete the promotion"
+      },
+
+      "cards": {
+        "pollo":   { "title": "2x1 Chicken Today", "note": "Selected restaurants" },
+        "marino":  { "title": "Seafood Menu $20",  "note": "Mon–Fri 12:00–16:00" },
+        "cafe":    { "title": "Coffee + Brownie",  "note": "Only at Aroma & Sabor" },
+        "parrilla":{ "title": "Family Grill",      "note": "15% off on weekends" },
+        "postre":  { "title": "Desserts 3x2",      "note": "At La Dulcería all month" },
+        "criollo": { "title": "Criollo Discount",  "note": "10% off criollo dishes" }
+      }
+    },
+
+
+    "promosMgmt": {
+      "create": { "title": "Create Featured Promotion" },
+      "form": {
+        "titleLabel": "Promotion Title",
+        "titlePh": "2x1 Chicken, 30% Discount, etc.",
+        "descriptionLabel": "Description",
+        "descriptionPh": "Promotion details...",
+        "discountLabel": "Discount (%)",
+        "startLabel": "Start Date",
+        "endLabel": "End Date",
+        "maxUsesLabel": "Quota (0 = no limit)"
+      },
+      "actions": {
+        "publish": "Publish Featured Promotion",
+        "publishing": "Creating..."
+      },
+      "success": {
+        "title": "Promotion Published!",
+        "lead": "Your promotion will appear as featured in the listings.",
+        "createAnother": "Create Another"
+      },
+      "list": {
+        "title": "Active Featured Promotions",
+        "loading": "Loading promotions...",
+        "searchPh": "Search promotion...",
+        "empty": "There are no active promotions at the moment"
+      },
+      "card": {
+        "daysRemaining": "Days remaining:",
+        "available": "Available:",
+        "usage": "{percent}% used",
+        "claim": "Claim Offer"
+      },
+      "errors": {
+        "createFailed": "Error creating promotion"
+      },
+      "confirm": {
+        "deleteIrreversible": "Delete this promotion? This action can't be undone in the mock."
+      }
+    }
+  },
+
   "contact": {
     "title": "Contact Us",
     "formTitle": "Write to us",
@@ -188,6 +374,7 @@
     "messagePh": "Tell us how we can help…",
     "submit": "Send",
     "submitting": "Sending…",
+    "sent": "Message sent!",
     "mapTitle": "Find us",
     "mapAria": "Map and contact details",
     "info": {
@@ -317,5 +504,154 @@
     "open": "Open now",
     "closed": "Closed",
     "unknown": "Not confirmed"
+  "passwordRecovery": {
+    "title": "Password recovery",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@email.com",
+    "submit": "Send instructions",
+    "submitting": "Sending…",
+    "successTitle": "Email sent!",
+    "successLead": "We have sent recovery instructions to:",
+    "successNote": "Check your inbox (including the spam folder) and follow the link to reset your password.",
+    "retry": "Try again",
+    "backToLogin": "Back to login",
+    "errorDefault": "We couldn’t process your request. Please try again.",
+    "haveLink": "Already have the link?",
+    "gotLink": "Already received the link?",
+    "resetNow": "Reset now"
+  },
+
+  "resetPassword": {
+    "title": "Reset Password",
+    "invalidTitle": "Invalid or Expired Link",
+    "tokenMissing": "No recovery token was found",
+    "requestNewLink": "Request New Link",
+    "newPassword": "New Password",
+    "minCharsPh": "Minimum 6 characters",
+    "minChars": "Minimum 6 characters",
+    "confirmPassword": "Confirm Password",
+    "repeatPasswordPh": "Repeat your password",
+    "passwordsMatch": "Passwords match",
+    "passwordsNoMatch": "Passwords do not match",
+    "updating": "Updating...",
+    "updateBtn": "Update Password",
+    "errorDefault": "Couldn't reset password. Please try again.",
+    "successTitle": "Password Updated!",
+    "successLead": "Your password has been reset successfully.",
+    "goToLogin": "Go to Login"
+  },
+
+  "ownerManage": {
+    "promos": {
+      "title": "Create Featured Promotion",
+      "listTitle": "Active Featured Promotions",
+      "loading": "Loading promotions...",
+      "empty": "There are no active promotions at the moment",
+      "searchPlaceholder": "Search promotion...",
+      "fields": {
+        "title": "Promotion Title",
+        "description": "Description",
+        "discount": "Discount (%)",
+        "maxUses": "Quota (0 = no limit)",
+        "start": "Start Date",
+        "end": "End Date"
+      },
+      "placeholders": {
+        "title": "2x1 Chicken, 30% Off, etc.",
+        "description": "Promotion details..."
+      },
+      "details": {
+        "validity": "Validity",
+        "daysRemaining": "Days remaining",
+        "available": "Available"
+      },
+      "labels": { "used": "used" },
+      "actions": {
+        "publish": "Publish Featured Promotion",
+        "creating": "Creating...",
+        "claim": "Claim Offer",
+        "delete": "Delete",
+        "createAnother": "Create Another"
+      },
+      "success": {
+        "title": "Promotion Published!",
+        "body": "Your promotion will appear featured in the listings."
+      },
+      "confirm": { "delete": "Delete this promotion? This action cannot be undone in the mock." },
+      "alerts": {
+        "deleted": "Promotion deleted",
+        "deleteFailed": "Could not delete the promotion"
+      },
+      "errors": {
+        "createFailed": "Failed to create promotion"
+      }
+    }
+  },
+
+  "payment": {
+    "title": "Update Membership",
+    "subtitle": "Confirm your details and payment method.",
+    "card": "Card",
+    "wallet": "Wallet",
+    "cardData": "Card Details",
+    "holderName": "Cardholder",
+    "holderPh": "Juan Pérez",
+    "number": "Card Number",
+    "numberPh": "4532 1488 0343 6467",
+    "month": "Month",
+    "year": "Year",
+    "walletIdLabel": "{name} ID",
+    "walletIdPh": "Your ID or Phone Number",
+    "amount": "Amount",
+    "cycle": "Billing Cycle",
+    "monthly": "Monthly",
+    "quarterly": "Quarterly",
+    "annual": "Annually",
+    "total": "Total Due",
+    "processing": "Processing...",
+
+    "payAmount": "Pay S/ {amount}",
+
+    "success": "Payment Successful!",
+
+    "activated": "Your membership has been activated.",
+
+    "txId": "Transaction ID",
+
+    "plan": "Plan",
+
+    "back": "Back",
+
+    "error": "Error",
+
+    "errorGeneric": "Error processing payment"
+  },
+
+  "favorites": {
+    "title": "My favorite huariques",
+    "subtitle": "Huariques you have marked as favorites.",
+    "empty": "You don't have any favorites yet.",
+    "ctaExplore": "Explore huariques",
+    "cta": {
+      "add": "Save {name} as favorite",
+      "remove": "Remove {name} from favorites",
+      "addShort": "Save",
+      "inFavorites": "In favorites"
+    }
+  },
+
+  "notifications": {
+    "title": "Notification settings",
+    "intro": "Turn notifications on or off according to your preferences.",
+    "section": {
+      "general": "General preferences"
+    },
+    "fields": {
+      "app": "In-app notifications",
+      "promos": "Promotions and discounts",
+      "reviews": "New reviews of my huariques"
+    },
+    "save": "Save preferences",
+    "saved": "Your notification preferences were saved successfully."
   }
 }
