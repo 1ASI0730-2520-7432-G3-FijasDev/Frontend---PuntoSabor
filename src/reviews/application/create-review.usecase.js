@@ -6,8 +6,17 @@
 import { ReviewsRepository } from '../infrastructure/reviews.repository.js';
 import { Review } from '../domain/model/reviews.entity.js';
 import { ContentModerationService } from '../domain/services/content-moderation.service.js';
+import { getSession } from '@/auth/application/get-session.query.js';
 
-export async function createReviewUseCase({ huariqueId, userId, rating, comment }) {
+export async function createReviewUseCase({ huariqueId, rating, comment }) {
+    // Obtener sesión actual
+    const session = getSession();
+    if (!session || !session.id) {
+        throw new Error('Debes iniciar sesión para publicar una reseña.');
+    }
+
+    const userId = session.id; // 👈 USAMOS EL ID REAL DEL USUARIO LOGUEADO
+
     // Validación básica de datos obligatorios
     if (!huariqueId || !rating || !comment) {
         throw new Error('La reseña debe incluir huarique, puntuación y comentario');
@@ -41,12 +50,12 @@ export async function createReviewUseCase({ huariqueId, userId, rating, comment 
     // 3) Crear entidad de dominio
     const review = new Review({
         huariqueId,
-        userId,
+        userId, // 👈 AHORA SIEMPRE VIENE EL QUE ESTÁ EN SESIÓN
         rating,
         comment: sanitizedComment
     });
 
-    // 4) Persistir usando el repositorio + manejo de error
+    // 4) Persistir usando el repositorio
     try {
         const result = await ReviewsRepository.create(review);
         return {

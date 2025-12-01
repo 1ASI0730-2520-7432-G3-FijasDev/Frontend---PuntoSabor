@@ -79,8 +79,8 @@ async function loadHuarique(id) {
 
 async function loadSession() {
   try {
-    const session = await getSession();
-    sessionUserId.value = session?.user?.id ?? 0;
+    const session = getSession();
+    sessionUserId.value = Number(session?.id ?? 0);
   } catch {
     sessionUserId.value = 0;
   }

@@ -83,20 +83,88 @@
       "schedules": "Horarios",
       "address": "Dirección",
       "services": "Servicios",
-      "menu": "Menú"
+      "menu": "Menú",
+      "promos": {
+        "labels": {
+          "off": "Inactiva"
+        },
+        "status": {
+          "active": "Activa"
+        },
+        "actions": {
+          "close": "Cerrar"
+        }
+      }
     },
     "promos": {
       "title": "Promociones",
       "seeDetails": "Ver detalles",
+
+      "manageBtn": "Gestionar promos",
+      "addBtn": "Nueva promoción",
+
+      "labels": {
+        "off": "de descuento"
+      },
+
+      "status": {
+        "active": "Activa",
+        "upcoming": "Próximamente",
+        "expired": "Vencida",
+        "complete": "Agotada"
+      },
+
+      "actions": {
+        "close": "Cerrar",
+        "create": "Crear promoción",
+        "creating": "Creando...",
+        "delete": "Eliminar promoción"
+      },
+
+      "create": {
+        "title": "Crear promoción"
+      },
+
+      "fields": {
+        "title": "Título",
+        "note": "Descripción corta",
+        "discount": "Descuento (%)",
+        "maxUses": "Número máximo de usos",
+        "start": "Fecha de inicio",
+        "end": "Fecha de fin",
+        "huarique": "Huarique",
+        "selectPlaceholder": "Selecciona un huarique…"
+      },
+
+      "noHuariquesHint": "Primero registra un huarique para poder crear promociones.",
+
+      "details": {
+        "validity": "Vigencia",
+        "available": "Disponibles"
+      },
+
+      "errors": {
+        "titleRequired": "El título es obligatorio",
+        "createFailed": "Error al crear promoción"
+      },
+
+      "confirm": {
+        "delete": "¿Seguro que deseas eliminar esta promoción?"
+      },
+
+      "alerts": {
+        "deleted": "Promoción eliminada correctamente",
+        "deleteFailed": "No se pudo eliminar la promoción"
+      },
       "cards": {
-        "pollo": { "title": "2x1 en Pollo Hoy", "note": "Locales seleccionados" },
+        "pollo":  { "title": "2x1 en Pollo Hoy",  "note": "Locales seleccionados" },
         "marino": { "title": "Menú Marino S/20", "note": "Lun–Vie 12:00–16:00" },
-        "cafe": { "title": "Café + Brownie", "note": "Solo en Aroma & Sabor" },
+        "cafe":   { "title": "Café + Brownie",   "note": "Solo en Aroma & Sabor" },
         "parrilla": { "title": "Parrillada Familiar", "note": "15% en fines de semana" },
         "postre": { "title": "Postres 3x2", "note": "En La Dulcería todo el mes" },
         "criollo": { "title": "Descuento Criollo", "note": "Platos criollos -10%" }
       }
-    },
+  },
     "labels": {
       "name": "Nombre",
       "category": "Categoría",

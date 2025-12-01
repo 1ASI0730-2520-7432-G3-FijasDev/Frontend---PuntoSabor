@@ -42,7 +42,26 @@ const userEmail = computed(() => session.value?.email || null);
 async function loadCategories() {
   try {
     const cats = await listCategoriesQuery();
-    categories.value = Array.isArray(cats) && cats.length ? cats : fallbackCategories;
+
+    const normalized = (Array.isArray(cats) && cats.length ? cats : fallbackCategories)
+        .map((cat) => {
+          if (typeof cat === 'string') {
+            try {
+              const parsed = JSON.parse(cat);
+              return parsed.name || cat;
+            } catch {
+              return cat;
+            }
+          }
+
+          if (cat && typeof cat === 'object') {
+            return cat.name || cat.label || String(cat.id ?? '');
+          }
+
+          return String(cat ?? '');
+        });
+
+    categories.value = normalized;
   } catch {
     categories.value = fallbackCategories;
   }

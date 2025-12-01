@@ -117,17 +117,11 @@ export default {
       this.isLoading = true;
 
       try {
-        const user = this.getCurrentUserId();
-        const reviewData = {
+        const result = await createReviewUseCase({
+          huariqueId: this.$route.params.id || this.huariqueId, // Ajusta según tu routing
           rating: this.rating,
-          content: this.content,
-          userId: user.id,
-          by: user.name,
-          stars: this.rating,
-          text: this.content
-        };
-
-        const result = await createReviewUseCase(reviewData);
+          comment: this.content
+        });
 
         if (result.success && result.status === 'approved') {
           this.successMessage = result.message;
@@ -145,6 +139,7 @@ export default {
         this.isLoading = false;
       }
     },
+
     resetForm() {
       this.rating = 5;
       this.content = '';
@@ -153,12 +148,6 @@ export default {
       this.error = null;
       this.blockMessage = '';
     },
-    getCurrentUserId() {
-
-      const sessionStr = localStorage.getItem('ps-session') || localStorage.getItem('ps-user');
-      const user = sessionStr ? JSON.parse(sessionStr) : {};
-      return { id: user.id || 'anonymous', name: user.name || 'Anónimo' };
-    }
   }
 };
 </script>
