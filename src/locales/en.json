@@ -88,15 +88,73 @@
     "promos": {
       "title": "Promotions",
       "seeDetails": "See details",
+
+      "manageBtn": "Manage promos",
+      "addBtn": "New promotion",
+
+      "labels": {
+        "off": "off"
+      },
+
+      "status": {
+        "active": "Active",
+        "upcoming": "Upcoming",
+        "expired": "Expired",
+        "complete": "Sold out"
+      },
+
+      "actions": {
+        "close": "Close",
+        "create": "Create promotion",
+        "creating": "Creating...",
+        "delete": "Delete promotion"
+      },
+
+      "create": {
+        "title": "Create promotion"
+      },
+
+      "fields": {
+        "title": "Title",
+        "note": "Short description",
+        "discount": "Discount (%)",
+        "maxUses": "Max uses",
+        "start": "Start date",
+        "end": "End date",
+        "huarique": "Huarique",
+        "selectPlaceholder": "Select a huarique…"
+      },
+
+      "noHuariquesHint": "Register a huarique first to create promotions.",
+
+      "details": {
+        "validity": "Validity",
+        "available": "Available"
+      },
+
+      "errors": {
+        "titleRequired": "Title is required",
+        "createFailed": "Error creating promotion"
+      },
+
+      "confirm": {
+        "delete": "Are you sure you want to delete this promotion?"
+      },
+
+      "alerts": {
+        "deleted": "Promotion deleted successfully",
+        "deleteFailed": "Could not delete the promotion"
+      },
+
       "cards": {
-        "pollo": { "title": "2x1 Chicken Today", "note": "Selected restaurants" },
-        "marino": { "title": "Seafood Menu $20", "note": "Mon–Fri 12:00–16:00" },
-        "cafe": { "title": "Coffee + Brownie", "note": "Only at Aroma & Sabor" },
-        "parrilla": { "title": "Family Grill", "note": "15% off on weekends" },
-        "postre": { "title": "Desserts 3x2", "note": "At La Dulcería all month" },
-        "criollo": { "title": "Criollo Discount", "note": "10% off criollo dishes" }
+        "pollo":  { "title": "2x1 Chicken Today",  "note": "Selected restaurants" },
+        "marino": { "title": "Seafood Menu $20",   "note": "Mon–Fri 12:00–16:00" },
+        "cafe":   { "title": "Coffee + Brownie",   "note": "Only at Aroma & Sabor" },
+        "parrilla": { "title": "Family Grill",     "note": "15% off on weekends" },
+        "postre": { "title": "Desserts 3x2",       "note": "At La Dulcería all month" },
+        "criollo": { "title": "Criollo Discount",  "note": "10% off criollo dishes" }
       }
-    },
+  },
     "labels": {
       "name": "Name",
       "category": "Category",
