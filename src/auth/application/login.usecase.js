@@ -5,7 +5,6 @@ export async function loginUseCase(email) {
     const user = await AuthRepository.login(email);
     if (!user) throw new Error('Usuario no encontrado');
 
-    // Guardar sesión con claves correctas
     setSession({
         id: user.id,
         email: user.email,
