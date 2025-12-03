@@ -5,5 +5,7 @@
   "/promos": "/promos",
   "/reviews": "/reviews",
   "/plans": "/plans",
+  "/subscriptions": "/subscriptions",
+  "/subscriptions/:id": "/subscriptions/:id",
   "/users": "/users"
 }

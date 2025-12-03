@@ -2,6 +2,18 @@ export default [
     { path: '/categories', component: () => import('./views/categories.view.vue') },
     { path: '/results', component: () => import('./views/results.view.vue') },
     { path: '/map', component: () => import('./views/map.view.vue') },
+    {
+        path: '/favorites',
+        component: () => import('./views/favorites.view.vue'),
+        meta: { requiresAuth: true, title: 'Mis favoritos' }
+    },
+
+    {
+        path: '/preferences',
+        name: 'preferences',
+        component: () => import('./views/preferences.view.vue'),
+        meta: { requiresAuth: true, title: 'Mis preferencias' }
+    },
 
     {
         path: '/owner/huariques/new',

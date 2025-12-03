@@ -4,34 +4,58 @@ import { getSession } from '@/auth/application/get-session.query';
 const Home = () => import('./shared/presentations/views/home.view.vue');
 const NotFound = () => import('./shared/presentations/views/page-not-found.view.vue');
 
+import authRoutes from './auth/presentation/auth-routes.js';
+import discoveryRoutes from './discovery/presentation/discovery-routes.js';
+import promotionsRoutes from './promotions/presentation/promotions-routes.js';
+import reviewsRoutes from './reviews/reviews-routes.js';
+import membershipsRoutes from './memberships/presentation/memberships-routes.js';
+import contactRoutes from './contact/presentation/contact-routes.js';
+import reportsRoutes from './reports/presentation/reports-routes.js';
 
-const AuthRoutes        = () => import('./auth/presentation/auth-routes.js');
-const DiscoveryRoutes   = () => import('./discovery/presentation/discovery-routes.js');
-const PromotionsRoutes  = () => import('./promotions/presentation/promotions-routes.js');
-const ReviewsRoutes     = () => import('./reviews/reviews-routes.js');
-const MembershipsRoutes = () => import('./memberships/presentation/memberships-routes.js');
-const ContactRoutes     = () => import('./contact/presentation/contact-routes.js');
+
+const routes = [
+
+    { path: '/', name: 'home', component: Home, meta: { title: 'PuntoSabor' } },
+
+    ...authRoutes,
+    ...discoveryRoutes,
+    ...promotionsRoutes,
+    ...reviewsRoutes,
+    ...membershipsRoutes,
+    ...contactRoutes,
+    ...reportsRoutes,
+
+    {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('./shared/presentations/views/profile.view.vue'),
+        meta: { requiresAuth: true, title: 'Mi perfil' }
+    },
+
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound, meta: { title: 'Página no encontrada' } },
+];
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: [
-        { path: '/', name: 'home', component: Home, meta: { title: 'PuntoSabor' } },
-
-        { path: '/auth', component: () => import('./auth/presentation/views/login.view.vue'), meta: { title: 'Sign in' } },
-
-        { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound, meta: { title: 'Página no encontrada' } }
-    ],
+    routes,
     scrollBehavior() { return { top: 0 }; }
 });
 
-
 router.beforeEach(async (to) => {
+
+    if (to.meta?.requiresAuth) {
+        try {
+            const session = getSession();
+            if (!session || !session.id) return { path: '/auth' };
+        } catch {
+            return { path: '/auth' };
+        }
+    }
+
     if (to.meta?.requiresOwner) {
         try {
-            const session = await getSession();
-            if (!session || session.role !== 'owner') {
-                return { path: '/role' };
-            }
+            const session = getSession();
+            if (!session || session.role !== 'owner') return { path: '/role' };
         } catch {
             return { path: '/auth' };
         }
@@ -39,24 +63,10 @@ router.beforeEach(async (to) => {
     return true;
 });
 
-
 router.afterEach((to) => {
     const base = 'PuntoSabor';
     const title = to.meta?.title ? `${to.meta.title} · ${base}` : base;
     if (typeof document !== 'undefined') document.title = title;
 });
-
-
-(async () => {
-    const ctxs = [
-        (await AuthRoutes()).default,
-        (await DiscoveryRoutes()).default,
-        (await PromotionsRoutes()).default,
-        (await ReviewsRoutes()).default,
-        (await MembershipsRoutes()).default,
-        (await ContactRoutes()).default
-    ];
-    ctxs.flat().forEach(r => router.addRoute(r));
-})();
 
 export default router;

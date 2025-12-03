@@ -91,12 +91,19 @@ export default {
         const prev = JSON.parse(localStorage.getItem('ps-session') || '{}');
         const session = { ...prev, role: this.role };
         localStorage.setItem('ps-session', JSON.stringify(session));
+
+
+        window.dispatchEvent(new Event('ps-session-updated'));
       }catch{
         localStorage.setItem('ps-session', JSON.stringify({ role: this.role }));
+        window.dispatchEvent(new Event('ps-session-updated'));
       }
-      this.$router.push(this.role === 'owner'
-          ? { name:'owner-huarique-new' }
-          : { name:'home' });
+
+      setTimeout(() => {
+        this.$router.push(this.role === 'owner'
+            ? { name:'owner-huarique-new' }
+            : { name:'home' });
+      }, 100);
     }
   }
 };
